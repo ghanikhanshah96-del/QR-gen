@@ -41,14 +41,14 @@ export default function GeneratorApp({ initialType = 'url', lockType = false, sh
   }, [initialType, lockType]);
 
   return (
-    <section id="generator-app" className="site-container pb-10 pt-2 sm:pb-14">
+    <section id="generator-app" className="site-container pb-10 pt-6 sm:pb-14 sm:pt-8">
       <div className="editor-shell">
-        <div className="animate-rise-in space-y-5">
+        <div className="space-y-5 animate-rise-in">
           <div className="panel-strong space-y-6 p-5 sm:p-7">
             <div className="space-y-4">
               <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-700">Content</p>
-                <h2 className="mt-1 text-xl font-semibold tracking-tight text-ink-950">What should this QR open?</h2>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-700 dark:text-brand-300">Content</p>
+                <h2 className="mt-1 text-xl font-semibold tracking-tight text-ink-950 dark:text-white">What should this QR open?</h2>
               </div>
               {showTypeSelect ? (
                 <div>
@@ -68,9 +68,9 @@ export default function GeneratorApp({ initialType = 'url', lockType = false, sh
           <div className="panel p-5 sm:p-7">
             <div className="flex items-start justify-between gap-4">
               <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-500">Design</p>
-                <h2 className="mt-1 text-lg font-semibold text-ink-950">Make it yours</h2>
-                <p className="mt-1 text-sm text-ink-500">Start simple. Open advanced options only when you need them.</p>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-500 dark:text-ink-400">Design</p>
+                <h2 className="mt-1 text-lg font-semibold text-ink-950 dark:text-white">Make it yours</h2>
+                <p className="mt-1 text-sm text-ink-500 dark:text-ink-400">Start simple. Open advanced options only when you need them.</p>
               </div>
             </div>
             <div className="mt-5">
@@ -94,27 +94,27 @@ function EditorControls() {
         <div className="mt-3 flex flex-wrap gap-2" data-presets />
       </div>
 
-      <details className="group rounded-2xl border border-ink-100 bg-ink-50/50 open:bg-white" open>
-        <summary className="cursor-pointer list-none px-4 py-3 text-sm font-semibold text-ink-900 marker:content-none [&::-webkit-details-marker]:hidden">
+      <details className="editor-accordion group" open>
+        <summary className="cursor-pointer list-none px-4 py-3 text-sm font-semibold text-ink-900 marker:content-none dark:text-ink-100 [&::-webkit-details-marker]:hidden">
           <span className="flex items-center justify-between gap-3">
             Colors &amp; pattern
-            <span className="text-ink-400 transition group-open:rotate-45" aria-hidden="true">
+            <span className="text-ink-400 transition duration-300 group-open:rotate-45" aria-hidden="true">
               +
             </span>
           </span>
         </summary>
-        <div className="space-y-5 border-t border-ink-100 px-4 py-4">
+        <div className="space-y-5 border-t px-4 py-4" style={{ borderColor: 'var(--border)' }}>
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-500">Pattern</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-500 dark:text-ink-400">Pattern</h4>
             <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3" data-dots-options />
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
-              <h4 className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-500">Corner eyes</h4>
+              <h4 className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-500 dark:text-ink-400">Corner eyes</h4>
               <div className="mt-3 grid grid-cols-1 gap-2" data-corner-square-options />
             </div>
             <div>
-              <h4 className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-500">Eye centers</h4>
+              <h4 className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-500 dark:text-ink-400">Eye centers</h4>
               <div className="mt-3 grid grid-cols-1 gap-2" data-corner-dot-options />
             </div>
           </div>
@@ -133,11 +133,11 @@ function EditorControls() {
             </div>
           </div>
           <div className="flex flex-col gap-3">
-            <label className="flex min-h-[44px] items-center gap-2 text-sm text-ink-800">
+            <label className="flex min-h-[44px] items-center gap-2 text-sm text-ink-800 dark:text-ink-200">
               <input id="design-transparent" type="checkbox" className="size-4 rounded border-ink-300 text-brand-700" />
               Transparent background
             </label>
-            <label className="flex min-h-[44px] items-center gap-2 text-sm text-ink-800">
+            <label className="flex min-h-[44px] items-center gap-2 text-sm text-ink-800 dark:text-ink-200">
               <input id="design-gradient" type="checkbox" className="size-4 rounded border-ink-300 text-brand-700" />
               Gradient foreground
             </label>
@@ -151,22 +151,22 @@ function EditorControls() {
         </div>
       </details>
 
-      <details className="group rounded-2xl border border-ink-100 bg-ink-50/50">
-        <summary className="cursor-pointer list-none px-4 py-3 text-sm font-semibold text-ink-900 marker:content-none [&::-webkit-details-marker]:hidden">
+      <details className="editor-accordion group">
+        <summary className="cursor-pointer list-none px-4 py-3 text-sm font-semibold text-ink-900 marker:content-none dark:text-ink-100 [&::-webkit-details-marker]:hidden">
           <span className="flex items-center justify-between gap-3">
             Size, logo &amp; error correction
-            <span className="text-ink-400 transition group-open:rotate-45" aria-hidden="true">
+            <span className="text-ink-400 transition duration-300 group-open:rotate-45" aria-hidden="true">
               +
             </span>
           </span>
         </summary>
-        <div className="space-y-5 border-t border-ink-100 px-4 py-4">
+        <div className="space-y-5 border-t px-4 py-4" style={{ borderColor: 'var(--border)' }}>
           <div>
             <div className="flex items-center justify-between gap-3">
               <label className="field-label mb-0" htmlFor="design-size">
                 Export size
               </label>
-              <span id="design-size-value" className="text-xs font-medium text-ink-500">
+              <span id="design-size-value" className="text-xs font-medium text-ink-500 dark:text-ink-400">
                 512px
               </span>
             </div>
@@ -181,19 +181,19 @@ function EditorControls() {
             />
           </div>
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-500">Error correction</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-500 dark:text-ink-400">Error correction</h4>
             <div className="mt-3 grid grid-cols-2 gap-2" data-ecc-options />
             <p className="field-hint">Use H when adding a logo or printing small.</p>
           </div>
-          <div className="space-y-3 rounded-2xl border border-ink-100 bg-white p-4">
-            <h4 className="text-sm font-semibold text-ink-900">Logo</h4>
+          <div className="space-y-3 rounded-2xl border p-4" style={{ borderColor: 'var(--border)', background: 'var(--surface-strong)' }}>
+            <h4 className="text-sm font-semibold text-ink-900 dark:text-ink-100">Logo</h4>
             <input
               id="design-logo"
               type="file"
               accept="image/png,image/jpeg,image/webp,image/svg+xml"
-              className="block w-full text-sm text-ink-700 file:mr-3 file:rounded-xl file:border-0 file:bg-ink-950 file:px-3 file:py-2 file:text-sm file:font-semibold file:text-white"
+              className="block w-full text-sm text-ink-700 file:mr-3 file:rounded-xl file:border-0 file:bg-ink-950 file:px-3 file:py-2 file:text-sm file:font-semibold file:text-white dark:text-ink-300 dark:file:bg-brand-600 dark:file:text-ink-950"
             />
-            <p id="design-logo-status" className="text-xs text-ink-500">
+            <p id="design-logo-status" className="text-xs text-ink-500 dark:text-ink-400">
               No logo uploaded
             </p>
             <div className="grid gap-3 sm:grid-cols-2">
@@ -225,7 +225,7 @@ function PreviewPanel() {
   return (
     <aside className="sticky-preview animate-preview-in" aria-label="QR preview and downloads">
       <div className="panel-strong overflow-hidden">
-        <div className="border-b border-ink-100 bg-gradient-to-br from-ink-950 via-ink-900 to-brand-900 px-5 py-4 text-white">
+        <div className="preview-header">
           <div className="flex items-center justify-between gap-3">
             <div>
               <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-200">Live preview</p>
@@ -237,13 +237,13 @@ function PreviewPanel() {
         <div className="space-y-5 p-5 sm:p-6">
           <div className="qr-preview-frame" id="qr-preview-canvas" role="img" aria-label="QR code preview" />
           <div className="space-y-2 text-center">
-            <p id="qr-status" className="text-sm text-ink-500">
+            <p id="qr-status" className="text-sm text-ink-500 dark:text-ink-400">
               Enter content to generate a live QR preview.
             </p>
-            <p id="qr-warning" className="text-xs text-amber-700" hidden />
+            <p id="qr-warning" className="text-xs text-amber-700 dark:text-amber-300" hidden />
           </div>
           <div className="space-y-3" aria-label="Download options">
-            <h2 className="text-sm font-semibold text-ink-900">Download</h2>
+            <h2 className="text-sm font-semibold text-ink-900 dark:text-ink-100">Download</h2>
             <div className="grid grid-cols-3 gap-2">
               <button type="button" id="download-png" className="btn-download">
                 PNG
@@ -256,9 +256,6 @@ function PreviewPanel() {
               </button>
             </div>
             <div className="flex flex-wrap gap-2 pt-1">
-              <button type="button" id="save-design" className="btn-secondary text-xs">
-                Save locally
-              </button>
               <button type="button" id="export-project" className="btn-ghost text-xs">
                 Export JSON
               </button>
@@ -267,9 +264,9 @@ function PreviewPanel() {
                 <input id="import-project" type="file" accept="application/json,.json,.everqr.json" className="sr-only" />
               </label>
             </div>
-            <p className="text-xs text-ink-500">Created on your device. Forever yours — no account needed.</p>
+            <p className="text-xs text-ink-500 dark:text-ink-400">Created on your device. Forever yours — no account needed.</p>
           </div>
-          <p id="qr-privacy-note" className="text-center text-xs leading-relaxed text-ink-500" />
+          <p id="qr-privacy-note" className="text-center text-xs leading-relaxed text-ink-500 dark:text-ink-400" />
         </div>
       </div>
     </aside>

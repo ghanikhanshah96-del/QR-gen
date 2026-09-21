@@ -4,6 +4,7 @@ import FaqList from '@/components/FaqList';
 import ToolGrid from '@/components/ToolGrid';
 import { TOOLS, getToolByDir } from '@/content/tools';
 import { LEGAL_PAGES } from '@/content/legal';
+import { getBlogByToolId } from '@/content/blogs';
 
 const LEGAL_BY_FILE = Object.fromEntries(LEGAL_PAGES.map((p) => [p.file, p]));
 
@@ -53,6 +54,8 @@ export default async function SegmentPage({ params }) {
 }
 
 function ToolPageView({ tool }) {
+  const blog = getBlogByToolId(tool.id);
+
   return (
     <>
       <section className="site-container pt-8 sm:pt-12">
@@ -68,15 +71,22 @@ function ToolPageView({ tool }) {
           </ol>
         </nav>
         <div className="mt-6 max-w-3xl animate-rise-in">
-          <p className="font-display text-4xl font-semibold tracking-tight text-ink-950 sm:text-5xl">EverQR</p>
-          <h1 className="mt-3 text-2xl font-semibold tracking-tight text-ink-800 sm:text-3xl">{tool.h1}</h1>
-          <p className="mt-3 max-w-2xl text-base text-ink-600 sm:text-lg">{tool.intro}</p>
+          <p className="font-display text-4xl font-semibold tracking-tight text-ink-950 dark:text-white sm:text-5xl">EverQR</p>
+          <h1 className="mt-3 text-2xl font-semibold tracking-tight text-ink-800 dark:text-ink-100 sm:text-3xl">{tool.h1}</h1>
+          <p className="mt-3 max-w-2xl text-base text-ink-600 dark:text-ink-300 sm:text-lg">{tool.intro}</p>
           <div className="trust-row mt-5">
             <span>Free</span>
             <span>Private</span>
             <span>No watermark</span>
             <span>No signup</span>
           </div>
+          {blog ? (
+            <p className="mt-4 text-sm text-ink-600">
+              <Link className="font-semibold text-brand-800 underline hover:text-brand-700" href={`/blogs/${blog.slug}/`}>
+                Read the blog: {blog.heading}
+              </Link>
+            </p>
+          ) : null}
         </div>
       </section>
 
@@ -93,11 +103,18 @@ function ToolPageView({ tool }) {
         </div>
         <div className="panel p-6">
           <h2 className="section-title">Privacy</h2>
-          <p className="mt-4 leading-relaxed text-ink-600">
+          <p className="mt-4 leading-relaxed text-ink-600 dark:text-ink-300">
             Static QR codes generated here do not expire and do not depend on our servers. The encoded destination or
             information must remain valid for the QR code to remain useful. Your inputs are processed in the browser for
             generation.
           </p>
+          {blog ? (
+            <p className="mt-4">
+              <Link className="btn-secondary text-xs" href={`/blogs/${blog.slug}/`}>
+                Related blog post
+              </Link>
+            </p>
+          ) : null}
         </div>
       </section>
 

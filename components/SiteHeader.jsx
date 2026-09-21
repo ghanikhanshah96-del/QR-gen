@@ -3,12 +3,13 @@
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { QR_TYPES } from '@/lib/constants';
+import ThemeToggle from '@/components/ThemeToggle';
 
 function BrandLockup() {
   return (
-    <Link href="/" className="flex items-center gap-2.5" aria-label="EverQR home">
+    <Link href="/" className="flex items-center gap-2.5 transition duration-300 ease-smooth hover:opacity-90" aria-label="EverQR home">
       <span
-        className="inline-flex size-9 items-center justify-center rounded-2xl bg-ink-950 text-brand-300 shadow-soft"
+        className="inline-flex size-9 items-center justify-center rounded-2xl bg-ink-950 text-brand-300 shadow-soft transition duration-300 dark:bg-brand-500 dark:text-ink-950"
         aria-hidden="true"
       >
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
@@ -18,7 +19,7 @@ function BrandLockup() {
           />
         </svg>
       </span>
-      <span className="font-display text-xl font-semibold tracking-tight text-ink-950">EverQR</span>
+      <span className="font-display text-xl font-semibold tracking-tight text-ink-950 dark:text-white">EverQR</span>
     </Link>
   );
 }
@@ -46,7 +47,7 @@ export default function SiteHeader() {
   const types = Object.values(QR_TYPES);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-ink-200/50 bg-[#f7f8fa]/80 backdrop-blur-xl">
+    <header className="site-header">
       <div className="site-container grid h-[4.25rem] grid-cols-[1fr_auto] items-center gap-3 md:grid-cols-[1fr_auto_1fr]">
         <BrandLockup />
 
@@ -55,32 +56,40 @@ export default function SiteHeader() {
             Create
           </Link>
 
-          <div className="relative" ref={typesRef}>
+          <div
+            className="relative"
+            ref={typesRef}
+            onMouseEnter={() => setTypesOpen(true)}
+            onMouseLeave={() => setTypesOpen(false)}
+          >
             <button
               type="button"
               className="nav-link inline-flex items-center gap-1.5"
               aria-expanded={typesOpen}
               aria-haspopup="true"
               onClick={() => setTypesOpen((v) => !v)}
+              onFocus={() => setTypesOpen(true)}
             >
               QR types
-              <svg className="size-3.5 opacity-70" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <svg className="size-3.5 opacity-70 transition duration-300" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </button>
             {typesOpen ? (
-              <div className="nav-dropdown-menu" role="menu">
-                {types.map((t) => (
-                  <Link
-                    key={t.id}
-                    className="nav-dropdown-item"
-                    role="menuitem"
-                    href={t.path}
-                    onClick={() => setTypesOpen(false)}
-                  >
-                    {t.label}
-                  </Link>
-                ))}
+              <div className="absolute left-1/2 top-full z-50 w-[min(22rem,calc(100vw-2rem))] -translate-x-1/2 pt-2 animate-fade-in">
+                <div className="nav-dropdown-panel" role="menu">
+                  {types.map((t) => (
+                    <Link
+                      key={t.id}
+                      className="nav-dropdown-item"
+                      role="menuitem"
+                      href={t.path}
+                      onClick={() => setTypesOpen(false)}
+                    >
+                      {t.label}
+                    </Link>
+                  ))}
+                </div>
               </div>
             ) : null}
           </div>
@@ -88,12 +97,13 @@ export default function SiteHeader() {
           <Link className="nav-link" href="/guides/">
             Guides
           </Link>
-          <Link className="nav-link" href="/saved-designs/">
-            Saved
+          <Link className="nav-link" href="/blogs/">
+            Blog
           </Link>
         </nav>
 
         <div className="flex items-center justify-end gap-2">
+          <ThemeToggle />
           <a href="/#generator-app" className="btn-primary hidden sm:inline-flex">
             Start free
           </a>
@@ -113,7 +123,7 @@ export default function SiteHeader() {
       </div>
 
       {open ? (
-        <div id="mobile-menu" className="border-t border-ink-100 bg-[#f7f8fa] md:hidden">
+        <div id="mobile-menu" className="border-t md:hidden animate-fade-in" style={{ borderColor: 'var(--border)', background: 'var(--header-bg)' }}>
           <div className="site-container flex flex-col gap-1 py-4">
             <Link className="nav-link" href="/" onClick={() => setOpen(false)}>
               Create
@@ -129,8 +139,8 @@ export default function SiteHeader() {
             <Link className="nav-link" href="/guides/" onClick={() => setOpen(false)}>
               Guides
             </Link>
-            <Link className="nav-link" href="/saved-designs/" onClick={() => setOpen(false)}>
-              Saved
+            <Link className="nav-link" href="/blogs/" onClick={() => setOpen(false)}>
+              Blog
             </Link>
             <a href="/#generator-app" className="btn-primary mt-2" onClick={() => setOpen(false)}>
               Start free

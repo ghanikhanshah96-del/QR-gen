@@ -50,9 +50,9 @@ export default async function GuidePage({ params }) {
         </ol>
       </nav>
       <article className="mx-auto mt-6 max-w-3xl">
-        <h1 className="font-display text-3xl font-semibold tracking-tight text-ink-950 sm:text-4xl">{guide.heading}</h1>
+        <h1 className="font-display text-3xl font-semibold tracking-tight text-ink-950 dark:text-white sm:text-4xl">{guide.heading}</h1>
         <div
-          className="mt-6 space-y-4 leading-relaxed text-ink-700 [&_strong]:text-ink-950"
+          className="mt-6 space-y-4 leading-relaxed text-ink-700 dark:text-ink-300 [&_strong]:text-ink-950 dark:[&_strong]:text-white"
           dangerouslySetInnerHTML={{ __html: guide.content }}
         />
         <p className="mt-10">

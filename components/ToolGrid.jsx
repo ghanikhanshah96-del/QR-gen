@@ -16,8 +16,8 @@ export default function ToolGrid() {
               />
             </svg>
           </span>
-          <p className="font-semibold text-ink-950">{t.label}</p>
-          <p className="mt-1 text-sm text-ink-600">{t.description}</p>
+          <p className="font-semibold text-ink-950 dark:text-white">{t.label}</p>
+          <p className="mt-1 text-sm text-ink-600 dark:text-ink-300">{t.description}</p>
         </Link>
       ))}
     </div>

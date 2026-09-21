@@ -1,5 +1,5 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     './app/**/*.{js,jsx,ts,tsx,mdx}',
     './components/**/*.{js,jsx,ts,tsx,mdx}',
@@ -46,18 +46,22 @@ module.exports = {
         display: ['var(--font-fraunces)', 'Georgia', 'ui-serif', 'serif'],
       },
       boxShadow: {
-        soft: '0 1px 2px rgb(11 16 32 / 0.04), 0 10px 28px rgb(11 16 32 / 0.06)',
-        panel: '0 1px 0 rgb(11 16 32 / 0.05), 0 18px 50px rgb(11 16 32 / 0.1)',
-        preview: '0 24px 60px rgb(11 16 32 / 0.14)',
-        glow: '0 0 0 1px rgb(20 133 119 / 0.12), 0 12px 40px rgb(20 133 119 / 0.12)',
+        soft: 'var(--shadow-soft)',
+        panel: 'var(--shadow-panel)',
+        preview: 'var(--shadow-preview)',
+        glow: 'var(--shadow-glow)',
       },
       maxWidth: {
         content: '74rem',
       },
+      transitionTimingFunction: {
+        smooth: 'cubic-bezier(0.22, 1, 0.36, 1)',
+      },
       animation: {
-        'fade-in': 'fadeIn 0.4s ease-out both',
-        'rise-in': 'riseIn 0.5s cubic-bezier(0.22,1,0.36,1) both',
-        'preview-in': 'previewIn 0.55s cubic-bezier(0.22,1,0.36,1) both',
+        'fade-in': 'fadeIn 0.45s ease-out both',
+        'rise-in': 'riseIn 0.55s cubic-bezier(0.22,1,0.36,1) both',
+        'preview-in': 'previewIn 0.6s cubic-bezier(0.22,1,0.36,1) both',
+        'chip-in': 'chipIn 0.35s cubic-bezier(0.22,1,0.36,1) both',
       },
       keyframes: {
         fadeIn: {
@@ -65,12 +69,16 @@ module.exports = {
           to: { opacity: '1' },
         },
         riseIn: {
-          from: { opacity: '0', transform: 'translateY(12px)' },
+          from: { opacity: '0', transform: 'translateY(14px)' },
           to: { opacity: '1', transform: 'translateY(0)' },
         },
         previewIn: {
-          from: { opacity: '0', transform: 'translateY(16px) scale(0.98)' },
+          from: { opacity: '0', transform: 'translateY(18px) scale(0.97)' },
           to: { opacity: '1', transform: 'translateY(0) scale(1)' },
+        },
+        chipIn: {
+          from: { opacity: '0', transform: 'scale(0.96)' },
+          to: { opacity: '1', transform: 'scale(1)' },
         },
       },
     },

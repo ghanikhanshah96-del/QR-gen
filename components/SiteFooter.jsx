@@ -86,6 +86,11 @@ export default function SiteFooter() {
               </Link>
             </li>
             <li>
+              <Link className="hover:text-brand-300" href="/blogs/">
+                Blog
+              </Link>
+            </li>
+            <li>
               <Link className="hover:text-brand-300" href="/faq.html/">
                 FAQ
               </Link>

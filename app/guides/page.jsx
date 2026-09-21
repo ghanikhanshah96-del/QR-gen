@@ -10,13 +10,18 @@ export const metadata = {
 export default function GuidesIndexPage() {
   return (
     <div className="site-container py-10 sm:py-14">
-      <h1 className="font-display text-3xl font-semibold text-ink-950">Guides</h1>
-      <p className="mt-2 text-ink-600">Clear, practical articles — written for humans, not keyword stuffing.</p>
+      <div className="max-w-3xl animate-rise-in">
+        <p className="pill">Learn</p>
+        <h1 className="mt-4 font-display text-3xl font-semibold text-ink-950 dark:text-white">Guides</h1>
+        <p className="mt-2 text-ink-600 dark:text-ink-300">
+          Clear, practical articles — written for humans, not keyword stuffing.
+        </p>
+      </div>
       <ul className="mt-8 grid gap-3 sm:grid-cols-2">
-        {GUIDES.map((g) => (
-          <li key={g.dir}>
-            <Link className="panel block p-4 hover:border-brand-300" href={`/guides/${g.dir}/`}>
-              <span className="font-semibold text-ink-900">{g.heading}</span>
+        {GUIDES.map((g, i) => (
+          <li key={g.dir} className="animate-rise-in" style={{ animationDelay: `${Math.min(i, 8) * 40}ms` }}>
+            <Link className="blog-card" href={`/guides/${g.dir}/`}>
+              <span className="font-semibold text-ink-900 dark:text-white">{g.heading}</span>
             </Link>
           </li>
         ))}

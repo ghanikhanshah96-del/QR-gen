@@ -77,6 +77,6 @@ export const LEGAL_PAGES = [
     title: "Offline | EverQR",
     description: "You appear to be offline.",
     heading: "You are offline",
-    content: "<p>Reconnect to load the latest assets. Saved designs already on this device may still be available when you return online.</p>",
+    content: "<p>Reconnect to load the latest assets, then return to create a QR code.</p>",
   }
 ];

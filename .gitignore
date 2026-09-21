@@ -1,0 +1,14 @@
+node_modules/
+.next/
+out/
+dist/
+.DS_Store
+*.log
+.env
+.env.*
+.vscode/
+.idea/
+coverage/
+assets/css/output.css.map
+_archive/
+_legacy_backup/

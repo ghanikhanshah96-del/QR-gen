@@ -6,7 +6,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const content = `User-agent: *
 Allow: /
 
-Sitemap: https://everqr.app/sitemap.xml
+Sitemap: https://generateqrfast.com/sitemap.xml
 `;
 fs.writeFileSync(path.join(ROOT, 'robots.txt'), content);
 console.log('robots.txt written');

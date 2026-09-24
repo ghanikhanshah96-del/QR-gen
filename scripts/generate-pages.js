@@ -52,7 +52,7 @@ function faqItems(items) {
 }
 
 function head({ title, description, path: pagePath, base, type }) {
-  const canonical = `https://everqr.app${pagePath}`;
+  const canonical = `https://generateqrfast.com${pagePath}`;
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,7 +63,7 @@ function head({ title, description, path: pagePath, base, type }) {
   <link rel="canonical" href="${canonical}" />
   <meta name="robots" content="index,follow" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="EverQR" />
+  <meta property="og:site_name" content="GenerateQRFast" />
   <meta property="og:title" content="${title}" />
   <meta property="og:description" content="${description}" />
   <meta property="og:url" content="${canonical}" />
@@ -136,7 +136,7 @@ const TOOLS = [
   {
     id: 'url',
     dir: 'url-qr-code',
-    title: 'Free URL QR Code Generator | EverQR',
+    title: 'Free URL QR Code Generator | GenerateQRFast',
     h1: 'URL QR Code Generator',
     description:
       'Create a free static URL QR code in your browser. No signup, no expiration, no watermark. Private and unlimited.',
@@ -154,7 +154,7 @@ const TOOLS = [
         a: 'Static QR codes generated here do not expire and do not depend on our servers. The website you encode must remain online for the QR to stay useful.',
       },
       {
-        q: 'Is the URL sent to EverQR?',
+        q: 'Is the URL sent to GenerateQRFast?',
         a: 'No. For normal static generation, your URL is processed in the browser and encoded into the QR locally.',
       },
       {
@@ -166,7 +166,7 @@ const TOOLS = [
   {
     id: 'text',
     dir: 'text-qr-code',
-    title: 'Free Text QR Code Generator | EverQR',
+    title: 'Free Text QR Code Generator | GenerateQRFast',
     h1: 'Text QR Code Generator',
     description: 'Encode plain text into a free static QR code. Private, unlimited, no signup, no watermark.',
     intro: 'Put a message, note, code, or instructions directly inside a QR — no short link required.',
@@ -190,7 +190,7 @@ const TOOLS = [
   {
     id: 'wifi',
     dir: 'wifi-qr-code',
-    title: 'Free WiFi QR Code Generator | EverQR',
+    title: 'Free WiFi QR Code Generator | GenerateQRFast',
     h1: 'WiFi QR Code Generator',
     description:
       'Create a free WiFi QR code so guests can join your network by scanning. Private, no signup, no watermark.',
@@ -216,7 +216,7 @@ const TOOLS = [
   {
     id: 'whatsapp',
     dir: 'whatsapp-qr-code',
-    title: 'Free WhatsApp QR Code Generator | EverQR',
+    title: 'Free WhatsApp QR Code Generator | GenerateQRFast',
     h1: 'WhatsApp QR Code Generator',
     description: 'Generate a WhatsApp chat QR with optional prefilled message. Free, permanent, private.',
     intro: 'Help customers start a WhatsApp conversation instantly. The wa.me link is encoded statically in the QR.',
@@ -236,7 +236,7 @@ const TOOLS = [
   {
     id: 'google-review',
     dir: 'google-review-qr-code',
-    title: 'Free Google Review QR Code Generator | EverQR',
+    title: 'Free Google Review QR Code Generator | GenerateQRFast',
     h1: 'Google Review QR Code Generator',
     description:
       'Create a QR code that opens your Google review page. Free, static, no signup, no watermark.',
@@ -262,7 +262,7 @@ const TOOLS = [
   {
     id: 'vcard',
     dir: 'vcard-qr-code',
-    title: 'Free vCard QR Code Generator — Digital Business Card | EverQR',
+    title: 'Free vCard QR Code Generator — Digital Business Card | GenerateQRFast',
     h1: 'vCard QR Code Generator',
     description: 'Create a contact QR (vCard) for networking. Free, private, unlimited, no watermark.',
     intro: 'Share name, phone, email, and company details as a scannable digital business card.',
@@ -282,7 +282,7 @@ const TOOLS = [
   {
     id: 'email',
     dir: 'email-qr-code',
-    title: 'Free Email QR Code Generator | EverQR',
+    title: 'Free Email QR Code Generator | GenerateQRFast',
     h1: 'Email QR Code Generator',
     description: 'Create a mailto QR with subject and message. Free, static, private, no signup.',
     intro: 'Let people compose an email to you with one scan — address, subject, and body included.',
@@ -302,7 +302,7 @@ const TOOLS = [
   {
     id: 'sms',
     dir: 'sms-qr-code',
-    title: 'Free SMS QR Code Generator | EverQR',
+    title: 'Free SMS QR Code Generator | GenerateQRFast',
     h1: 'SMS QR Code Generator',
     description: 'Generate an SMS QR with optional prefilled text. Free, permanent, no watermark.',
     intro: 'Start a text message conversation from a poster, packaging, or flyer.',
@@ -314,14 +314,14 @@ const TOOLS = [
     faqs: [
       {
         q: 'Are SMS charges applied?',
-        a: 'Standard carrier rates may apply when the user sends the message. EverQR does not send SMS.',
+        a: 'Standard carrier rates may apply when the user sends the message. GenerateQRFast does not send SMS.',
       },
     ],
   },
   {
     id: 'phone',
     dir: 'phone-number-qr-code',
-    title: 'Free Phone Number QR Code Generator | EverQR',
+    title: 'Free Phone Number QR Code Generator | GenerateQRFast',
     h1: 'Phone Number QR Code Generator',
     description: 'Create a free phone number QR code for click-to-call. Private, unlimited, no signup.',
     intro: 'Encode a telephone number so scanning starts a call on supported devices.',
@@ -340,7 +340,7 @@ const TOOLS = [
   {
     id: 'location',
     dir: 'location-qr-code',
-    title: 'Free Location QR Code Generator | EverQR',
+    title: 'Free Location QR Code Generator | GenerateQRFast',
     h1: 'Location QR Code Generator',
     description: 'Create a free location QR code generator pin for Google Maps. Static, private, no watermark.',
     intro: 'Share a precise map pin. Enter latitude and longitude — scanning opens that place in Google Maps.',
@@ -359,22 +359,22 @@ const TOOLS = [
   {
     id: 'image',
     dir: 'image-to-qr-code',
-    title: 'Free Image to QR Code Generator | EverQR',
+    title: 'Free Image to QR Code Generator | GenerateQRFast',
     h1: 'Image to QR Code Generator',
     description:
       'Convert an image to QR code for free — upload or paste a URL. No signup, no watermark.',
     intro:
-      'Upload your photo (temporary public link) or paste a lasting image URL. EverQR encodes that https link in the QR — not the image bytes.',
+      'Upload your photo (temporary public link) or paste a lasting image URL. GenerateQRFast encodes that https link in the QR — not the image bytes.',
     instructions: [
       'Upload an image (PNG, JPG, WebP, GIF, SVG) or paste a public https URL.',
-      'We host uploads briefly on tmpfiles.org so scanners get a real link (EverQR has no media server).',
+      'We host uploads briefly on tmpfiles.org so scanners get a real link (GenerateQRFast has no media server).',
       'Customize colors, logo, and size.',
       'Download PNG, SVG, or JPG — no watermark.',
     ],
     faqs: [
       {
         q: 'How does image upload work?',
-        a: 'Like QR.io: your file is sent to a third-party host (tmpfiles.org) to get a public URL. That URL is what goes into the QR. EverQR does not store your image.',
+        a: 'Like QR.io: your file is sent to a third-party host (tmpfiles.org) to get a public URL. That URL is what goes into the QR. GenerateQRFast does not store your image.',
       },
       {
         q: 'Does an uploaded image QR expire?',
@@ -389,7 +389,7 @@ const TOOLS = [
   {
     id: 'video',
     dir: 'video-to-qr-code',
-    title: 'Free Video to QR Code Generator | EverQR',
+    title: 'Free Video to QR Code Generator | GenerateQRFast',
     h1: 'Video to QR Code Generator',
     description:
       'Convert a video to QR code for free — upload or paste YouTube/Vimeo/Drive. No signup, no watermark.',
@@ -408,7 +408,7 @@ const TOOLS = [
       },
       {
         q: 'Do you host my video?',
-        a: 'EverQR has no media backend. Optional uploads go to tmpfiles.org (~48h). For lasting QRs, use YouTube, Vimeo, Drive, or your own host.',
+        a: 'GenerateQRFast has no media backend. Optional uploads go to tmpfiles.org (~48h). For lasting QRs, use YouTube, Vimeo, Drive, or your own host.',
       },
       {
         q: 'Which platforms are supported?',
@@ -423,7 +423,7 @@ const TOOLS = [
   {
     id: 'file',
     dir: 'file-qr-code',
-    title: 'Free File QR Code Generator — PDF, DOC, TXT | EverQR',
+    title: 'Free File QR Code Generator — PDF, DOC, TXT | GenerateQRFast',
     h1: 'File QR Code Generator',
     description:
       'Upload a PDF, DOC, TXT, or other document and create a free file QR code. No signup, no watermark.',
@@ -469,15 +469,9 @@ function toolPage(tool) {
     <section class="site-container pt-8 sm:pt-12">
       ${crumbs}
       <div class="mt-6 max-w-3xl animate-rise-in">
-        <p class="font-display text-4xl font-semibold tracking-tight text-ink-950 sm:text-5xl">EverQR</p>
+        <p class="font-display text-4xl font-semibold tracking-tight text-ink-950 sm:text-5xl">GenerateQRFast</p>
         <h1 class="mt-3 text-2xl font-semibold tracking-tight text-ink-800 sm:text-3xl">${tool.h1}</h1>
         <p class="mt-3 max-w-2xl text-base text-ink-600 sm:text-lg">${tool.intro}</p>
-        <div class="trust-row mt-5">
-          <span>Free</span>
-          <span>Private</span>
-          <span>No watermark</span>
-          <span>No signup</span>
-        </div>
       </div>
     </section>
     ${generatorBlock({ lockType: true, showTypeSelect: true })}
@@ -514,7 +508,7 @@ function toolPage(tool) {
 function homePage() {
   const base = '.';
   const body = `${head({
-    title: 'EverQR — Free Permanent Private Unlimited QR Code Generator',
+    title: 'GenerateQRFast — Free Permanent Private Unlimited QR Code Generator',
     description:
       'Free, permanent, private, unlimited QR code generator. No signup, no expiration, no watermark. Create static QR codes in your browser.',
     path: '/',
@@ -525,15 +519,8 @@ function homePage() {
   <main>
     <section class="site-container pt-10 sm:pt-16">
       <div class="max-w-4xl animate-rise-in">
-        <h1 class="hero-brand">EverQR</h1>
-        <p class="mt-5 max-w-xl text-xl font-medium tracking-tight text-ink-800 sm:text-2xl">Free. Permanent. Private. Unlimited.</p>
+        <h1 class="hero-brand">GenerateQRFast</h1>
         <p class="mt-4 max-w-xl text-base leading-relaxed text-ink-600 sm:text-lg">Create beautiful static QR codes in your browser — no signup, no watermark, nothing stored on our servers.</p>
-        <div class="trust-row mt-6">
-          <span>No signup</span>
-          <span>No expiration</span>
-          <span>No watermark</span>
-          <span>Unlimited</span>
-        </div>
       </div>
     </section>
     ${generatorBlock({ lockType: false, showTypeSelect: true })}
@@ -617,98 +604,98 @@ function guidePage({ dir, title, description, heading, content }) {
 const guides = [
   {
     dir: 'what-is-a-qr-code',
-    title: 'What Is a QR Code? | EverQR Guides',
+    title: 'What Is a QR Code? | GenerateQRFast Guides',
     heading: 'What is a QR code?',
     description: 'A plain-language explanation of QR codes and how they store information.',
     content: `<p>A QR (Quick Response) code is a two-dimensional barcode that stores data as a pattern of modules. Phone cameras and scanners read the pattern and decode the information instantly.</p><p>Unlike one-dimensional barcodes, QR codes can hold URLs, text, contact cards, Wi‑Fi credentials, and more — which is why they’re used on packaging, posters, restaurants, and business cards.</p>`,
   },
   {
     dir: 'how-qr-codes-work',
-    title: 'How QR Codes Work | EverQR Guides',
+    title: 'How QR Codes Work | GenerateQRFast Guides',
     heading: 'How QR codes work',
     description: 'Learn how scanners read QR modules, finder patterns, and error correction.',
-    content: `<p>QR codes use finder patterns (the three large corner squares) so scanners can locate and orient the code quickly. Data is encoded into the remaining modules with error correction so damaged codes can still scan.</p><p>When you create a static QR with EverQR, the payload is written directly into those modules in your browser.</p>`,
+    content: `<p>QR codes use finder patterns (the three large corner squares) so scanners can locate and orient the code quickly. Data is encoded into the remaining modules with error correction so damaged codes can still scan.</p><p>When you create a static QR with GenerateQRFast, the payload is written directly into those modules in your browser.</p>`,
   },
   {
     dir: 'static-vs-dynamic-qr-codes',
-    title: 'Static vs Dynamic QR Codes | EverQR Guides',
+    title: 'Static vs Dynamic QR Codes | GenerateQRFast Guides',
     heading: 'Static vs dynamic QR codes',
     description: 'Understand the difference between static and dynamic QR codes.',
-    content: `<p><strong>Static QR codes</strong> encode the final content directly. After you download them, they don’t need our servers. <strong>Dynamic QR codes</strong> usually point to a short redirect URL you can edit later — useful for campaigns, but dependent on a service remaining online.</p><p>EverQR v1 focuses on static QR codes: free, private, and permanent with respect to our infrastructure.</p>`,
+    content: `<p><strong>Static QR codes</strong> encode the final content directly. After you download them, they don’t need our servers. <strong>Dynamic QR codes</strong> usually point to a short redirect URL you can edit later — useful for campaigns, but dependent on a service remaining online.</p><p>GenerateQRFast v1 focuses on static QR codes: free, private, and permanent with respect to our infrastructure.</p>`,
   },
   {
     dir: 'do-qr-codes-expire',
-    title: 'Do QR Codes Expire? | EverQR Guides',
+    title: 'Do QR Codes Expire? | GenerateQRFast Guides',
     heading: 'Do QR codes expire?',
-    description: 'Clear answer on QR expiration for static codes generated with EverQR.',
+    description: 'Clear answer on QR expiration for static codes generated with GenerateQRFast.',
     content: `<p>Static QR codes generated here do not expire and do not depend on our servers. The encoded destination or information must remain valid for the QR code to remain useful — for example, a website must stay online, or a phone number must still ring.</p>`,
   },
   {
     dir: 'qr-code-error-correction',
-    title: 'QR Code Error Correction Levels | EverQR Guides',
+    title: 'QR Code Error Correction Levels | GenerateQRFast Guides',
     heading: 'QR code error correction',
     description: 'Choose L, M, Q, or H error correction for logos and print durability.',
     content: `<p>Error correction lets scanners recover data if part of the QR is dirty, covered by a logo, or lightly damaged. Levels L, M, Q, and H trade capacity for resilience. Use <strong>H</strong> when adding a logo or printing small.</p>`,
   },
   {
     dir: 'qr-code-size-guide',
-    title: 'QR Code Size Guide | EverQR Guides',
+    title: 'QR Code Size Guide | GenerateQRFast Guides',
     heading: 'QR code size guide',
     description: 'Recommended QR sizes for print, packaging, posters, and screens.',
     content: `<p>As a rule of thumb, printed QR codes should be at least 2 × 2 cm (about 0.8 × 0.8 in) for short URLs, and larger for complex payloads or long scanning distances. Test with a real phone before a large print run.</p>`,
   },
   {
     dir: 'qr-code-printing-guide',
-    title: 'QR Code Printing Guide | EverQR Guides',
+    title: 'QR Code Printing Guide | GenerateQRFast Guides',
     heading: 'QR code printing guide',
     description: 'Print QR codes that scan reliably — contrast, quiet zone, and materials.',
     content: `<p>Maintain strong contrast, keep the quiet zone (margin) clear, avoid distorting the code, and prefer matte finishes over heavy gloss glare. SVG downloads scale cleanly for professional print.</p>`,
   },
   {
     dir: 'qr-code-best-practices',
-    title: 'QR Code Best Practices | EverQR Guides',
+    title: 'QR Code Best Practices | GenerateQRFast Guides',
     heading: 'QR code best practices',
     description: 'Practical tips for designing QR codes people will actually scan.',
     content: `<p>Tell people what happens when they scan, place codes at comfortable heights, keep designs scannable, and test on multiple devices. Don’t bury critical CTAs behind a QR without a fallback URL when appropriate.</p>`,
   },
   {
     dir: 'qr-code-security',
-    title: 'QR Code Security | EverQR Guides',
+    title: 'QR Code Security | GenerateQRFast Guides',
     heading: 'QR code security',
     description: 'Stay safe with QR codes — verify destinations and avoid risky scans.',
     content: `<p>QR codes are only as trustworthy as their content. Preview URLs when your device allows it, be cautious with unexpected codes in public places, and never encode secrets you wouldn’t print on paper.</p>`,
   },
   {
     dir: 'qr-code-for-business',
-    title: 'QR Codes for Business | EverQR Guides',
+    title: 'QR Codes for Business | GenerateQRFast Guides',
     heading: 'QR codes for business',
     description: 'Business use cases for static QR codes — packaging, cards, and signage.',
     content: `<p>Businesses use QR codes for menus, product info, support links, Wi‑Fi, reviews, and contact cards. Static codes are ideal when the destination is stable and you want zero dependency on a QR vendor after printing.</p>`,
   },
   {
     dir: 'qr-code-for-restaurants',
-    title: 'QR Codes for Restaurants | EverQR Guides',
+    title: 'QR Codes for Restaurants | GenerateQRFast Guides',
     heading: 'QR codes for restaurants',
     description: 'Menus, Wi‑Fi, and review QR ideas for restaurants and cafes.',
     content: `<p>Restaurants commonly use QR codes for menus, Wi‑Fi access, and Google reviews. Keep table tents clean, high contrast, and easy to scan in low light.</p>`,
   },
   {
     dir: 'qr-code-for-wifi',
-    title: 'Wi‑Fi QR Codes Guide | EverQR Guides',
+    title: 'Wi‑Fi QR Codes Guide | GenerateQRFast Guides',
     heading: 'QR codes for Wi‑Fi',
     description: 'How Wi‑Fi QR codes work and how to share guest access safely.',
     content: `<p>A Wi‑Fi QR encodes SSID, security type, and password in a standard format many phones understand. Prefer a guest network when sharing access publicly, and reprint if you rotate passwords.</p>`,
   },
   {
     dir: 'qr-code-for-google-reviews',
-    title: 'Google Review QR Codes | EverQR Guides',
+    title: 'Google Review QR Codes | GenerateQRFast Guides',
     heading: 'QR codes for Google reviews',
     description: 'Collect more Google reviews with a simple printable QR code.',
     content: `<p>Place a Google review QR at checkout, on receipts, or near exits. Make sure your Google Business link is correct, then generate a static QR so customers can leave feedback in seconds.</p>`,
   },
   {
     dir: 'qr-code-with-logo',
-    title: 'QR Codes with Logos | EverQR Guides',
+    title: 'QR Codes with Logos | GenerateQRFast Guides',
     heading: 'QR codes with logos',
     description: 'Add a logo without breaking scan reliability — ECC and size tips.',
     content: `<p>Logos should stay relatively small, keep high error correction (H), and preserve enough contrast. Always scan-test after adding branding.</p>`,
@@ -718,7 +705,7 @@ const guides = [
 function savedDesignsPage() {
   const base = '..';
   const body = `${head({
-    title: 'Saved Designs — Local QR Projects | EverQR',
+    title: 'Saved Designs — Local QR Projects | GenerateQRFast',
     description: 'Open, rename, duplicate, and delete QR designs saved locally in your browser.',
     path: '/saved-designs/',
     base,
@@ -727,7 +714,7 @@ function savedDesignsPage() {
   <!-- include:header.html -->
   <main class="site-container py-10 sm:py-14">
     <h1 class="font-display text-3xl font-semibold text-ink-950">Saved designs</h1>
-    <p class="mt-2 max-w-2xl text-ink-600">Designs are stored in this browser with IndexedDB. Nothing is uploaded to an EverQR account — there isn’t one.</p>
+    <p class="mt-2 max-w-2xl text-ink-600">Designs are stored in this browser with IndexedDB. Nothing is uploaded to an GenerateQRFast account — there isn’t one.</p>
     <div id="saved-designs-root" class="mt-8 grid gap-3"></div>
   </main>
   <!-- include:footer.html -->
@@ -746,34 +733,34 @@ function main() {
 
   simplePage({
     file: 'about.html',
-    title: 'About EverQR',
-    description: 'EverQR is a free, private, static QR code generator that runs in your browser.',
+    title: 'About GenerateQRFast',
+    description: 'GenerateQRFast is a free, private, static QR code generator that runs in your browser.',
     path: '/about.html',
-    heading: 'About EverQR',
-    content: `<p>EverQR helps anyone create free, permanent, private, unlimited static QR codes — no signup, no watermark, no expiration on our side.</p><p>We built the product around browser-side generation so your content doesn’t need to travel to our servers just to become a QR code.</p>`,
+    heading: 'About GenerateQRFast',
+    content: `<p>GenerateQRFast helps anyone create free, permanent, private, unlimited static QR codes — no signup, no watermark, no expiration on our side.</p><p>We built the product around browser-side generation so your content doesn’t need to travel to our servers just to become a QR code.</p>`,
   });
 
   simplePage({
     file: 'privacy-policy.html',
-    title: 'Privacy Policy | EverQR',
-    description: 'How EverQR handles privacy for client-side QR generation.',
+    title: 'Privacy Policy | GenerateQRFast',
+    description: 'How GenerateQRFast handles privacy for client-side QR generation.',
     path: '/privacy-policy.html',
     heading: 'Privacy policy',
-    content: `<p>EverQR is designed so normal static QR generation happens in your browser. We do not require an account, and we do not need your QR payloads on a server to create PNG, SVG, or JPG downloads.</p><p>LocalStorage and IndexedDB may store preferences and saved designs on your device only. If analytics are enabled in a future release, they must never include QR payload content.</p><p>Contact: hello@everqr.app</p>`,
+    content: `<p>GenerateQRFast is designed so normal static QR generation happens in your browser. We do not require an account, and we do not need your QR payloads on a server to create PNG, SVG, or JPG downloads.</p><p>LocalStorage and IndexedDB may store preferences and saved designs on your device only. If analytics are enabled in a future release, they must never include QR payload content.</p><p>Contact: hello@generateqrfast.com</p>`,
   });
 
   simplePage({
     file: 'terms.html',
-    title: 'Terms of Use | EverQR',
-    description: 'Terms for using the EverQR static QR code generator.',
+    title: 'Terms of Use | GenerateQRFast',
+    description: 'Terms for using the GenerateQRFast static QR code generator.',
     path: '/terms.html',
     heading: 'Terms of use',
-    content: `<p>EverQR is provided free of charge for lawful use. You are responsible for the content you encode and for complying with applicable laws.</p><p>Static QR codes do not expire because of EverQR, but third-party destinations may change. The service is provided “as is” without warranties.</p>`,
+    content: `<p>GenerateQRFast is provided free of charge for lawful use. You are responsible for the content you encode and for complying with applicable laws.</p><p>Static QR codes do not expire because of GenerateQRFast, but third-party destinations may change. The service is provided “as is” without warranties.</p>`,
   });
 
   simplePage({
     file: 'disclaimer.html',
-    title: 'Disclaimer | EverQR',
+    title: 'Disclaimer | GenerateQRFast',
     description: 'Important technical disclaimer about static QR permanence.',
     path: '/disclaimer.html',
     heading: 'Disclaimer',
@@ -782,35 +769,35 @@ function main() {
 
   simplePage({
     file: 'contact.html',
-    title: 'Contact | EverQR',
-    description: 'Contact EverQR support.',
+    title: 'Contact | GenerateQRFast',
+    description: 'Contact GenerateQRFast support.',
     path: '/contact.html',
     heading: 'Contact',
-    content: `<p>Email us at <a class="text-brand-800 underline" href="mailto:hello@everqr.app">hello@everqr.app</a>. We don’t require accounts, so include enough detail for us to help.</p>`,
+    content: `<p>Email us at <a class="text-brand-800 underline" href="mailto:hello@generateqrfast.com">hello@generateqrfast.com</a>. We don’t require accounts, so include enough detail for us to help.</p>`,
   });
 
   simplePage({
     file: 'faq.html',
-    title: 'FAQ | EverQR',
-    description: 'Frequently asked questions about EverQR static QR codes.',
+    title: 'FAQ | GenerateQRFast',
+    description: 'Frequently asked questions about GenerateQRFast static QR codes.',
     path: '/faq.html',
     heading: 'Frequently asked questions',
-    content: `<p><strong>Is EverQR really free?</strong> Yes — unlimited static QR generation with no watermark.</p><p><strong>Do I need to sign up?</strong> No.</p><p><strong>Do QR codes expire?</strong> Static codes generated here do not expire and do not depend on our servers. External destinations must remain valid.</p>`,
+    content: `<p><strong>Is GenerateQRFast really free?</strong> Yes — unlimited static QR generation with no watermark.</p><p><strong>Do I need to sign up?</strong> No.</p><p><strong>Do QR codes expire?</strong> Static codes generated here do not expire and do not depend on our servers. External destinations must remain valid.</p>`,
   });
 
   simplePage({
     file: 'accessibility.html',
-    title: 'Accessibility | EverQR',
-    description: 'EverQR accessibility commitments.',
+    title: 'Accessibility | GenerateQRFast',
+    description: 'GenerateQRFast accessibility commitments.',
     path: '/accessibility.html',
     heading: 'Accessibility',
-    content: `<p>We aim for semantic HTML, keyboard access, visible focus, labeled forms, and sufficient contrast. If you hit a barrier, email hello@everqr.app.</p>`,
+    content: `<p>We aim for semantic HTML, keyboard access, visible focus, labeled forms, and sufficient contrast. If you hit a barrier, email hello@generateqrfast.com.</p>`,
   });
 
   simplePage({
     file: 'security.html',
-    title: 'Security | EverQR',
-    description: 'Security practices for the EverQR client-side generator.',
+    title: 'Security | GenerateQRFast',
+    description: 'Security practices for the GenerateQRFast client-side generator.',
     path: '/security.html',
     heading: 'Security',
     content: `<p>We sanitize user-controlled text before HTML insertion, validate URLs and uploads, keep dependencies minimal, and avoid executing imported project JSON as code.</p>`,
@@ -818,8 +805,8 @@ function main() {
 
   simplePage({
     file: 'changelog.html',
-    title: 'Changelog | EverQR',
-    description: 'Product changelog for EverQR.',
+    title: 'Changelog | GenerateQRFast',
+    description: 'Product changelog for GenerateQRFast.',
     path: '/changelog.html',
     heading: 'Changelog',
     content: `<p><strong>v1.0.0</strong> — Initial release with URL, Text, Wi‑Fi, WhatsApp, Google Review, vCard, Email, SMS, Phone, and Location generators; live preview; PNG/SVG/JPG export; local saved designs.</p>`,
@@ -827,7 +814,7 @@ function main() {
 
   simplePage({
     file: '404.html',
-    title: 'Page not found | EverQR',
+    title: 'Page not found | GenerateQRFast',
     description: 'The page you requested could not be found.',
     path: '/404.html',
     heading: 'Page not found',
@@ -836,7 +823,7 @@ function main() {
 
   simplePage({
     file: 'offline.html',
-    title: 'Offline | EverQR',
+    title: 'Offline | GenerateQRFast',
     description: 'You appear to be offline.',
     path: '/offline.html',
     heading: 'You are offline',
@@ -845,7 +832,7 @@ function main() {
 
   // Guides index
   const guidesIndex = `${head({
-    title: 'QR Code Guides | EverQR',
+    title: 'QR Code Guides | GenerateQRFast',
     description: 'Practical guides on QR codes, printing, security, and business use cases.',
     path: '/guides/',
     base: '..',
@@ -875,7 +862,7 @@ function main() {
 
   // templates index stub
   const templates = `${head({
-    title: 'QR Templates | EverQR',
+    title: 'QR Templates | GenerateQRFast',
     description: 'Starting points for business, restaurant, Wi‑Fi, review, and social QR designs.',
     path: '/templates/',
     base: '..',

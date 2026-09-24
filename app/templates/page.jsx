@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'QR Templates | EverQR',
+  title: 'QR Templates | GenerateQRFast',
   description: 'Starting points for business, restaurant, Wi‑Fi, review, and social QR designs.',
   alternates: { canonical: '/templates/' },
 };

@@ -7,7 +7,7 @@ import ThemeToggle from '@/components/ThemeToggle';
 
 function BrandLockup() {
   return (
-    <Link href="/" className="flex items-center gap-2.5 transition duration-300 ease-smooth hover:opacity-90" aria-label="EverQR home">
+    <Link href="/" className="flex items-center gap-2.5 transition duration-300 ease-smooth hover:opacity-90" aria-label="GenerateQRFast home">
       <span
         className="inline-flex size-9 items-center justify-center rounded-2xl bg-ink-950 text-brand-300 shadow-soft transition duration-300 dark:bg-brand-500 dark:text-ink-950"
         aria-hidden="true"
@@ -19,7 +19,7 @@ function BrandLockup() {
           />
         </svg>
       </span>
-      <span className="font-display text-xl font-semibold tracking-tight text-ink-950 dark:text-white">EverQR</span>
+      <span className="font-display text-xl font-semibold tracking-tight text-ink-950 dark:text-white">GenerateQRFast</span>
     </Link>
   );
 }

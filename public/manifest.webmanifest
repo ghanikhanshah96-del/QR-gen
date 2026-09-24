@@ -1,6 +1,6 @@
 {
-  "name": "EverQR",
-  "short_name": "EverQR",
+  "name": "GenerateQRFast",
+  "short_name": "GenerateQRFast",
   "description": "Free, permanent, private, unlimited static QR code generator.",
   "start_url": "/",
   "display": "standalone",

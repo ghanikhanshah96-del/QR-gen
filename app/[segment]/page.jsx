@@ -20,7 +20,7 @@ export async function generateMetadata({ params }) {
   const tool = getToolByDir(segment);
   if (tool) {
     return {
-      title: tool.title,
+      title: { absolute: tool.title },
       description: tool.description,
       alternates: { canonical: `/${tool.dir}/` },
     };
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }) {
   const legal = LEGAL_BY_FILE[segment];
   if (legal) {
     return {
-      title: legal.title,
+      title: { absolute: legal.title },
       description: legal.description,
       alternates: { canonical: `/${legal.file}` },
     };
@@ -71,18 +71,12 @@ function ToolPageView({ tool }) {
           </ol>
         </nav>
         <div className="mt-6 max-w-3xl animate-rise-in">
-          <p className="font-display text-4xl font-semibold tracking-tight text-ink-950 dark:text-white sm:text-5xl">EverQR</p>
+          <p className="font-display text-4xl font-semibold tracking-tight text-ink-950 dark:text-white sm:text-5xl">GenerateQRFast</p>
           <h1 className="mt-3 text-2xl font-semibold tracking-tight text-ink-800 dark:text-ink-100 sm:text-3xl">{tool.h1}</h1>
           <p className="mt-3 max-w-2xl text-base text-ink-600 dark:text-ink-300 sm:text-lg">{tool.intro}</p>
-          <div className="trust-row mt-5">
-            <span>Free</span>
-            <span>Private</span>
-            <span>No watermark</span>
-            <span>No signup</span>
-          </div>
           {blog ? (
-            <p className="mt-4 text-sm text-ink-600">
-              <Link className="font-semibold text-brand-800 underline hover:text-brand-700" href={`/blogs/${blog.slug}/`}>
+            <p className="mt-4 text-sm text-ink-600 dark:text-ink-300">
+              <Link className="font-semibold text-brand-800 underline hover:text-brand-700 dark:text-brand-300 dark:hover:text-brand-200" href={`/blogs/${blog.slug}/`}>
                 Read the blog: {blog.heading}
               </Link>
             </p>
@@ -95,7 +89,7 @@ function ToolPageView({ tool }) {
       <section className="site-container grid gap-10 py-12 lg:grid-cols-2">
         <div className="panel p-6">
           <h2 className="section-title">How to use</h2>
-          <ol className="mt-4 list-decimal space-y-2 pl-5 text-ink-700">
+          <ol className="mt-4 list-decimal space-y-2 pl-5 text-ink-700 dark:text-ink-300">
             {tool.instructions.map((step) => (
               <li key={step}>{step}</li>
             ))}
@@ -124,7 +118,7 @@ function ToolPageView({ tool }) {
           <FaqList items={tool.faqs} />
         </div>
         <div className="mt-10">
-          <h2 className="text-lg font-semibold text-ink-950">Related tools</h2>
+          <h2 className="text-lg font-semibold text-ink-950 dark:text-white">Related tools</h2>
           <div className="mt-4">
             <ToolGrid />
           </div>
@@ -138,9 +132,11 @@ function LegalPageView({ page }) {
   return (
     <div className="site-container py-10 sm:py-14">
       <article className="mx-auto max-w-3xl">
-        <h1 className="font-display text-3xl font-semibold tracking-tight text-ink-950 sm:text-4xl">{page.heading}</h1>
+        <h1 className="font-display text-3xl font-semibold tracking-tight text-ink-950 dark:text-white sm:text-4xl">
+          {page.heading}
+        </h1>
         <div
-          className="prose-ever mt-6 space-y-4 leading-relaxed text-ink-700 [&_a]:text-brand-800 [&_a]:underline [&_strong]:text-ink-950"
+          className="prose-ever mt-6 space-y-4 leading-relaxed text-ink-700 dark:text-ink-300 [&_a]:text-brand-800 [&_a]:underline dark:[&_a]:text-brand-300 [&_strong]:text-ink-950 dark:[&_strong]:text-white"
           dangerouslySetInnerHTML={{ __html: page.content }}
         />
       </article>

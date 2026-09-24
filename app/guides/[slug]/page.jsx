@@ -10,7 +10,7 @@ export async function generateMetadata({ params }) {
   const guide = GUIDES.find((g) => g.dir === slug);
   if (!guide) return {};
   return {
-    title: guide.title,
+    title: { absolute: guide.title },
     description: guide.description,
     alternates: { canonical: `/guides/${guide.dir}/` },
   };

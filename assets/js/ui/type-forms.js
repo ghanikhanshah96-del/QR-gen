@@ -461,7 +461,7 @@ export function renderTypeFields(container, type, fields, onPatch) {
         status.className = 'field-hint';
         status.textContent = `Uploaded to ${hosted.provider}. Link expires in ~${formatExpiry(
           hosted.expiresInSeconds
-        )}. QR encodes this public URL (not stored on EverQR).`;
+        )}. QR encodes this public URL (not stored on GenerateQRFast).`;
       } catch (err) {
         status.className = 'field-error';
         status.textContent = err.message || 'Upload failed.';
@@ -561,7 +561,7 @@ export function renderTypeFields(container, type, fields, onPatch) {
         status.className = 'field-hint';
         status.textContent = `Uploaded to ${hosted.provider}. Link expires in ~${formatExpiry(
           hosted.expiresInSeconds
-        )}. QR encodes this public URL (not stored on EverQR).`;
+        )}. QR encodes this public URL (not stored on GenerateQRFast).`;
       } catch (err) {
         status.className = 'field-error';
         status.textContent = err.message || 'Upload failed.';

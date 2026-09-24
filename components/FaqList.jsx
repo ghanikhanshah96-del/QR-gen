@@ -15,19 +15,23 @@ export default function FaqList({ items = [] }) {
             <h3>
               <button
                 type="button"
-                className="flex w-full items-center justify-between gap-4 px-4 py-3 text-left text-sm font-semibold text-ink-900"
+                className="flex w-full items-center justify-between gap-4 px-4 py-3 text-left text-sm font-semibold text-ink-900 dark:text-white"
                 aria-expanded={open}
                 aria-controls={id}
                 onClick={() => setOpenId(open ? null : id)}
               >
                 <span>{item.q}</span>
-                <span aria-hidden="true" className="text-ink-400">
+                <span aria-hidden="true" className="text-ink-400 dark:text-ink-400">
                   {open ? '−' : '+'}
                 </span>
               </button>
             </h3>
             {open ? (
-              <div id={id} className="border-t border-ink-100 px-4 py-3 text-sm leading-relaxed text-ink-600">
+              <div
+                id={id}
+                className="border-t px-4 py-3 text-sm leading-relaxed text-ink-600 dark:border-ink-700 dark:text-ink-300"
+                style={{ borderColor: 'var(--border)' }}
+              >
                 {item.a}
               </div>
             ) : null}

@@ -47,7 +47,7 @@ export const metadata = {
 const themeInitScript = `
 (function () {
   try {
-    var key = 'everqr.theme';
+    var key = 'generateqrfast.theme';
     var stored = localStorage.getItem(key);
     var theme = stored === 'dark' || stored === 'light'
       ? stored
@@ -65,9 +65,9 @@ export default function RootLayout({ children }) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
-      <body>
+      <body className="flex min-h-screen flex-col">
         <SiteHeader />
-        <main>{children}</main>
+        <main className="flex-1">{children}</main>
         <SiteFooter />
       </body>
     </html>

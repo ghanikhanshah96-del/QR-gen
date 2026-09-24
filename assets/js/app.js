@@ -60,7 +60,7 @@ export function bootGenerator(options = {}) {
       setText(statusEl, snap.status.error || 'Fix the highlighted fields.');
       statusEl.className = 'text-sm font-medium text-red-600';
     } else {
-      setText(statusEl, 'Ready — encoded in your browser. No watermark.');
+      setText(statusEl, 'Ready — encoded in your browser.');
       statusEl.className = 'text-sm font-semibold text-brand-700';
     }
     if (warningEl) {

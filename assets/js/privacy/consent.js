@@ -8,9 +8,9 @@ export function getConsent() {
 
 export function setConsent(value) {
   lsSet(STORAGE_KEYS.consent, value);
-  window.__everqrAnalyticsEnabled = value === 'granted';
+  window.__generateqrfastAnalyticsEnabled = value === 'granted';
 }
 
 export function initConsent() {
-  window.__everqrAnalyticsEnabled = getConsent() === 'granted';
+  window.__generateqrfastAnalyticsEnabled = getConsent() === 'granted';
 }

@@ -1,6 +1,6 @@
 /** Analytics stub — never sends QR payload content. */
 export function trackEvent(name, props = {}) {
-  if (!window.__everqrAnalyticsEnabled) return;
+  if (!window.__generateqrfastAnalyticsEnabled) return;
   const safe = { ...props };
   delete safe.payload;
   delete safe.fields;

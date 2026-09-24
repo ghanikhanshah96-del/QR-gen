@@ -14,7 +14,7 @@ export function createQrRenderer(container) {
     if (!QRCodeStyling || !container) return { ok: false, error: 'QR library not loaded.' };
 
     const payload = state.status?.valid ? state.payload : '';
-    const effectivePayload = payload || 'https://everqr.app';
+    const effectivePayload = payload || 'https://generateqrfast.com';
     const { options, warnings } = buildStylingOptions({
       payload: effectivePayload,
       design: state.design,

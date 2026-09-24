@@ -1,4 +1,4 @@
-# EverQR
+# GenerateQRFast
 
 Free, permanent, private, unlimited static QR code generator — **no signup, no expiration, no watermark**.
 
@@ -38,7 +38,7 @@ Generators under `lib/generators/` only build payloads. Rendering and export sta
 
 ## Privacy
 
-Static QR content is processed in the browser. EverQR does not need your Wi‑Fi passwords, messages, or logos on a server to generate downloads.
+Static QR content is processed in the browser. GenerateQRFast does not need your Wi‑Fi passwords, messages, or logos on a server to generate downloads.
 
 > Static QR codes generated here do not expire and do not depend on our servers. The encoded destination or information must remain valid for the QR code to remain useful.
 

@@ -61,7 +61,7 @@ export default function BlogIndexClient() {
       <div className="blog-index-header animate-rise-in">
         <div>
           <h1 className="font-display text-3xl font-semibold tracking-tight text-ink-950 dark:text-white sm:text-4xl">
-            EverQR Blog
+            GenerateQRFast Blog
           </h1>
           <p className="mt-2 text-base text-ink-600 dark:text-ink-300 sm:text-lg">Learn more about QR codes</p>
         </div>

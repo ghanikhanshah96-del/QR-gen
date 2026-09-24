@@ -123,13 +123,13 @@ function EditorControls() {
               <label className="field-label" htmlFor="design-foreground">
                 Foreground
               </label>
-              <input id="design-foreground" className="field-input h-12 p-1" type="color" defaultValue="#111827" />
+              <input id="design-foreground" className="color-input" type="color" defaultValue="#111827" />
             </div>
             <div>
               <label className="field-label" htmlFor="design-background">
                 Background
               </label>
-              <input id="design-background" className="field-input h-12 p-1" type="color" defaultValue="#ffffff" />
+              <input id="design-background" className="color-input" type="color" defaultValue="#ffffff" />
             </div>
           </div>
           <div className="flex flex-col gap-3">
@@ -145,7 +145,7 @@ function EditorControls() {
               <label className="field-label" htmlFor="design-gradient-color">
                 Gradient end color
               </label>
-              <input id="design-gradient-color" className="field-input h-12 p-1" type="color" defaultValue="#1fa392" />
+              <input id="design-gradient-color" className="color-input" type="color" defaultValue="#1fa392" />
             </div>
           </div>
         </div>
@@ -231,7 +231,6 @@ function PreviewPanel() {
               <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-brand-200">Live preview</p>
               <p className="mt-1 text-sm text-white/70">Updates as you type</p>
             </div>
-            <span className="rounded-full bg-white/10 px-3 py-1 text-[11px] font-semibold text-brand-100">No watermark</span>
           </div>
         </div>
         <div className="space-y-5 p-5 sm:p-6">
@@ -254,15 +253,6 @@ function PreviewPanel() {
               <button type="button" id="download-jpg" className="btn-secondary">
                 JPG
               </button>
-            </div>
-            <div className="flex flex-wrap gap-2 pt-1">
-              <button type="button" id="export-project" className="btn-ghost text-xs">
-                Export JSON
-              </button>
-              <label className="btn-ghost cursor-pointer text-xs">
-                Import
-                <input id="import-project" type="file" accept="application/json,.json,.everqr.json" className="sr-only" />
-              </label>
             </div>
             <p className="text-xs text-ink-500 dark:text-ink-400">Created on your device. Forever yours — no account needed.</p>
           </div>

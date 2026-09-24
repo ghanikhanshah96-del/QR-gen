@@ -3,9 +3,9 @@ import ToolGrid from '@/components/ToolGrid';
 import { SITE } from '@/lib/config';
 
 export const metadata = {
-  title: `${SITE.name} — Free Permanent Private Unlimited QR Code Generator`,
+  title: { absolute: `Free QR Code Generator Online | ${SITE.name}` },
   description:
-    'Free, permanent, private, unlimited QR code generator. No signup, no expiration, no watermark. Create static QR codes in your browser.',
+    'Create free QR codes for URLs, WiFi, text, WhatsApp, contacts, email, SMS, locations, images, videos and more. No signup, no watermark.',
   alternates: { canonical: '/' },
 };
 
@@ -15,10 +15,10 @@ export default function HomePage() {
       <section className="hero-shell site-container pt-10 sm:pt-16">
         <div className="max-w-3xl animate-rise-in">
           <p className="pill">Browser-side · Watermark-free</p>
-          <h1 className="hero-brand mt-5">EverQR</h1>
-          <p className="mt-5 max-w-xl text-xl font-medium tracking-tight text-ink-800 dark:text-ink-100 sm:text-2xl">
-            Free. Permanent. Private. Unlimited.
-          </p>
+          <p className="hero-brand mt-5">GenerateQRFast</p>
+          <h1 className="mt-3 text-2xl font-semibold tracking-tight text-ink-800 dark:text-ink-100 sm:text-3xl">
+            Free QR Code Generator Online
+          </h1>
           <p className="mt-4 max-w-xl text-base leading-relaxed text-ink-600 dark:text-ink-300 sm:text-lg">
             Create beautiful static QR codes in your browser — no signup, no watermark, nothing stored on our servers.
           </p>
@@ -29,12 +29,6 @@ export default function HomePage() {
             <a href="/blogs/" className="btn-secondary">
               Read the blog
             </a>
-          </div>
-          <div className="trust-row mt-7">
-            <span>No signup</span>
-            <span>No expiration</span>
-            <span>No watermark</span>
-            <span>Unlimited</span>
           </div>
         </div>
       </section>

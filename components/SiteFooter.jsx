@@ -4,17 +4,17 @@ export default function SiteFooter() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-24 border-t border-ink-200/70 bg-ink-950 text-ink-200">
-      <div className="site-container grid gap-10 py-14 md:grid-cols-4">
-        <div className="space-y-4 md:col-span-1">
-          <p className="font-display text-2xl font-semibold text-white">EverQR</p>
+    <footer className="mt-12 border-t border-ink-200/70 bg-ink-950 text-ink-200 dark:border-ink-800 sm:mt-16">
+      <div className="site-container grid gap-8 py-10 md:grid-cols-4 md:gap-8 md:py-12">
+        <div className="space-y-3 md:col-span-1">
+          <p className="font-display text-2xl font-semibold text-white">GenerateQRFast</p>
           <p className="text-sm leading-relaxed text-ink-300">
-            Free, permanent, private, unlimited static QR codes. No signup. No watermark. Generated in your browser.
+            Free, permanent, private, unlimited static QR codes. Generated in your browser.
           </p>
         </div>
         <div>
           <p className="text-sm font-semibold text-white">Tools</p>
-          <ul className="mt-4 space-y-2 text-sm text-ink-300">
+          <ul className="mt-3 space-y-1.5 text-sm text-ink-300">
             <li>
               <Link className="hover:text-brand-300" href="/url-qr-code/">
                 URL QR
@@ -64,7 +64,7 @@ export default function SiteFooter() {
         </div>
         <div>
           <p className="text-sm font-semibold text-white">Learn</p>
-          <ul className="mt-4 space-y-2 text-sm text-ink-300">
+          <ul className="mt-3 space-y-1.5 text-sm text-ink-300">
             <li>
               <Link className="hover:text-brand-300" href="/guides/what-is-a-qr-code/">
                 What is a QR code?
@@ -99,7 +99,7 @@ export default function SiteFooter() {
         </div>
         <div>
           <p className="text-sm font-semibold text-white">Company</p>
-          <ul className="mt-4 space-y-2 text-sm text-ink-300">
+          <ul className="mt-3 space-y-1.5 text-sm text-ink-300">
             <li>
               <Link className="hover:text-brand-300" href="/about.html/">
                 About
@@ -129,9 +129,8 @@ export default function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="site-container flex flex-col gap-2 py-6 text-xs text-ink-400 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {year} EverQR. Static QR codes do not expire and do not depend on our servers.</p>
-          <p className="text-brand-300">No signup · No watermark · Unlimited</p>
+        <div className="site-container flex flex-col gap-1 py-4 text-xs text-ink-400 sm:flex-row sm:items-center sm:justify-between sm:py-5">
+          <p>© {year} GenerateQRFast. Static QR codes do not expire and do not depend on our servers.</p>
         </div>
       </div>
     </footer>

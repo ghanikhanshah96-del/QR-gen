@@ -2,8 +2,9 @@ import Link from 'next/link';
 import { GUIDES } from '@/content/guides';
 
 export const metadata = {
-  title: 'QR Code Guides | EverQR',
-  description: 'Practical guides on QR codes, printing, security, and business use cases.',
+  title: { absolute: 'QR Code Guides | GenerateQRFast' },
+  description:
+    'Practical GenerateQRFast guides on QR codes, printing, security, Wi‑Fi, Google reviews, and business use cases.',
   alternates: { canonical: '/guides/' },
 };
 

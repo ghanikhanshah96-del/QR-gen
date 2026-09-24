@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Page not found | EverQR',
+  title: 'Page not found | GenerateQRFast',
   description: 'The page you requested could not be found.',
 };
 

@@ -1,136 +1,114 @@
 import Link from 'next/link';
 
+const TOOL_LINKS = [
+  { href: '/url-qr-code/', label: 'URL' },
+  { href: '/wifi-qr-code/', label: 'WiFi' },
+  { href: '/whatsapp-qr-code/', label: 'WhatsApp' },
+  { href: '/google-review-qr-code/', label: 'Google Review' },
+  { href: '/vcard-qr-code/', label: 'vCard' },
+  { href: '/email-qr-code/', label: 'Email' },
+  { href: '/image-to-qr-code/', label: 'Image' },
+  { href: '/video-to-qr-code/', label: 'Video' },
+  { href: '/file-qr-code/', label: 'File' },
+];
+
+const LEARN_LINKS = [
+  { href: '/guides/what-is-a-qr-code/', label: 'What is a QR code?' },
+  { href: '/guides/static-vs-dynamic-qr-codes/', label: 'Static vs dynamic' },
+  { href: '/guides/do-qr-codes-expire/', label: 'Do QR codes expire?' },
+  { href: '/guides/qr-code-security/', label: 'QR security' },
+  { href: '/blogs/', label: 'Blog' },
+  { href: '/faq.html/', label: 'FAQ' },
+];
+
+const COMPANY_LINKS = [
+  { href: '/about.html/', label: 'About' },
+  { href: '/privacy-policy.html/', label: 'Privacy' },
+  { href: '/terms.html/', label: 'Terms' },
+  { href: '/accessibility.html/', label: 'Accessibility' },
+  { href: '/contact.html/', label: 'Contact' },
+];
+
+function FooterLink({ href, children }) {
+  return (
+    <Link
+      href={href}
+      className="text-sm text-ink-600 transition duration-200 hover:text-brand-700 dark:text-ink-300 dark:hover:text-brand-300"
+    >
+      {children}
+    </Link>
+  );
+}
+
 export default function SiteFooter() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-12 border-t border-ink-200/70 bg-ink-950 text-ink-200 dark:border-ink-800 sm:mt-16">
-      <div className="site-container grid gap-8 py-10 md:grid-cols-4 md:gap-8 md:py-12">
-        <div className="space-y-3 md:col-span-1">
-          <p className="font-display text-2xl font-semibold text-white">GenerateQRFast</p>
-          <p className="text-sm leading-relaxed text-ink-300">
-            Free, permanent, private, unlimited static QR codes. Generated in your browser.
-          </p>
-        </div>
-        <div>
-          <p className="text-sm font-semibold text-white">Tools</p>
-          <ul className="mt-3 space-y-1.5 text-sm text-ink-300">
-            <li>
-              <Link className="hover:text-brand-300" href="/url-qr-code/">
-                URL QR
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-brand-300" href="/wifi-qr-code/">
-                WiFi QR
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-brand-300" href="/vcard-qr-code/">
-                vCard QR
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-brand-300" href="/whatsapp-qr-code/">
-                WhatsApp QR
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-brand-300" href="/google-review-qr-code/">
-                Google Review QR
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-brand-300" href="/phone-number-qr-code/">
-                Phone Number QR
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-brand-300" href="/image-to-qr-code/">
-                Image to QR
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-brand-300" href="/video-to-qr-code/">
-                Video to QR
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-brand-300" href="/file-qr-code/">
-                File QR
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <p className="text-sm font-semibold text-white">Learn</p>
-          <ul className="mt-3 space-y-1.5 text-sm text-ink-300">
-            <li>
-              <Link className="hover:text-brand-300" href="/guides/what-is-a-qr-code/">
-                What is a QR code?
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-brand-300" href="/guides/static-vs-dynamic-qr-codes/">
-                Static vs dynamic
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-brand-300" href="/guides/do-qr-codes-expire/">
-                Do QR codes expire?
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-brand-300" href="/guides/qr-code-security/">
-                QR security
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-brand-300" href="/blogs/">
-                Blog
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-brand-300" href="/faq.html/">
-                FAQ
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <p className="text-sm font-semibold text-white">Company</p>
-          <ul className="mt-3 space-y-1.5 text-sm text-ink-300">
-            <li>
-              <Link className="hover:text-brand-300" href="/about.html/">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-brand-300" href="/privacy-policy.html/">
-                Privacy
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-brand-300" href="/terms.html/">
-                Terms
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-brand-300" href="/accessibility.html/">
-                Accessibility
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-brand-300" href="/contact.html/">
-                Contact
-              </Link>
-            </li>
-          </ul>
+    <footer className="mt-10 border-t sm:mt-14" style={{ borderColor: 'var(--border)', background: 'var(--surface-strong)' }}>
+      <div className="site-container py-10 sm:py-12">
+        <div className="grid gap-10 lg:grid-cols-[1.2fr_repeat(3,minmax(0,0.7fr))] lg:gap-8">
+          <div className="max-w-sm space-y-4">
+            <Link href="/" className="inline-flex items-center gap-2.5" aria-label="GenerateQRFast home">
+              <span
+                className="inline-flex size-9 items-center justify-center rounded-lg bg-brand-600 text-white"
+                aria-hidden="true"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M4 4h6v6H4V4zm10 0h6v6h-6V4zM4 14h6v6H4v-6zm10 2h2v2h-2v-2zm4-2h2v6h-6v-2h4v-4zM14 14h2v2h-2v-2z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <span className="text-lg font-bold tracking-tight text-ink-950 dark:text-white">GenerateQRFast</span>
+            </Link>
+            <p className="text-sm leading-relaxed text-ink-600 dark:text-ink-300">
+              Free static QR codes generated in your browser. Private, permanent, and ready to download.
+            </p>
+            <Link href="/#generator-app" className="btn-primary inline-flex text-sm">
+              Create a QR code
+            </Link>
+          </div>
+
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-500 dark:text-ink-400">Tools</p>
+            <ul className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2.5 sm:grid-cols-1">
+              {TOOL_LINKS.map((item) => (
+                <li key={item.href}>
+                  <FooterLink href={item.href}>{item.label}</FooterLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-500 dark:text-ink-400">Learn</p>
+            <ul className="mt-4 space-y-2.5">
+              {LEARN_LINKS.map((item) => (
+                <li key={item.href}>
+                  <FooterLink href={item.href}>{item.label}</FooterLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-500 dark:text-ink-400">Company</p>
+            <ul className="mt-4 space-y-2.5">
+              {COMPANY_LINKS.map((item) => (
+                <li key={item.href}>
+                  <FooterLink href={item.href}>{item.label}</FooterLink>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
-      <div className="border-t border-white/10">
-        <div className="site-container flex flex-col gap-1 py-4 text-xs text-ink-400 sm:flex-row sm:items-center sm:justify-between sm:py-5">
-          <p>© {year} GenerateQRFast. Static QR codes do not expire and do not depend on our servers.</p>
+
+      <div className="border-t" style={{ borderColor: 'var(--border)', background: 'var(--surface-soft)' }}>
+        <div className="site-container flex flex-col gap-2 py-4 text-xs text-ink-500 dark:text-ink-400 sm:flex-row sm:items-center sm:justify-between">
+          <p>© {year} GenerateQRFast</p>
+          <p>Static QR codes do not expire and do not depend on our servers.</p>
         </div>
       </div>
     </footer>

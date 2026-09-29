@@ -46,7 +46,7 @@ export const IDB = {
 export const LIMITS = {
   maxLogoBytes: 2 * 1024 * 1024,
   maxProjectBytes: 5 * 1024 * 1024,
-  maxTextLength: 2000,
+  maxTextLength: 1000,
   maxWifiPassword: 63,
   maxWifiSsid: 32,
   minQrSize: 128,

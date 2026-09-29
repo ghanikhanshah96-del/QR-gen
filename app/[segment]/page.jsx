@@ -71,9 +71,8 @@ function ToolPageView({ tool }) {
           </ol>
         </nav>
         <div className="mt-6 max-w-3xl animate-rise-in">
-          <p className="font-display text-4xl font-semibold tracking-tight text-ink-950 dark:text-white sm:text-5xl">GenerateQRFast</p>
-          <h1 className="mt-3 text-2xl font-semibold tracking-tight text-ink-800 dark:text-ink-100 sm:text-3xl">{tool.h1}</h1>
-          <p className="mt-3 max-w-2xl text-base text-ink-600 dark:text-ink-300 sm:text-lg">{tool.intro}</p>
+          <h1 className="text-2xl font-bold tracking-tight text-ink-950 dark:text-white sm:text-3xl">{tool.h1}</h1>
+          <p className="mt-2 max-w-2xl text-sm text-ink-600 dark:text-ink-300 sm:text-base">{tool.intro}</p>
           {blog ? (
             <p className="mt-4 text-sm text-ink-600 dark:text-ink-300">
               <Link className="font-semibold text-brand-800 underline hover:text-brand-700 dark:text-brand-300 dark:hover:text-brand-200" href={`/blogs/${blog.slug}/`}>

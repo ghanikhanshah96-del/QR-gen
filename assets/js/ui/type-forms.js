@@ -1,4 +1,5 @@
 import { setText } from '../utils/escape.js';
+import { LIMITS } from '../config.js';
 import {
   validateMediaFile,
   uploadMediaForQr,
@@ -37,6 +38,7 @@ function input(opts) {
   if (opts.placeholder) el.placeholder = opts.placeholder;
   if (opts.autocomplete) el.autocomplete = opts.autocomplete;
   if (opts.inputmode) el.inputMode = opts.inputmode;
+  if (opts.maxLength != null) el.maxLength = opts.maxLength;
   if (opts.value != null) el.value = opts.value;
   if (opts.multiline) el.classList.add('min-h-[96px]', 'py-3');
   el.addEventListener('input', () => opts.onInput?.(el.value));
@@ -101,6 +103,7 @@ export function renderTypeFields(container, type, fields, onPatch) {
   }
 
   if (type === 'text') {
+    const max = LIMITS.maxTextLength;
     const w = fieldWrap();
     w.append(
       label('field-text', 'Text'),
@@ -109,8 +112,10 @@ export function renderTypeFields(container, type, fields, onPatch) {
         multiline: true,
         value: f.text || '',
         placeholder: 'Type any message to encode…',
-        onInput: (v) => onPatch({ text: v }),
-      })
+        maxLength: max,
+        onInput: (v) => onPatch({ text: v.slice(0, max) }),
+      }),
+      hint(`Max ${max} characters — longer text makes the QR denser and harder to scan.`)
     );
     add([w]);
     return;

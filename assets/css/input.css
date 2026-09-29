@@ -183,11 +183,11 @@
   }
 
   .sticky-preview {
-    @apply lg:sticky lg:top-24;
+    @apply lg:sticky lg:top-24 lg:self-start;
   }
 
   .hero-brand {
-    @apply font-display text-[clamp(2.75rem,8vw,5.5rem)] font-semibold leading-[0.95] tracking-tight text-ink-950;
+    @apply font-sans text-[clamp(2.25rem,6.5vw,3.75rem)] font-bold leading-none tracking-tight text-ink-950;
   }
 
   .editor-shell {

@@ -1,9 +1,8 @@
 import GeneratorApp from '@/components/GeneratorApp';
 import ToolGrid from '@/components/ToolGrid';
-import { SITE } from '@/lib/config';
 
 export const metadata = {
-  title: { absolute: `Free QR Code Generator Online | ${SITE.name}` },
+  title: { absolute: `Free QR Code Generator Online | GenerateQRFast` },
   description:
     'Create free QR codes for URLs, WiFi, text, WhatsApp, contacts, email, SMS, locations, images, videos and more. No signup, no watermark.',
   alternates: { canonical: '/' },
@@ -12,63 +11,25 @@ export const metadata = {
 export default function HomePage() {
   return (
     <>
-      <section className="hero-shell site-container pt-10 sm:pt-16">
-        <div className="max-w-3xl animate-rise-in">
-          <p className="pill">Browser-side · Watermark-free</p>
-          <p className="hero-brand mt-5">GenerateQRFast</p>
-          <h1 className="mt-3 text-2xl font-semibold tracking-tight text-ink-800 dark:text-ink-100 sm:text-3xl">
-            Free QR Code Generator Online
+      <section className="site-container pt-6 sm:pt-8">
+        <div className="animate-rise-in">
+          <h1 className="text-2xl font-bold tracking-tight text-ink-950 dark:text-white sm:text-3xl">
+            Free QR Code Generator
           </h1>
-          <p className="mt-4 max-w-xl text-base leading-relaxed text-ink-600 dark:text-ink-300 sm:text-lg">
-            Create beautiful static QR codes in your browser — no signup, no watermark, nothing stored on our servers.
+          <p className="mt-1.5 max-w-2xl text-sm text-ink-600 dark:text-ink-300 sm:text-base">
+            Create static QR codes in your browser — free, private, no watermark.
           </p>
-          <div className="mt-7 flex flex-wrap items-center gap-3">
-            <a href="#generator-app" className="btn-primary">
-              Start creating
-            </a>
-            <a href="/blogs/" className="btn-secondary">
-              Read the blog
-            </a>
-          </div>
         </div>
       </section>
 
       <GeneratorApp key="home" initialType="url" lockType={false} showTypeSelect />
 
-      <section className="site-container py-6">
-        <div className="grid gap-4 md:grid-cols-3">
-          <article className="feature-card animate-rise-in stagger-1">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-brand-700 dark:text-brand-300">Private</p>
-            <h3 className="mt-2 font-semibold text-ink-950 dark:text-white">Processed on your device</h3>
-            <p className="mt-2 text-sm leading-relaxed text-ink-600 dark:text-ink-300">
-              Wi‑Fi passwords, contacts, and messages stay in the browser for generation.
-            </p>
-          </article>
-          <article className="feature-card animate-rise-in stagger-2">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-brand-700 dark:text-brand-300">Permanent</p>
-            <h3 className="mt-2 font-semibold text-ink-950 dark:text-white">No server dependency</h3>
-            <p className="mt-2 text-sm leading-relaxed text-ink-600 dark:text-ink-300">
-              Static codes don’t expire because of us. Destinations must remain valid.
-            </p>
-          </article>
-          <article className="feature-card animate-rise-in stagger-3">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-brand-700 dark:text-brand-300">Print-ready</p>
-            <h3 className="mt-2 font-semibold text-ink-950 dark:text-white">PNG, SVG, or JPG</h3>
-            <p className="mt-2 text-sm leading-relaxed text-ink-600 dark:text-ink-300">
-              Download high-quality files with your colors and logo — never a watermark.
-            </p>
-          </article>
+      <section className="site-container border-t py-10 sm:py-12" style={{ borderColor: 'var(--border)' }}>
+        <div className="animate-rise-in">
+          <h2 className="text-lg font-semibold tracking-tight text-ink-950 dark:text-white">More QR tools</h2>
+          <p className="muted mt-1 text-sm">URL, WiFi, WhatsApp, vCard, image, video, and more.</p>
         </div>
-      </section>
-
-      <section className="site-container py-14">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-          <div className="animate-rise-in">
-            <h2 className="section-title">All QR tools</h2>
-            <p className="muted mt-2">Every tool encodes information directly in the QR whenever possible.</p>
-          </div>
-        </div>
-        <div className="mt-8 animate-rise-in stagger-2">
+        <div className="mt-6 animate-rise-in stagger-1">
           <ToolGrid />
         </div>
       </section>

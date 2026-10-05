@@ -8,6 +8,7 @@ export function createQrRenderer(container) {
   let instance = null;
   let lastPayload = '';
   let lastDesignKey = '';
+  let lastHadLogo = false;
 
   const renderNow = (state) => {
     const QRCodeStyling = getQrCodeStyling();
@@ -29,7 +30,11 @@ export function createQrRenderer(container) {
       return { ok: true, warnings, instance };
     }
 
-    if (!instance) {
+    const hasLogo = Boolean(options.image);
+    // Recreate when a logo is removed — library merge alone can leave a stale image.
+    const mustRecreate = !instance || (lastHadLogo && !hasLogo);
+
+    if (mustRecreate) {
       instance = new QRCodeStyling(options);
       container.replaceChildren();
       instance.append(container);
@@ -39,6 +44,7 @@ export function createQrRenderer(container) {
 
     lastPayload = effectivePayload;
     lastDesignKey = designKey;
+    lastHadLogo = hasLogo;
     return { ok: true, warnings, instance };
   };
 
@@ -52,6 +58,9 @@ export function createQrRenderer(container) {
     },
     destroy() {
       instance = null;
+      lastPayload = '';
+      lastDesignKey = '';
+      lastHadLogo = false;
       container?.replaceChildren();
     },
   };

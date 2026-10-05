@@ -1,6 +1,12 @@
 import { setText } from '../utils/escape.js';
 import { LIMITS } from '../config.js';
 import {
+  COUNTRIES,
+  DEFAULT_COUNTRY,
+  flagEmoji,
+  getSortedCountries,
+} from '../data/countries.js';
+import {
   validateMediaFile,
   uploadMediaForQr,
   formatExpiry,
@@ -171,33 +177,59 @@ export function renderTypeFields(container, type, fields, onPatch) {
   }
 
   if (type === 'whatsapp') {
+    const countries = getSortedCountries();
+    const selectedIso = f.countryIso || DEFAULT_COUNTRY.iso2;
+    const selected =
+      COUNTRIES.find((c) => c.iso2 === selectedIso) ||
+      COUNTRIES.find((c) => c.dial === String(f.countryCode || '').replace(/\D/g, '')) ||
+      DEFAULT_COUNTRY;
+
     const row = document.createElement('div');
-    row.className = 'grid grid-cols-3 gap-3';
+    row.className = 'grid gap-3 sm:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]';
+
     const code = fieldWrap();
-    code.classList.add('col-span-1');
+    const dialHint = hint(`${flagEmoji(selected.iso2)} Dialing code +${selected.dial}`);
     code.append(
       label('field-cc', 'Country'),
-      input({
+      select({
         id: 'field-cc',
-        value: f.countryCode || '1',
-        placeholder: '1',
-        inputmode: 'numeric',
-        onInput: (v) => onPatch({ countryCode: v }),
-      })
+        value: selected.iso2,
+        options: countries.map((c) => ({
+          id: c.iso2,
+          label: `${flagEmoji(c.iso2)} ${c.name} (+${c.dial})`,
+        })),
+        onInput: (iso) => {
+          const c = COUNTRIES.find((x) => x.iso2 === iso) || DEFAULT_COUNTRY;
+          setText(dialHint, `${flagEmoji(c.iso2)} Dialing code +${c.dial}`);
+          onPatch({ countryIso: c.iso2, countryCode: c.dial });
+        },
+      }),
+      dialHint
     );
+
     const phone = fieldWrap();
-    phone.classList.add('col-span-2');
     phone.append(
       label('field-phone', 'Phone number'),
       input({
         id: 'field-phone',
+        type: 'tel',
         value: f.phone || '',
         placeholder: '5551234567',
-        inputmode: 'tel',
-        onInput: (v) => onPatch({ phone: v }),
-      })
+        inputmode: 'numeric',
+        autocomplete: 'tel-national',
+        maxLength: 15,
+        onInput: (v) => {
+          const digits = String(v).replace(/\D/g, '').slice(0, 15);
+          const el = document.getElementById('field-phone');
+          if (el && el.value !== digits) el.value = digits;
+          onPatch({ phone: digits });
+        },
+      }),
+      hint('Numbers only without country code or leading 0.')
     );
+
     row.append(code, phone);
+
     const msg = fieldWrap();
     msg.append(
       label('field-message', 'Prefill message (optional)'),
@@ -206,8 +238,11 @@ export function renderTypeFields(container, type, fields, onPatch) {
         multiline: true,
         rows: 3,
         value: f.message || '',
-        onInput: (v) => onPatch({ message: v }),
-      })
+        maxLength: 500,
+        placeholder: 'Hi! I scanned your QR code…',
+        onInput: (v) => onPatch({ message: String(v).slice(0, 500) }),
+      }),
+      hint('Optional message that opens ready to send in WhatsApp.')
     );
     add([row, msg]);
     return;

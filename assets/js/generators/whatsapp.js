@@ -1,8 +1,9 @@
 import { combineCountryPhone } from '../validation/phone.js';
 import { sanitizeText } from '../validation/sanitize.js';
+import { DEFAULT_COUNTRY } from '../data/countries.js';
 
 export function buildWhatsappPayload(fields) {
-  const phone = combineCountryPhone(fields.countryCode, fields.phone);
+  const phone = combineCountryPhone(fields.countryCode || DEFAULT_COUNTRY.dial, fields.phone);
   if (!phone.ok) {
     return {
       ok: false,

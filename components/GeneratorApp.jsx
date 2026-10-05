@@ -69,7 +69,7 @@ export default function GeneratorApp({ initialType = 'url', lockType = false, sh
               <h2 className="text-base font-semibold tracking-tight text-ink-950 dark:text-white sm:text-lg">
                 Design
               </h2>
-              <p className="mt-1 text-sm text-ink-500 dark:text-ink-400">Optional — customize colors, logo, and size.</p>
+              <p className="mt-1 text-sm text-ink-500 dark:text-ink-400">Optional customize colors, logo, and size.</p>
               <div className="mt-4">
                 <EditorControls />
               </div>

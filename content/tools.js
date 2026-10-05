@@ -459,7 +459,7 @@ export const TOOLS = [
     description:
       'Turn an image or photo into a QR code. Add your image, generate the code, test it, and download it for sharing.',
     intro:
-      'Convert an image to a QR code for free. Upload a photo for a temporary public link, or paste a lasting image URL — GenerateQRFast encodes that https link in the QR, not the image bytes.',
+      'Convert an image to a QR code for free. Upload a photo for a temporary public link, or paste a lasting image URL GenerateQRFast encodes that https link in the QR, not the image bytes.',
     instructions: [
       'Upload an image (PNG, JPG, WebP, GIF, SVG) or paste a public https URL.',
       'Confirm the public image link appears in the form.',

@@ -26,15 +26,15 @@ export default function FaqList({ items = [] }) {
                 </span>
               </button>
             </h3>
-            {open ? (
-              <div
-                id={id}
-                className="border-t px-4 py-3 text-sm leading-relaxed text-ink-600 dark:border-ink-700 dark:text-ink-300"
-                style={{ borderColor: 'var(--border)' }}
-              >
-                {item.a}
-              </div>
-            ) : null}
+            {/* Always rendered (hidden when closed) so answers are in the static HTML for SEO. */}
+            <div
+              id={id}
+              hidden={!open}
+              className="border-t px-4 py-3 text-sm leading-relaxed text-ink-600 dark:border-ink-700 dark:text-ink-300"
+              style={{ borderColor: 'var(--border)' }}
+            >
+              {item.a}
+            </div>
           </div>
         );
       })}

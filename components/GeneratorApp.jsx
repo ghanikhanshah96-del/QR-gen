@@ -248,7 +248,9 @@ function PreviewPanel() {
                 JPG
               </button>
             </div>
-            <p className="text-xs text-ink-500 dark:text-ink-400">Generated on your device. No account needed.</p>
+            <p id="qr-device-note" className="text-xs text-ink-500 dark:text-ink-400">
+              Generated on your device. No account needed.
+            </p>
           </div>
           <p id="qr-privacy-note" className="text-center text-xs leading-relaxed text-ink-500 dark:text-ink-400" />
         </div>

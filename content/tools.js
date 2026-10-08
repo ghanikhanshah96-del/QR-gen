@@ -7,7 +7,7 @@ export const TOOLS = [
     description:
       'Create a free QR code from any website URL. Enter your link, generate your QR code, test it, and download it.',
     intro:
-      'Turn any website link into a scannable QR code with our free URL QR Code Generator. Enter the web address you want to share, generate your QR code, and use it on printed or digital materials.',
+      'Turn any website link into a scannable QR code with our free URL QR Code Generator. Enter the web address you want to share, generate your QR code, and use it on printed or digital materials. A URL QR code gives people a quick way to open your website without typing a long address. It can point to a homepage, product page, online form, menu, social profile, booking page, or almost any other public web link.',
     instructions: [
       'Copy the full URL of the page you want to share.',
       'Paste the link into the URL field above.',
@@ -459,7 +459,7 @@ export const TOOLS = [
     description:
       'Turn an image or photo into a QR code. Add your image, generate the code, test it, and download it for sharing.',
     intro:
-      'Convert an image to a QR code for free. Upload a photo for a temporary public link, or paste a lasting image URL GenerateQRFast encodes that https link in the QR, not the image bytes.',
+      'Convert an image to a QR code for free. Upload a photo for a temporary link that expires after 48 hours, or paste your own image URL for a permanent QR code. GenerateQRFast encodes that https link in the QR, not the image bytes.',
     instructions: [
       'Upload an image (PNG, JPG, WebP, GIF, SVG) or paste a public https URL.',
       'Confirm the public image link appears in the form.',
@@ -477,11 +477,11 @@ export const TOOLS = [
       },
       {
         q: 'How does image upload work?',
-        a: 'Your file is sent to a third-party host (tmpfiles.org) to get a public URL. That URL is what goes into the QR. GenerateQRFast does not store your image.',
+        a: 'Your file is sent to a free temporary host (tmpfiles.org) to get a public link, and that link goes into the QR code. GenerateQRFast does not store your image. The uploaded file is deleted after 48 hours.',
       },
       {
         q: 'Does an uploaded image QR expire?',
-        a: 'The QR graphic itself does not expire. Temporary upload links expire after about 48 hours. For print or long-term use, paste a permanent URL from your own CDN, Drive, or website.',
+        a: 'Yes, if you upload. Uploaded images expire after 48 hours, and the QR code stops working after that. For a permanent QR code, paste your own image link (Google Drive, Dropbox, or your website). Then it works as long as that link stays online.',
       },
       {
         q: 'What kind of links work best?',
@@ -497,9 +497,9 @@ export const TOOLS = [
     description:
       'Turn a video or video link into a QR code. Generate, test, download, and share your video QR code free.',
     intro:
-      'Convert a video to a QR code for free. Upload a short video for a temporary public link, or paste YouTube, Vimeo, or Drive — the QR opens that link because video files are too large to embed inside a QR.',
+      'Convert a video to a QR code for free. Upload a short video for a temporary link that expires after 48 hours, or paste YouTube, Vimeo, or Drive for a permanent QR code — the QR opens that link because video files are too large to embed inside a QR.',
     instructions: [
-      'Upload MP4/WebM/MOV (temporary third-party link) or paste YouTube, Vimeo, or Drive.',
+      'Paste a YouTube, Vimeo, or Drive link (permanent), or upload MP4/WebM/MOV (expires after 48 hours).',
       'Confirm the public URL appears in the form.',
       'Customize the design.',
       'Download and share — no watermark.',
@@ -519,7 +519,7 @@ export const TOOLS = [
       },
       {
         q: 'Can I turn an MP4 file into a QR code?',
-        a: 'You can upload an MP4 for a temporary public link, or host it yourself and paste a lasting URL. The QR stores the link, not the whole video.',
+        a: 'You can upload an MP4 for a temporary link that expires after 48 hours, or host it on YouTube, Vimeo, or Drive and paste that link for a permanent QR code. The QR stores the link, not the whole video.',
       },
       {
         q: 'Is the whole video stored inside the QR code?',
@@ -527,7 +527,7 @@ export const TOOLS = [
       },
       {
         q: 'Do you host my video?',
-        a: 'GenerateQRFast has no media backend. Optional uploads go to tmpfiles.org (~48h). For lasting QRs, use YouTube, Vimeo, Drive, or your own host.',
+        a: 'No. Uploads go to a free temporary host (tmpfiles.org) and are deleted after 48 hours, so the QR code stops working after that. For a permanent QR code, use a YouTube, Vimeo, or Drive link.',
       },
       {
         q: 'Does a video QR code expire?',
@@ -543,7 +543,7 @@ export const TOOLS = [
     description:
       'Create a free file QR code for PDF, DOC, TXT, and other documents. Upload or paste a link, generate, test, and download.',
     intro:
-      'Turn a document into a scannable QR code. Upload PDF, Word, text, and similar files (or paste a lasting link). The QR opens the public download link — files are too large to embed inside a QR.',
+      'Turn a document into a scannable QR code. Upload PDF, Word, text, and similar files (or paste a public link). Uploaded files expire after 48 hours; a pasted link is permanent.. The QR opens the public download link — files are too large to embed inside a QR.',
     instructions: [
       'Upload PDF, DOC, DOCX, TXT, CSV, RTF, XLS, PPT (or paste a public https URL).',
       'Confirm the public link appears in the form.',
@@ -569,7 +569,7 @@ export const TOOLS = [
       },
       {
         q: 'Does an uploaded file QR expire?',
-        a: 'The QR image itself does not expire. Temporary upload links last about 48 hours. For print, paste a permanent Drive or website URL.',
+        a: 'Yes, if you upload. Uploaded files expire after 48 hours, and the QR code stops working after that. For a permanent QR code, paste a Google Drive, Dropbox, or website link instead.',
       },
     ],
   },

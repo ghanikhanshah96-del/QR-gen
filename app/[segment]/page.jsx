@@ -2,9 +2,14 @@ import Link from 'next/link';
 import GeneratorApp from '@/components/GeneratorApp';
 import FaqList from '@/components/FaqList';
 import ToolGrid from '@/components/ToolGrid';
+import ToolArticle from '@/components/ToolArticle';
 import { TOOLS, getToolByDir } from '@/content/tools';
 import { LEGAL_PAGES } from '@/content/legal';
 import { getBlogByToolId } from '@/content/blogs';
+import { getArticle } from '@/content/articles';
+
+// Tools whose optional upload uses a temporary host (files expire after 48 hours).
+const UPLOAD_TOOLS = new Set(['image', 'video', 'file']);
 
 const LEGAL_BY_FILE = Object.fromEntries(LEGAL_PAGES.map((p) => [p.file, p]));
 
@@ -55,6 +60,7 @@ export default async function SegmentPage({ params }) {
 
 function ToolPageView({ tool }) {
   const blog = getBlogByToolId(tool.id);
+  const article = getArticle(tool.id);
 
   return (
     <>
@@ -96,11 +102,24 @@ function ToolPageView({ tool }) {
         </div>
         <div className="panel p-6">
           <h2 className="section-title">Privacy</h2>
-          <p className="mt-4 leading-relaxed text-ink-600 dark:text-ink-300">
-            Static QR codes generated here do not expire and do not depend on our servers. The encoded destination or
-            information must remain valid for the QR code to remain useful. Your inputs are processed in the browser for
-            generation.
-          </p>
+          {UPLOAD_TOOLS.has(tool.id) ? (
+            <>
+              <p className="mt-4 rounded-lg border border-amber-300 bg-amber-50 px-4 py-3 text-sm font-medium leading-relaxed text-amber-900 dark:border-amber-700/60 dark:bg-amber-950/40 dark:text-amber-200">
+                Uploaded files expire after 48 hours. After that, the QR code stops working.
+              </p>
+              <p className="mt-4 leading-relaxed text-ink-600 dark:text-ink-300">
+                Uploads go to a free temporary host (tmpfiles.org) so the QR code has a public link. GenerateQRFast does
+                not store your files. For a permanent QR code, paste your own link instead (YouTube, Google Drive,
+                Dropbox, or your website). It keeps working as long as that link stays online.
+              </p>
+            </>
+          ) : (
+            <p className="mt-4 leading-relaxed text-ink-600 dark:text-ink-300">
+              Static QR codes generated here do not expire and do not depend on our servers. The encoded destination or
+              information must remain valid for the QR code to remain useful. Your inputs are processed in the browser
+              for generation.
+            </p>
+          )}
           {blog ? (
             <p className="mt-4">
               <Link className="btn-secondary text-xs" href={`/blogs/${blog.slug}/`}>
@@ -110,6 +129,8 @@ function ToolPageView({ tool }) {
           ) : null}
         </div>
       </section>
+
+      {article ? <ToolArticle sections={article} /> : null}
 
       <section className="site-container pb-16">
         <h2 className="section-title">Frequently asked questions</h2>

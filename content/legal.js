@@ -69,7 +69,7 @@ export const LEGAL_PAGES = [
     title: "Changelog | GenerateQRFast",
     description: "Product changelog for GenerateQRFast.",
     heading: "Changelog",
-    content: "<p><strong>v1.0.0</strong> — Initial release with URL, Text, Wi‑Fi, WhatsApp, Google Review, vCard, Email, SMS, Phone, and Location generators; live preview; PNG/SVG/JPG export; local saved designs.</p>",
+    content: "<p><strong>v1.0.0</strong> — Initial release with URL, Text, Wi‑Fi, WhatsApp, Google Review, vCard, Email, SMS, and Phone generators; live preview; PNG/SVG/JPG export; local saved designs.</p>",
   },
   {
     slug: "offline",

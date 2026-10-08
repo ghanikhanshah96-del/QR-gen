@@ -14,7 +14,6 @@ const COVER_TONES = {
   email: 'from-ink-800 via-brand-800 to-ink-950',
   sms: 'from-brand-800 via-ink-900 to-brand-950',
   phone: 'from-ink-900 via-brand-800 to-ink-950',
-  location: 'from-brand-500 via-ink-800 to-brand-950',
   image: 'from-brand-600 via-ink-900 to-brand-950',
   video: 'from-ink-800 via-brand-700 to-ink-950',
   file: 'from-ink-700 via-brand-800 to-ink-950',

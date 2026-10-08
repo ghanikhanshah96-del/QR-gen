@@ -5,7 +5,7 @@
 export const HOME = {
   h1: 'Free QR Code Generator Online',
   intro: [
-    'Create QR codes quickly with GenerateQRFast. Choose a tool for URLs, WiFi, text, WhatsApp, contact details, email, SMS, phone numbers, locations, images, videos, and more.',
+    'Create QR codes quickly with GenerateQRFast. Choose a tool for URLs, WiFi, text, WhatsApp, contact details, email, SMS, phone numbers, images, videos, and more.',
     'Select the QR code type you need, enter the required information, generate your code, and download it for print or digital use.',
   ],
 
@@ -36,11 +36,6 @@ export const HOME = {
     },
     { id: 'sms', name: 'SMS QR Code Generator', text: 'Generate a QR code for a phone number and pre-filled text message.' },
     { id: 'phone', name: 'Phone Number QR Code Generator', text: 'Create a scan-to-call QR code for your phone number.' },
-    {
-      id: 'location',
-      name: 'Location QR Code Generator',
-      text: 'Turn a map location or Google Maps link into a scannable QR code.',
-    },
     { id: 'image', name: 'Image to QR Code', text: 'Create a QR code that opens a photo, graphic, or other image.' },
     { id: 'video', name: 'Video to QR Code', text: 'Share videos through a QR code that users can scan and watch.' },
   ],
@@ -65,7 +60,7 @@ export const HOME = {
       blocks: [
         'Use a URL QR code for websites, WiFi QR code for network access, and vCard QR code for contact details.',
         'Choose WhatsApp, SMS, email, or phone QR codes when you want people to contact you directly.',
-        'For physical destinations, use the Location QR Code Generator. Images and videos can be shared through their dedicated QR tools.',
+        'Images and videos can be shared through their dedicated QR tools.',
       ],
     },
     {
@@ -93,7 +88,7 @@ export const HOME = {
       blocks: [
         'Always test your QR code before publishing or printing it.',
         'Use strong contrast, leave enough clear space around the code, and make sure it is large enough to scan.',
-        'Also check the information inside the code, especially website links, phone numbers, email addresses, WiFi details, and locations.',
+        'Also check the information inside the code, especially website links, phone numbers, email addresses, and WiFi details.',
       ],
     },
   ],
@@ -101,7 +96,7 @@ export const HOME = {
   faqs: [
     {
       q: 'What is a QR code generator?',
-      a: 'A QR code generator converts information such as a URL, text, phone number, contact details, or location into a scannable QR code.',
+      a: 'A QR code generator converts information such as a URL, text, phone number, or contact details into a scannable QR code.',
     },
     {
       q: 'Can I create QR codes for free?',
@@ -109,7 +104,7 @@ export const HOME = {
     },
     {
       q: 'Which QR code generator should I choose?',
-      a: 'Choose the tool based on what you want users to do after scanning, such as open a website, connect to WiFi, call, message, or view a location.',
+      a: 'Choose the tool based on what you want users to do after scanning, such as open a website, connect to WiFi, call, or message.',
     },
     {
       q: 'Should I test my QR code?',

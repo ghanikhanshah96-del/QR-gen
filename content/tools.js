@@ -418,40 +418,6 @@ export const TOOLS = [
     ],
   },
   {
-    id: 'location',
-    dir: 'location-qr-code',
-    title: 'Free Location QR Code Generator – Google Maps QR Code | GenerateQRFast',
-    h1: 'Location QR Code Generator',
-    description:
-      'Create a free QR code for a location or Google Maps link. Generate, test, and download your map QR code.',
-    intro:
-      'Share a map pin with a location QR code. Enter coordinates or use a Google Maps destination so scanners can open directions quickly.',
-    instructions: [
-      'Enter latitude and longitude (separate fields — not both in one box).',
-      'Optionally add a label for your own reference.',
-      'Generate the QR code and scan it to confirm Google Maps opens the correct pin.',
-      'Download and place it on invitations, packaging, or venue signs.',
-    ],
-    faqs: [
-      {
-        q: 'How do I create a location QR code?',
-        a: 'Enter the coordinates, generate the QR code, test that Maps opens the right place, then download.',
-      },
-      {
-        q: 'Is this a free location QR code generator?',
-        a: 'Yes. GenerateQRFast creates free static location QR codes with no signup and no watermark.',
-      },
-      {
-        q: 'What happens when someone scans?',
-        a: 'The QR encodes a Google Maps link for your coordinates, so phones open Google Maps at that pin.',
-      },
-      {
-        q: 'Does a location QR code expire?',
-        a: 'A static location QR code does not expire because of GenerateQRFast. It remains useful as long as the destination map link works.',
-      },
-    ],
-  },
-  {
     id: 'image',
     dir: 'image-to-qr-code',
     title: 'Free Image to QR Code Generator – Convert Photos to QR | GenerateQRFast',

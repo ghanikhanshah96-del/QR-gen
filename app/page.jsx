@@ -8,7 +8,7 @@ import { getToolById } from '@/content/tools';
 export const metadata = {
   title: { absolute: `Free QR Code Generator Online | GenerateQRFast` },
   description:
-    'Create free QR codes for URLs, WiFi, text, WhatsApp, contacts, email, SMS, locations, images, videos, and more.',
+    'Create free QR codes for URLs, WiFi, text, WhatsApp, contacts, email, SMS, images, videos, and more.',
   alternates: { canonical: '/' },
 };
 

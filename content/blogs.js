@@ -638,62 +638,6 @@ const POSTS = [
 `,
   },
   {
-    slug: 'location-qr-code-map-pins',
-    toolId: 'location',
-    title: 'Free Location QR Code Generator — Google Maps QR Codes | GenerateQRFast Blog',
-    heading: 'Location QR codes for map pins',
-    description:
-      'Create a free location QR code that opens Google Maps at your coordinates for events, stores, and venues.',
-    date: '2026-09-21',
-    excerpt: 'Directions in one scan — encode lat/long as a Google Maps link.',
-    content: `
-<p>A <strong>location QR</strong> typically encodes a Google Maps URL for your latitude and longitude so scanners open that pin.</p>
-<p>Create one with the <a href="/location-qr-code/">free Location QR Code Generator</a> on GenerateQRFast. Enter latitude and longitude in separate fields (not both in one box) for accurate results.</p>
-
-<h2>What is a location QR code?</h2>
-<p>A location QR code helps people open a map pin or directions without typing an address. It is useful for stores, venues, events, and meeting points.</p>
-
-<h2>How to create a location QR code</h2>
-<ol>
-<li>Find the latitude and longitude for your place.</li>
-<li>Enter them in the <a href="/location-qr-code/">location generator</a>.</li>
-<li>Optionally add a label for your own reference.</li>
-<li>Generate the QR code and scan it to confirm Google Maps opens the correct pin.</li>
-<li>Download and place it on invitations, packaging, or venue signs.</li>
-</ol>
-
-<h2>Where can you use a location QR code?</h2>
-<ul>
-<li>Storefronts and offices</li>
-<li>Event invitations</li>
-<li>Wedding and party signage</li>
-<li>Delivery and pickup instructions</li>
-<li>Tourism and venue maps</li>
-<li>Real estate listings</li>
-</ul>
-
-<h2>Why use a Google Maps QR code?</h2>
-<p>Addresses can be ambiguous. A precise map pin reduces wrong turns and support calls. Scanning is faster than typing a long address on a phone.</p>
-
-<h2>Tips for a better location QR code</h2>
-<ul>
-<li>Double-check coordinates before printing</li>
-<li>Test that Maps opens the intended place</li>
-<li>Print large enough for the scanning distance</li>
-<li>Add a short CTA (“Scan for directions”)</li>
-</ul>
-
-<h2>Does a location QR code expire?</h2>
-<p>A static location QR code does not expire because of GenerateQRFast. It remains useful as long as the destination map link works.</p>
-
-<h2>Location QR code FAQs</h2>
-<p><strong>How do I create a location QR code?</strong><br />Enter coordinates, generate the QR, test that Maps opens the right place, then download.</p>
-<p><strong>Is this a free location QR code generator?</strong><br />Yes. GenerateQRFast creates free static location QR codes in your browser.</p>
-<p><strong>What happens when someone scans?</strong><br />Phones open Google Maps at your encoded pin.</p>
-<p><strong>Can I use a Google Maps link instead of coordinates?</strong><br />GenerateQRFast’s location tool builds a Maps link from latitude and longitude. For an arbitrary Maps URL, you can also use the <a href="/url-qr-code/">URL QR generator</a>.</p>
-`,
-  },
-  {
     slug: 'image-to-qr-code-explained',
     toolId: 'image',
     title: 'Free Image to QR Code Generator Explained | GenerateQRFast Blog',
@@ -910,13 +854,12 @@ const CATEGORY_BY_TOOL = {
   whatsapp: 'For business',
   'google-review': 'For business',
   vcard: 'For business',
-  location: 'Smart uses',
   image: 'Media',
   video: 'Media',
   file: 'Media',
 };
 
-export const BLOG_CATEGORIES = ['How-tos', 'For business', 'Smart uses', 'Media'];
+export const BLOG_CATEGORIES = ['How-tos', 'For business', 'Media'];
 
 export const BLOGS = POSTS.map((post) => ({
   ...post,

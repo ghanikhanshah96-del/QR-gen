@@ -496,6 +496,134 @@
       dark:hover:bg-brand-500 dark:hover:text-ink-950;
   }
 
+  /* ---------- Blog article ---------- */
+
+  .blog-hero {
+    @apply border-b;
+    border-color: var(--border);
+    background:
+      radial-gradient(60rem 30rem at 85% -10%, rgb(31 163 146 / 0.14), transparent 60%),
+      radial-gradient(40rem 24rem at 0% 110%, rgb(31 163 146 / 0.08), transparent 60%),
+      var(--surface);
+  }
+
+  .blog-prose {
+    @apply space-y-4 leading-relaxed text-ink-600 dark:text-ink-300;
+  }
+
+  .blog-prose > p:first-child {
+    @apply text-base text-ink-800 dark:text-ink-100 sm:text-[17px];
+  }
+
+  .blog-intro > p:first-child::first-letter {
+    @apply float-left mr-2 mt-1 font-display text-5xl font-semibold leading-[0.85] text-brand-700 dark:text-brand-300;
+  }
+
+  .blog-prose h3 {
+    @apply pt-3 text-lg font-semibold tracking-tight text-ink-950 dark:text-white;
+  }
+
+  .blog-prose a {
+    @apply font-semibold text-brand-800 underline decoration-brand-300 underline-offset-2 transition hover:text-brand-600
+      dark:text-brand-300 dark:decoration-brand-700 dark:hover:text-brand-200;
+  }
+
+  .blog-prose strong {
+    @apply font-semibold text-ink-950 dark:text-white;
+  }
+
+  .blog-prose ul {
+    @apply grid gap-2;
+  }
+
+  .blog-prose ul > li {
+    @apply relative rounded-lg border py-2.5 pl-12 pr-3 text-sm;
+    border-color: var(--border);
+    background: var(--surface-soft);
+  }
+
+  .blog-prose ul > li::before {
+    content: '';
+    @apply absolute left-3 top-2.5 size-6 rounded-full bg-brand-100 dark:bg-brand-950;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M5 10.5l3.2 3.2L15 7' stroke='%231fa392' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+  }
+
+  .blog-prose ol {
+    counter-reset: blog-step;
+    @apply space-y-2.5;
+  }
+
+  .blog-prose ol > li {
+    counter-increment: blog-step;
+    @apply relative rounded-lg border py-2.5 pl-12 pr-3 text-sm;
+    border-color: var(--border);
+    background: var(--surface-soft);
+  }
+
+  .blog-prose ol > li::before {
+    content: counter(blog-step);
+    @apply absolute left-3 top-2.5 grid size-6 place-items-center rounded-full bg-brand-600 text-xs font-bold text-white
+      dark:bg-brand-500 dark:text-ink-950;
+  }
+
+  .blog-callout {
+    @apply rounded-lg border-l-4 border-brand-500 bg-brand-50 px-4 py-3 text-brand-900 dark:bg-brand-950/60 dark:text-brand-100;
+  }
+
+  .blog-prose .blog-callout strong {
+    @apply text-brand-800 dark:text-brand-200;
+  }
+
+  .blog-prose-invert,
+  .blog-prose-invert > p:first-child {
+    @apply text-white/85;
+  }
+
+  .blog-prose-invert a {
+    @apply text-white decoration-white/50 hover:text-brand-100;
+  }
+
+  .blog-faq {
+    @apply overflow-hidden rounded-xl border transition;
+    border-color: var(--border);
+    background: var(--surface-soft);
+  }
+
+  .blog-faq[open] {
+    @apply border-brand-300 dark:border-brand-700;
+  }
+
+  .blog-faq summary {
+    @apply flex cursor-pointer list-none items-start gap-3 px-4 py-3.5 text-sm font-semibold text-ink-950 dark:text-white;
+  }
+
+  .blog-faq summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .blog-faq-q {
+    @apply grid size-6 shrink-0 place-items-center rounded-md bg-brand-600 text-xs font-bold text-white dark:bg-brand-500 dark:text-ink-950;
+  }
+
+  .blog-faq summary h3 {
+    @apply pt-0.5 text-sm font-semibold sm:text-base;
+  }
+
+  .blog-faq-icon {
+    @apply pt-0.5 text-lg leading-none text-ink-400 transition duration-300;
+  }
+
+  .blog-faq[open] .blog-faq-icon {
+    transform: rotate(45deg);
+  }
+
+  .blog-faq-a {
+    @apply px-4 pb-4 pl-[3.25rem] text-sm leading-relaxed text-ink-600 dark:text-ink-300;
+  }
+
   .preview-header {
     @apply border-b px-5 py-3.5;
     border-color: var(--border);

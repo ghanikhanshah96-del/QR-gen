@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t">
+  <title id="t">A QR code protected by a security shield with a check mark and a padlock</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#062a27"/>
+      <stop offset="0.55" stop-color="#15564f"/>
+      <stop offset="1" stop-color="#0b1020"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3fbfaa"/>
+      <stop offset="1" stop-color="#148577"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="600" cy="315" r="300" fill="#3fbfaa" fill-opacity="0.08"/>
+  <circle cx="600" cy="315" r="220" fill="#3fbfaa" fill-opacity="0.08"/>
+
+  <!-- floating warning / link chips -->
+  <g opacity="0.9">
+    <rect x="120" y="150" width="210" height="64" rx="16" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.18"/>
+    <circle cx="156" cy="182" r="14" fill="#f59e0b"/>
+    <rect x="152" y="172" width="8" height="13" rx="2" fill="#0b1020"/>
+    <rect x="152" y="188" width="8" height="5" rx="2" fill="#0b1020"/>
+    <rect x="184" y="172" width="120" height="9" rx="4.5" fill="#ffffff" fill-opacity="0.5"/>
+    <rect x="184" y="188" width="84" height="9" rx="4.5" fill="#ffffff" fill-opacity="0.3"/>
+
+    <rect x="870" y="410" width="210" height="64" rx="16" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.18"/>
+    <circle cx="906" cy="442" r="14" fill="#3fbfaa"/>
+    <path d="M899 442l5 5 10-10" fill="none" stroke="#062a27" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="934" y="432" width="120" height="9" rx="4.5" fill="#ffffff" fill-opacity="0.5"/>
+    <rect x="934" y="448" width="84" height="9" rx="4.5" fill="#ffffff" fill-opacity="0.3"/>
+
+    <rect x="900" y="150" width="150" height="64" rx="16" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.18"/>
+    <text x="975" y="191" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="22" font-weight="700" fill="#aeebdd">https://</text>
+  </g>
+
+  <!-- shield -->
+  <g filter="url(#shadow)">
+    <path d="M600 92 L790 160 V320 C790 430 712 510 600 552 C488 510 410 430 410 320 V160 Z" fill="url(#shield)"/>
+    <path d="M600 92 L790 160 V320 C790 430 712 510 600 552 C488 510 410 430 410 320 V160 Z" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="4"/>
+  </g>
+
+  <!-- QR code card -->
+  <rect x="490" y="190" width="220" height="220" rx="22" fill="#ffffff"/>
+  <g fill="#0b1020">
+    <!-- finder patterns -->
+    <path d="M512 212h56v56h-56z M522 222v36h36v-36z" fill-rule="evenodd"/>
+    <rect x="530" y="230" width="20" height="20"/>
+    <path d="M632 212h56v56h-56z M642 222v36h36v-36z" fill-rule="evenodd"/>
+    <rect x="650" y="230" width="20" height="20"/>
+    <path d="M512 332h56v56h-56z M522 342v36h36v-36z" fill-rule="evenodd"/>
+    <rect x="530" y="350" width="20" height="20"/>
+    <!-- data modules -->
+    <rect x="582" y="212" width="12" height="12"/><rect x="606" y="212" width="12" height="12"/>
+    <rect x="594" y="236" width="12" height="12"/><rect x="582" y="256" width="12" height="12"/>
+    <rect x="606" y="256" width="12" height="12"/>
+    <rect x="512" y="282" width="12" height="12"/><rect x="536" y="282" width="12" height="12"/>
+    <rect x="560" y="294" width="12" height="12"/><rect x="524" y="306" width="12" height="12"/>
+    <rect x="582" y="282" width="12" height="12"/><rect x="606" y="294" width="12" height="12"/>
+    <rect x="594" y="318" width="12" height="12"/><rect x="632" y="282" width="12" height="12"/>
+    <rect x="656" y="282" width="12" height="12"/><rect x="676" y="306" width="12" height="12"/>
+    <rect x="644" y="306" width="12" height="12"/><rect x="582" y="342" width="12" height="12"/>
+    <rect x="606" y="366" width="12" height="12"/><rect x="582" y="376" width="12" height="12"/>
+  </g>
+
+  <!-- padlock badge -->
+  <g transform="translate(640 330)">
+    <circle cx="40" cy="40" r="46" fill="#062a27" stroke="#ffffff" stroke-width="6"/>
+    <path d="M26 38v-8a14 14 0 0 1 28 0v8" fill="none" stroke="#aeebdd" stroke-width="6" stroke-linecap="round"/>
+    <rect x="20" y="38" width="40" height="30" rx="6" fill="#3fbfaa"/>
+    <circle cx="40" cy="51" r="5" fill="#062a27"/>
+    <rect x="38" y="53" width="4" height="8" rx="2" fill="#062a27"/>
+  </g>
+
+  <!-- check badge -->
+  <g transform="translate(398 120)">
+    <circle cx="36" cy="36" r="36" fill="#ffffff"/>
+    <path d="M20 37l11 11 22-23" fill="none" stroke="#148577" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

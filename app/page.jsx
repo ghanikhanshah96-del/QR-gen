@@ -51,7 +51,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <ToolArticle sections={HOME.article} />
+      <ToolArticle sections={HOME.article} showToc={false} />
 
       <section className="site-container pb-12">
         <h2 className="section-title">Frequently Asked Questions</h2>

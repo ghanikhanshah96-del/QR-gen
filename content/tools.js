@@ -504,38 +504,43 @@ export const TOOLS = [
   {
     id: 'file',
     dir: 'file-qr-code',
-    title: 'Free File QR Code Generator – PDF, DOC, TXT | GenerateQRFast',
+    title: 'Free File QR Code Generator – Turn Documents Into QR Codes | GenerateQRFast',
     h1: 'File QR Code Generator',
     description:
-      'Create a free file QR code for PDF, DOC, TXT, and other documents. Upload or paste a link, generate, test, and download.',
+      'Create a free QR code for a PDF, Word document, spreadsheet, or other file. Upload or paste a link, generate your QR code, test it, and download it.',
     intro:
-      'Turn a document into a scannable QR code. Upload PDF, Word, text, and similar files (or paste a public link). Uploaded files expire after 48 hours; a pasted link is permanent.. The QR opens the public download link — files are too large to embed inside a QR.',
+      "Turn a PDF, Word document, spreadsheet, presentation, or other file into a scannable QR code with our free File QR Code Generator. Upload your file or paste a link to it, generate your QR code, and add it to printed or digital materials. A file QR code gives people a quick way to open or download a document from their phone, without emailing it or typing a long link.",
     instructions: [
-      'Upload PDF, DOC, DOCX, TXT, CSV, RTF, XLS, PPT (or paste a public https URL).',
-      'Confirm the public link appears in the form.',
-      'Customize colors and logo.',
-      'Download PNG, SVG, or JPG — no watermark.',
+      'Upload your file, or paste a public link to a file stored on Google Drive, Dropbox, or your website.',
+      'Check that the link appears in the form.',
+      'Generate your QR code and customize the design if needed.',
+      'Scan the code with your phone to check that the file opens.',
+      'Download the finished QR code and add it wherever you need it.',
     ],
     faqs: [
       {
-        q: 'How do I create a file QR code?',
-        a: 'Upload a supported document or paste a public file URL, generate the QR code, test it, then download.',
+        q: 'How do I turn a file into a QR code?',
+        a: 'Upload your document or paste a public link to it in the File QR Code Generator above, then generate the code. Scan it once to confirm the file opens before downloading or sharing it.',
       },
       {
-        q: 'Is this a free file QR code generator?',
-        a: 'Yes. GenerateQRFast creates free file QR codes with no signup and no watermark.',
+        q: 'Which file types can I use?',
+        a: 'You can upload PDF, DOC, DOCX, TXT, CSV, RTF, XLS, XLSX, PPT, PPTX, ODT, JSON, and XML files up to 25 MB. If you paste a link instead, it can point to almost any file that opens in a browser.',
       },
       {
-        q: 'Which file types are supported?',
-        a: 'PDF, DOC, DOCX, TXT, CSV, RTF, XLS/XLSX, PPT/PPTX, ODT, JSON, and XML — up to 25 MB per upload.',
+        q: 'Is the file stored inside the QR code?',
+        a: 'No. A QR code can only hold a small amount of data, so it stores a link to the file. Scanning the code opens that link.',
       },
       {
-        q: 'Can the PDF live inside the QR?',
-        a: 'No. QR capacity is only a few KB. The QR encodes a public URL that opens or downloads the file.',
+        q: 'Do uploaded files expire?',
+        a: 'Yes. Uploaded files are kept for 48 hours, and the QR code stops working after that. For a permanent QR code, paste a link to a file stored on Google Drive, Dropbox, or your own website.',
       },
       {
-        q: 'Does an uploaded file QR expire?',
-        a: 'Yes, if you upload. Uploaded files expire after 48 hours, and the QR code stops working after that. For a permanent QR code, paste a Google Drive, Dropbox, or website link instead.',
+        q: 'Can I use a Google Drive or Dropbox link?',
+        a: 'Yes. Set the file so anyone with the link can view it, then paste the share link. People who scan the code will need the same access, so test it in a private browser window first.',
+      },
+      {
+        q: 'Is this File QR Code Generator free?',
+        a: 'Yes. You can create file QR codes for free, with no signup and no watermark.',
       },
     ],
   },

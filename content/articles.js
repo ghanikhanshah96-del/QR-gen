@@ -1891,6 +1891,127 @@ export const ARTICLES = {
       ],
     },
   ],
+
+  file: [
+    {
+      heading: "What Is a File QR Code?",
+      blocks: [
+        "A file QR code is a QR code that opens a document when someone scans it. It contains a link to the file, so a compatible phone camera or QR scanner can open or download it in the browser.",
+        "It removes the need to email a document or type a long download link. This makes file QR codes useful when you want to connect printed materials with a document people can read on their phone.",
+        "For example, a business can add a QR code to a flyer that opens a full price list. A teacher can link a worksheet to a PDF of extra exercises, while an event organizer can share the full program as a document.",
+      ],
+    },
+    {
+      heading: "Upload a File or Paste a Link",
+      blocks: [
+        "You can create a file QR code in two ways.",
+        {
+          cards: [
+            {
+              title: "Upload your file",
+              body: [
+                "The fastest option. Your file is uploaded to a free temporary host to create a public link, and that link goes into the QR code.",
+                "Uploaded files are kept for 48 hours. After that, the QR code stops working.",
+              ],
+            },
+            {
+              title: "Paste a link",
+              body: [
+                "Upload your file to Google Drive, Dropbox, OneDrive, or your own website, make it public, and paste the link.",
+                "The QR code keeps working as long as that link stays online, so this is the best choice for printed materials.",
+              ],
+            },
+          ],
+        },
+        { note: "Printing your QR code? Paste a permanent link instead of uploading, so the code keeps working." },
+      ],
+    },
+    {
+      heading: "What Files Can You Share With a QR Code?",
+      blocks: [
+        "You can upload these file types, up to 25 MB each:",
+        [
+          "PDF documents",
+          "Word documents (DOC, DOCX)",
+          "Spreadsheets (XLS, XLSX, CSV)",
+          "Presentations (PPT, PPTX)",
+          "Text files (TXT, RTF, ODT)",
+          "Data files (JSON, XML)",
+        ],
+        "If you paste a link instead, it can point to almost any file that opens in a phone browser.",
+      ],
+    },
+    {
+      heading: "Where Can You Use a File QR Code?",
+      blocks: [
+        "A file QR code can be used anywhere people may want to read or download a document.",
+        "Common uses include flyers, posters, brochures, product packaging, business cards, event materials, classroom handouts, and signs.",
+        "You can also use a file QR code for:",
+        [
+          "Restaurant menus and price lists",
+          "Product manuals and instructions",
+          "Brochures and catalogs",
+          "Event programs and schedules",
+          "Resumes and portfolios",
+          "Worksheets and course materials",
+          "Forms and application documents",
+          "Reports and presentations",
+        ],
+        "Choose a document that works well on a small screen, because most people will open it on a smartphone.",
+      ],
+    },
+    {
+      heading: "Why Turn a File Into a QR Code?",
+      blocks: [
+        "Documents are easy to share online, but harder to share on printed materials.",
+        "A QR code turns a file link into something a phone can scan in seconds. Instead of printing many pages or asking someone to type a long download link, you can send them straight to the document.",
+        "This also saves paper and printing costs, especially for long documents such as manuals, catalogs, and reports.",
+      ],
+    },
+    {
+      heading: "Tips for Creating a Reliable File QR Code",
+      variant: "tips",
+      blocks: [
+        "Always test the QR code before publishing or printing it. Make sure the right file opens and can be read on a phone.",
+        "If you paste a Google Drive or Dropbox link, set the file so anyone with the link can view it. Otherwise, people who scan the code will see an access request instead of your document.",
+        "Keep file sizes reasonable. Smaller files open faster, especially on mobile data.",
+        "Keep strong contrast between the QR code and its background, and leave enough clear space around it for scanners to recognize the pattern.",
+      ],
+    },
+    {
+      heading: "File QR Codes for Print and Digital Use",
+      blocks: [
+        "A file QR code is not limited to printed material.",
+        "You can include it in presentations, digital displays, emails, social graphics, or other visual content where scanning is convenient.",
+        "For print, make sure the code is large and clear enough to scan, and use a permanent link rather than an upload. For digital use, avoid shrinking the image until the QR pattern becomes difficult to distinguish.",
+      ],
+    },
+    {
+      heading: "Can You Make a QR Code for Any File?",
+      blocks: [
+        "You can create a QR code for most files that can be opened from a public link.",
+        "A QR code does not bypass passwords, sharing settings, or access restrictions. If the file is private or requires a login, people who scan the code will still need the necessary access.",
+        "Do not share confidential documents through a public QR code. Anyone who can scan the code can open the file.",
+      ],
+    },
+    {
+      heading: "Does a File QR Code Expire?",
+      blocks: [
+        "The QR code itself does not expire, but it depends on the file link stored inside it.",
+        "If you upload your file here, the file is deleted after 48 hours and the QR code stops working.",
+        "If you paste your own link, the QR code keeps working as long as the file stays online at that address. If you delete the file, move it, or change its sharing settings, the code may still scan but will no longer open the document.",
+        "For long-term printed materials, use a stable link that you expect to keep active.",
+      ],
+    },
+    {
+      heading: "Should I Test My File QR Code Before Printing It?",
+      blocks: [
+        "Yes. Always scan the finished QR code with at least one real phone before printing or distributing it.",
+        "Check that the correct file opens, that it can be read on a small screen, and that the code is easy to scan at its intended size.",
+        "Testing a few seconds before printing can prevent mistakes that are difficult or expensive to correct later.",
+      ],
+    },
+  ],
 };
 
 export function getArticle(toolId) {

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { PATHS } from '@/lib/config';
 
 const TOOL_LINKS = [
   { href: '/url-qr-code/', label: 'URL' },
@@ -17,7 +18,7 @@ const LEARN_LINKS = [
   { href: '/guides/static-vs-dynamic-qr-codes/', label: 'Static vs dynamic' },
   { href: '/guides/do-qr-codes-expire/', label: 'Do QR codes expire?' },
   { href: '/guides/qr-code-security/', label: 'QR security' },
-  { href: '/blogs/', label: 'Blog' },
+  { href: PATHS.blogs, label: 'Blog' },
   { href: '/faq.html', label: 'FAQ' },
 ];
 

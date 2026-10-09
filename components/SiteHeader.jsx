@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { QR_TYPES } from '@/lib/constants';
 import ThemeToggle from '@/components/ThemeToggle';
+import { PATHS } from '@/lib/config';
 
 function BrandLockup() {
   return (
@@ -97,7 +98,7 @@ export default function SiteHeader() {
           <Link className="nav-link" href="/guides/">
             Guides
           </Link>
-          <Link className="nav-link" href="/blogs/">
+          <Link className="nav-link" href={PATHS.blogs}>
             Blog
           </Link>
         </nav>
@@ -139,7 +140,7 @@ export default function SiteHeader() {
             <Link className="nav-link" href="/guides/" onClick={() => setOpen(false)}>
               Guides
             </Link>
-            <Link className="nav-link" href="/blogs/" onClick={() => setOpen(false)}>
+            <Link className="nav-link" href={PATHS.blogs} onClick={() => setOpen(false)}>
               Blog
             </Link>
             <a href="/#generator-app" className="btn-primary mt-2" onClick={() => setOpen(false)}>

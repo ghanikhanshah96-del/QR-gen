@@ -24,7 +24,13 @@ function slugify(text) {
 function CheckIcon() {
   return (
     <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" className="size-4 shrink-0">
-      <path d="M5 10.5l3.2 3.2L15 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M5 10.5l3.2 3.2L15 7"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
@@ -54,7 +60,11 @@ function Steps({ items }) {
   return (
     <ol className="space-y-2.5">
       {items.map((item, i) => (
-        <li key={item} className="flex items-start gap-3 rounded-lg border px-3 py-2.5" style={softBox}>
+        <li
+          key={item}
+          className="flex items-start gap-3 rounded-lg border px-3 py-2.5"
+          style={softBox}
+        >
           <span className="grid size-6 shrink-0 place-items-center rounded-full bg-brand-600 text-xs font-bold text-white dark:bg-brand-500 dark:text-ink-950">
             {i + 1}
           </span>
@@ -133,7 +143,11 @@ function Block({ block, lead = false, compact = false }) {
   if (block.note) return <Note lines={block.note} compact={compact} />;
   if (block.chips) return <Chips items={block.chips} />;
   if (block.h3) {
-    return <h3 className="pt-2 text-lg font-semibold tracking-tight text-ink-950 dark:text-white">{block.h3}</h3>;
+    return (
+      <h3 className="pt-2 text-lg font-semibold tracking-tight text-ink-950 dark:text-white">
+        {block.h3}
+      </h3>
+    );
   }
   return null;
 }
@@ -167,30 +181,39 @@ function SectionBody({ section }) {
   );
 }
 
-export default function ToolArticle({ sections }) {
-  const items = sections.map((s, i) => ({ ...s, id: slugify(s.heading), num: String(i + 1).padStart(2, '0') }));
+/** showToc: set false to hide the "On this page" sidebar (used on the home page). */
+export default function ToolArticle({ sections, showToc = true }) {
+  const items = sections.map((s, i) => ({
+    ...s,
+    id: slugify(s.heading),
+    num: String(i + 1).padStart(2, '0'),
+  }));
 
   return (
     <section className="site-container pb-14" aria-label="Guide">
-      <div className="grid gap-8 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-10">
-        <nav aria-label="On this page" className="hidden lg:block">
-          <div className="panel sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-500 dark:text-ink-400">On this page</p>
-            <ol className="mt-3 space-y-0.5">
-              {items.map((s) => (
-                <li key={s.id}>
-                  <a
-                    href={`#${s.id}`}
-                    className="flex gap-2.5 rounded-md px-2 py-1.5 text-sm text-ink-600 transition hover:bg-brand-50 hover:text-brand-800 dark:text-ink-300 dark:hover:bg-brand-950/50 dark:hover:text-brand-200"
-                  >
-                    <span className="font-semibold tabular-nums text-ink-400">{s.num}</span>
-                    <span>{s.heading}</span>
-                  </a>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </nav>
+      <div className={showToc ? 'grid gap-8 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-10' : ''}>
+        {showToc ? (
+          <nav aria-label="On this page" className="hidden lg:block">
+            <div className="panel sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto p-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-500 dark:text-ink-400">
+                On this page
+              </p>
+              <ol className="mt-3 space-y-0.5">
+                {items.map((s) => (
+                  <li key={s.id}>
+                    <a
+                      href={`#${s.id}`}
+                      className="flex gap-2.5 rounded-md px-2 py-1.5 text-sm text-ink-600 transition hover:bg-brand-50 hover:text-brand-800 dark:text-ink-300 dark:hover:bg-brand-950/50 dark:hover:text-brand-200"
+                    >
+                      <span className="font-semibold tabular-nums text-ink-400">{s.num}</span>
+                      <span>{s.heading}</span>
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </nav>
+        ) : null}
 
         <div className="space-y-5">
           {items.map((s) => (

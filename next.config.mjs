@@ -5,10 +5,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  async redirects() {
-    // The blog has one main article — /blogs/ opens it directly instead of a list page.
-    return [{ source: '/blogs', destination: '/blogs/are-free-qr-code-generators-safe/', permanent: false }];
-  },
   // Keep legacy .html URLs working alongside clean paths where both existed.
 };
 

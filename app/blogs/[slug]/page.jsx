@@ -175,7 +175,11 @@ export default async function BlogPostPage({ params }) {
                 </Link>
               </li>
               <li aria-hidden="true">/</li>
-              <li>Blog</li>
+              <li>
+                <Link className="hover:text-brand-700 dark:hover:text-brand-300" href="/blogs/">
+                  Blog
+                </Link>
+              </li>
             </ol>
           </nav>
 

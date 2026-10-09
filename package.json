@@ -14,7 +14,8 @@
     "next": "^15.5.3",
     "qr-code-styling": "^1.9.2",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "resend": "^4.8.0"
   },
   "devDependencies": {
     "@types/node": "^22.18.1",

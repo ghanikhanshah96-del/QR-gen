@@ -4,12 +4,12 @@ Free, permanent, private, unlimited static QR code generator — **no signup, no
 
 ## Stack
 
-- [Next.js](https://nextjs.org/) (App Router, static export)
+- [Next.js](https://nextjs.org/) (App Router, pre-rendered pages, deployed on Vercel)
 - Tailwind CSS
 - Client-side QR generation via `qr-code-styling`
 - LocalStorage + IndexedDB for preferences and saved designs
 
-No accounts, no server-side QR processing. Generation stays in the browser.
+No accounts, no server-side QR processing. Generation stays in the browser. The only server code is the contact form (`app/api/contact`), which emails messages via [Resend](https://resend.com).
 
 ## Quick start
 
@@ -25,8 +25,18 @@ Open [http://localhost:3000](http://localhost:3000).
 | Command | Purpose |
 | --- | --- |
 | `npm run dev` | Next.js development server |
-| `npm run build` | Static export to `out/` |
+| `npm run build` | Production build (Vercel runs this on deploy) |
 | `npm start` | Serve the production build (Node) |
+
+## Contact form (Resend)
+
+Set these environment variables in `.env.local` locally and in Vercel → Project → Settings → Environment Variables:
+
+| Variable | Purpose |
+| --- | --- |
+| `RESEND_API_KEY` | Resend API key (server only — never put it in client code) |
+| `CONTACT_TO_EMAIL` | Inbox that receives contact messages |
+| `CONTACT_FROM_EMAIL` | Sender, e.g. `GenerateQRFast <onboarding@resend.dev>` or an address on your verified domain |
 
 ## Architecture
 

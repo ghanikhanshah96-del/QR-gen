@@ -3,6 +3,7 @@ import GeneratorApp from '@/components/GeneratorApp';
 import FaqList from '@/components/FaqList';
 import ToolGrid from '@/components/ToolGrid';
 import ToolArticle from '@/components/ToolArticle';
+import ContactForm from '@/components/ContactForm';
 import { TOOLS, getToolByDir } from '@/content/tools';
 import { LEGAL_PAGES } from '@/content/legal';
 import { getBlogByToolId } from '@/content/blogs';
@@ -12,6 +13,9 @@ import { getArticle } from '@/content/articles';
 const UPLOAD_TOOLS = new Set(['image', 'video', 'file']);
 
 const LEGAL_BY_FILE = Object.fromEntries(LEGAL_PAGES.map((p) => [p.file, p]));
+
+// Only the pages listed below exist; any other address is a 404.
+export const dynamicParams = false;
 
 export function generateStaticParams() {
   return [
@@ -159,6 +163,7 @@ function LegalPageView({ page }) {
           className="prose-ever mt-6 space-y-4 leading-relaxed text-ink-700 dark:text-ink-300 [&_a]:text-brand-800 [&_a]:underline dark:[&_a]:text-brand-300 [&_strong]:text-ink-950 dark:[&_strong]:text-white"
           dangerouslySetInnerHTML={{ __html: page.content }}
         />
+        {page.file === 'contact.html' ? <ContactForm /> : null}
       </article>
     </div>
   );

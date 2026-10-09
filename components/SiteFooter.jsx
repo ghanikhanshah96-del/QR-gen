@@ -18,15 +18,15 @@ const LEARN_LINKS = [
   { href: '/guides/do-qr-codes-expire/', label: 'Do QR codes expire?' },
   { href: '/guides/qr-code-security/', label: 'QR security' },
   { href: '/blogs/', label: 'Blog' },
-  { href: '/faq.html/', label: 'FAQ' },
+  { href: '/faq.html', label: 'FAQ' },
 ];
 
 const COMPANY_LINKS = [
-  { href: '/about.html/', label: 'About' },
-  { href: '/privacy-policy.html/', label: 'Privacy' },
-  { href: '/terms.html/', label: 'Terms' },
-  { href: '/accessibility.html/', label: 'Accessibility' },
-  { href: '/contact.html/', label: 'Contact' },
+  { href: '/about.html', label: 'About' },
+  { href: '/privacy-policy.html', label: 'Privacy' },
+  { href: '/terms.html', label: 'Terms' },
+  { href: '/accessibility.html', label: 'Accessibility' },
+  { href: '/contact.html', label: 'Contact' },
 ];
 
 function FooterLink({ href, children }) {

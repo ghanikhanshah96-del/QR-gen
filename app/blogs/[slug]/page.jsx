@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { BLOGS, getBlogBySlug } from '@/content/blogs';
 import { getToolById } from '@/content/tools';
 
+// Only the pages listed below exist; any other address is a 404.
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return BLOGS.map((b) => ({ slug: b.slug }));
 }

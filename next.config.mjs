@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  // Not a static export: Vercel runs app/api/contact (Resend). Pages are still pre-rendered at build time.
   trailingSlash: true,
   images: {
     unoptimized: true,

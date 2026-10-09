@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import { GUIDES } from '@/content/guides';
 
+// Only the pages listed below exist; any other address is a 404.
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return GUIDES.map((g) => ({ slug: g.dir }));
 }

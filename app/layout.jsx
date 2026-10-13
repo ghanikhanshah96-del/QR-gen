@@ -61,6 +61,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${plusJakarta.variable} ${fraunces.variable}`} suppressHydrationWarning>
       <head>
+        {/* Google Search Console ownership check. Written directly in <head> (not via metadata)
+            so it is always in the initial <head>, never streamed into <body>. */}
+        <meta name="google-site-verification" content="QqkaJSl8U0i4F8isgE53joiwTOQn1ndq5dVIAiIcbUE" />
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
       <body className="flex min-h-screen flex-col">

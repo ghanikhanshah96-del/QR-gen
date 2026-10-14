@@ -51,7 +51,7 @@ export const TOOLS = [
   },
   {
     id: 'text',
-    dir: 'text-qr-code',
+    dir: 'text-qr-code-generator',
     title: 'Free Text QR Code Generator – Convert Text to QR Code | GenerateQRFast',
     h1: 'Text QR Code Generator',
     description:
@@ -97,7 +97,7 @@ export const TOOLS = [
   },
   {
     id: 'wifi',
-    dir: 'wifi-qr-code',
+    dir: 'wifi-qr-code-generator',
     title: 'Free WiFi QR Code Generator – Share WiFi Instantly | GenerateQRFast',
     h1: 'WiFi QR Code Generator',
     description:
@@ -151,7 +151,7 @@ export const TOOLS = [
   },
   {
     id: 'whatsapp',
-    dir: 'whatsapp-qr-code',
+    dir: 'whatsapp-qr-code-generator',
     title: 'Free WhatsApp QR Code Generator – Create QR Code | GenerateQRFast',
     h1: 'WhatsApp QR Code Generator',
     description:
@@ -201,7 +201,7 @@ export const TOOLS = [
   },
   {
     id: 'google-review',
-    dir: 'google-review-qr-code',
+    dir: 'google-review-qr-code-generator',
     title: 'Free Google Review QR Code Generator for Your Business | GenerateQRFast',
     h1: 'Google Review QR Code Generator',
     description:
@@ -247,7 +247,7 @@ export const TOOLS = [
   },
   {
     id: 'vcard',
-    dir: 'vcard-qr-code',
+    dir: 'vcard-qr-code-generator',
     title: 'Free vCard QR Code Generator – Share Contact Details | GenerateQRFast',
     h1: 'vCard QR Code Generator',
     description:
@@ -293,7 +293,7 @@ export const TOOLS = [
   },
   {
     id: 'email',
-    dir: 'email-qr-code',
+    dir: 'email-qr-code-generator',
     title: 'Free Email QR Code Generator – Create Email QR Codes | GenerateQRFast',
     h1: 'Email QR Code Generator',
     description:
@@ -335,7 +335,7 @@ export const TOOLS = [
   },
   {
     id: 'sms',
-    dir: 'sms-qr-code',
+    dir: 'sms-qr-code-generator',
     title: 'Free SMS QR Code Generator – Create Text Message QR | GenerateQRFast',
     h1: 'SMS QR Code Generator',
     description:
@@ -377,7 +377,7 @@ export const TOOLS = [
   },
   {
     id: 'phone',
-    dir: 'phone-number-qr-code',
+    dir: 'qr-code-generator-phone-number',
     title: 'Free QR Code Generator for Phone Number – Scan to Call | GenerateQRFast',
     h1: 'Phone Number QR Code Generator',
     description:

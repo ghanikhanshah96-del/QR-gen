@@ -3,11 +3,11 @@ import { PATHS } from '@/lib/config';
 
 const TOOL_LINKS = [
   { href: '/url-qr-code/', label: 'URL' },
-  { href: '/wifi-qr-code/', label: 'WiFi' },
-  { href: '/whatsapp-qr-code/', label: 'WhatsApp' },
-  { href: '/google-review-qr-code/', label: 'Google Review' },
-  { href: '/vcard-qr-code/', label: 'vCard' },
-  { href: '/email-qr-code/', label: 'Email' },
+  { href: '/wifi-qr-code-generator/', label: 'WiFi' },
+  { href: '/whatsapp-qr-code-generator/', label: 'WhatsApp' },
+  { href: '/google-review-qr-code-generator/', label: 'Google Review' },
+  { href: '/vcard-qr-code-generator/', label: 'vCard' },
+  { href: '/email-qr-code-generator/', label: 'Email' },
   { href: '/image-to-qr-code/', label: 'Image' },
   { href: '/video-to-qr-code/', label: 'Video' },
   { href: '/file-qr-code/', label: 'File' },

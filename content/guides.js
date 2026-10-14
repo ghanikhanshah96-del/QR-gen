@@ -112,7 +112,7 @@ export const GUIDES = [
     heading: 'QR codes for Wi‑Fi',
     description: 'How Wi‑Fi QR codes work and how to share guest access safely.',
     content: `<p>A Wi‑Fi QR encodes SSID, security type, and password in a standard format many phones understand. Prefer a guest network when sharing access publicly, and reprint if you rotate passwords.</p>
-<p>Use GenerateQRFast’s <a href="/wifi-qr-code/">WiFi QR Code Generator</a> to create a free static code in your browser — the password is not uploaded to GenerateQRFast for generation.</p>`,
+<p>Use GenerateQRFast’s <a href="/wifi-qr-code-generator/">WiFi QR Code Generator</a> to create a free static code in your browser — the password is not uploaded to GenerateQRFast for generation.</p>`,
   },
   {
     dir: 'qr-code-for-google-reviews',
@@ -120,7 +120,7 @@ export const GUIDES = [
     heading: 'QR codes for Google reviews',
     description: 'Collect more Google reviews with a simple printable QR code.',
     content: `<p>Place a Google review QR at checkout, on receipts, or near exits. Make sure your Google Business link is correct, then generate a static QR so customers can leave feedback in seconds.</p>
-<p>Create yours with the <a href="/google-review-qr-code/">Google Review QR Code Generator</a>, scan-test it, and print it where happy customers are most likely to see it.</p>`,
+<p>Create yours with the <a href="/google-review-qr-code-generator/">Google Review QR Code Generator</a>, scan-test it, and print it where happy customers are most likely to see it.</p>`,
   },
   {
     dir: 'qr-code-with-logo',

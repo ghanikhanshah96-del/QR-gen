@@ -13,7 +13,7 @@ export const LEGAL_PAGES = [
     title: "Privacy Policy | GenerateQRFast",
     description: "How GenerateQRFast handles privacy for client-side QR generation.",
     heading: "Privacy policy",
-    content: "<p>GenerateQRFast is designed so normal static QR generation happens in your browser. We do not require an account, and we do not need your QR payloads on a server to create PNG, SVG, or JPG downloads.</p><p>LocalStorage and IndexedDB may store preferences and saved designs on your device only. If analytics are enabled in a future release, they must never include QR payload content.</p><p>Contact: hello@generateqrfast.com</p>",
+    content: "<p>GenerateQRFast is designed so normal static QR generation happens in your browser. We do not require an account, and we do not need your QR payloads on a server to create PNG, SVG, or JPG downloads.</p><p>LocalStorage and IndexedDB may store preferences and saved designs on your device only. We use Google Analytics to understand how visitors use the site, such as which pages are viewed. Google Analytics may set cookies and collects standard usage data like page addresses, browser type, and approximate location. It does not receive the content you put into your QR codes.</p><p>Contact: hello@generateqrfast.com</p>",
   },
   {
     slug: "terms",

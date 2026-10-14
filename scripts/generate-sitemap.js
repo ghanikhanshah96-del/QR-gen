@@ -16,7 +16,6 @@ const urls = [
   '/email-qr-code-generator/',
   '/sms-qr-code-generator/',
   '/phone-number-qr-code/',
-  '/location-qr-code/',
   '/image-to-qr-code/',
   '/video-to-qr-code/',
   '/file-qr-code/',

@@ -338,25 +338,6 @@ const TOOLS = [
     ],
   },
   {
-    id: 'location',
-    dir: 'location-qr-code',
-    title: 'Free Location QR Code Generator | GenerateQRFast',
-    h1: 'Location QR Code Generator',
-    description: 'Create a free location QR code generator pin for Google Maps. Static, private, no watermark.',
-    intro: 'Share a precise map pin. Enter latitude and longitude — scanning opens that place in Google Maps.',
-    instructions: [
-      'Enter latitude and longitude (separate fields — not both in one box).',
-      'Optionally add a label.',
-      'Customize and download — scan opens Google Maps.',
-    ],
-    faqs: [
-      {
-        q: 'What happens when someone scans?',
-        a: 'The QR encodes a Google Maps link for your coordinates, so phones open Google Maps at that pin.',
-      },
-    ],
-  },
-  {
     id: 'image',
     dir: 'image-to-qr-code',
     title: 'Free Image to QR Code Generator | GenerateQRFast',

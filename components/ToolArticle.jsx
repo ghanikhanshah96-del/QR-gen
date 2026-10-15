@@ -1,6 +1,9 @@
+import TocScrollSpy from '@/components/TocScrollSpy';
+
 /**
- * Long-form SEO article for tool pages and the home page. Server-rendered (no
- * client JS) so all text is in the static HTML. Content lives in content/articles.js.
+ * Long-form SEO article for tool pages and the home page. Server-rendered so all
+ * text is in the static HTML (only the sidebar's TocScrollSpy runs in the browser).
+ * Content lives in content/articles.js.
  *
  * Section shape: { heading, blocks, variant? }
  * Block types:
@@ -194,6 +197,7 @@ export default function ToolArticle({ sections, showToc = true }) {
       <div className={showToc ? 'grid gap-8 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-10' : ''}>
         {showToc ? (
           <nav aria-label="On this page" className="hidden lg:block">
+            <TocScrollSpy />
             <div className="panel sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto p-4">
               <p className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-500 dark:text-ink-400">
                 On this page
@@ -203,7 +207,7 @@ export default function ToolArticle({ sections, showToc = true }) {
                   <li key={s.id}>
                     <a
                       href={`#${s.id}`}
-                      className="flex gap-2.5 rounded-md px-2 py-1.5 text-sm text-ink-600 transition hover:bg-brand-50 hover:text-brand-800 dark:text-ink-300 dark:hover:bg-brand-950/50 dark:hover:text-brand-200"
+                      className="toc-link flex gap-2.5 rounded-md px-2 py-1.5 text-sm text-ink-600 transition hover:bg-brand-50 hover:text-brand-800 dark:text-ink-300 dark:hover:bg-brand-950/50 dark:hover:text-brand-200"
                     >
                       <span className="font-semibold tabular-nums text-ink-400">{s.num}</span>
                       <span>{s.heading}</span>

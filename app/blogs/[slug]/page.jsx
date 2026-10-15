@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { BLOGS, getBlogBySlug, formatBlogDate } from '@/content/blogs';
 import { getToolById } from '@/content/tools';
 import { SITE } from '@/lib/config';
+import TocScrollSpy from '@/components/TocScrollSpy';
 
 // Only the pages listed below exist; any other address is a 404.
 export const dynamicParams = false;
@@ -77,7 +78,7 @@ function TocList({ sections }) {
         <li key={s.id}>
           <a
             href={`#${s.id}`}
-            className="flex gap-2.5 rounded-md px-2 py-1.5 text-sm text-ink-600 transition hover:bg-brand-50 hover:text-brand-800 dark:text-ink-300 dark:hover:bg-brand-950/50 dark:hover:text-brand-200"
+            className="toc-link flex gap-2.5 rounded-md px-2 py-1.5 text-sm text-ink-600 transition hover:bg-brand-50 hover:text-brand-800 dark:text-ink-300 dark:hover:bg-brand-950/50 dark:hover:text-brand-200"
           >
             <span className="font-semibold tabular-nums text-ink-400">{pad(i + 1)}</span>
             <span>{s.heading}</span>
@@ -234,6 +235,7 @@ export default async function BlogPostPage({ params }) {
           <aside className="hidden lg:block">
             <div className="sticky top-24 space-y-4">
               <nav aria-label="On this page" className="panel max-h-[calc(100vh-16rem)] overflow-y-auto p-4">
+                <TocScrollSpy />
                 <p className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-500 dark:text-ink-400">On this page</p>
                 <div className="mt-3">
                   <TocList sections={sections} />

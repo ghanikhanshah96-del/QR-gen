@@ -624,6 +624,59 @@
     @apply px-4 pb-4 pl-[3.25rem] text-sm leading-relaxed text-ink-600 dark:text-ink-300;
   }
 
+  /* ---------- "On this page" active section (set by components/TocScrollSpy) ---------- */
+
+  .toc-link[aria-current] {
+    @apply bg-brand-50 font-semibold text-brand-800 dark:bg-brand-950/60 dark:text-brand-200;
+    box-shadow: inset 3px 0 0 #148577;
+  }
+
+  .toc-link[aria-current] > span:first-child {
+    @apply text-brand-600 dark:text-brand-300;
+  }
+
+  /* ---------- Legal / company pages ---------- */
+
+  .legal-prose {
+    @apply space-y-4 leading-relaxed text-ink-600 dark:text-ink-300;
+  }
+
+  .legal-prose > p:first-child {
+    @apply text-base text-ink-800 dark:text-ink-100 sm:text-[17px];
+  }
+
+  .legal-prose h2 {
+    @apply scroll-mt-24 border-t pt-8 text-xl font-semibold tracking-tight text-ink-950 dark:text-white sm:text-2xl;
+    border-color: var(--border);
+    margin-top: 2rem !important;
+  }
+
+  .legal-prose h3 {
+    @apply pt-2 text-base font-semibold text-ink-950 dark:text-white;
+  }
+
+  .legal-prose a {
+    @apply font-semibold text-brand-800 underline decoration-brand-300 underline-offset-2 transition hover:text-brand-600
+      dark:text-brand-300 dark:decoration-brand-700 dark:hover:text-brand-200;
+  }
+
+  .legal-prose ul {
+    @apply grid gap-x-6 gap-y-2 sm:grid-cols-2;
+  }
+
+  .legal-prose ul > li {
+    @apply relative pl-7 text-sm leading-relaxed;
+  }
+
+  .legal-prose ul > li::before {
+    content: '';
+    @apply absolute left-0 top-0.5 size-[1.15rem] rounded-full bg-brand-100 dark:bg-brand-950;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M5 10.5l3.2 3.2L15 7' stroke='%231fa392' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 0.8rem;
+  }
+
   .preview-header {
     @apply border-b px-5 py-3.5;
     border-color: var(--border);

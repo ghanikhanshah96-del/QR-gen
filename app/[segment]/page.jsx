@@ -4,6 +4,7 @@ import FaqList from '@/components/FaqList';
 import ToolGrid from '@/components/ToolGrid';
 import ToolArticle from '@/components/ToolArticle';
 import ContactForm from '@/components/ContactForm';
+import TocScrollSpy from '@/components/TocScrollSpy';
 import { TOOLS, getToolByDir } from '@/content/tools';
 import { LEGAL_PAGES } from '@/content/legal';
 import { getBlogByToolId } from '@/content/blogs';
@@ -152,19 +153,81 @@ function ToolPageView({ tool }) {
   );
 }
 
+/** Section links for the sidebar, read from the page's <h2 id="..."> headings. */
+function legalToc(html) {
+  return [...html.matchAll(/<h2 id="([^"]+)">(.*?)<\/h2>/g)].map((m) => ({
+    id: m[1],
+    label: m[2].replace(/<[^>]+>/g, ''),
+  }));
+}
+
 function LegalPageView({ page }) {
+  const toc = legalToc(page.content);
+  const showToc = toc.length >= 4;
+  const isContact = page.file === 'contact.html';
+
   return (
-    <div className="site-container py-10 sm:py-14">
-      <article className="mx-auto max-w-3xl">
-        <h1 className="font-display text-3xl font-semibold tracking-tight text-ink-950 dark:text-white sm:text-4xl">
-          {page.heading}
-        </h1>
-        <div
-          className="prose-ever mt-6 space-y-4 leading-relaxed text-ink-700 dark:text-ink-300 [&_a]:text-brand-800 [&_a]:underline dark:[&_a]:text-brand-300 [&_strong]:text-ink-950 dark:[&_strong]:text-white"
-          dangerouslySetInnerHTML={{ __html: page.content }}
-        />
-        {page.file === 'contact.html' ? <ContactForm /> : null}
-      </article>
-    </div>
+    <>
+      <header className="blog-hero">
+        <div className="site-container py-10 sm:py-12">
+          <nav className="text-sm text-ink-500 dark:text-ink-400" aria-label="Breadcrumb">
+            <ol className="flex flex-wrap items-center gap-2">
+              <li>
+                <Link className="hover:text-brand-700 dark:hover:text-brand-300" href="/">
+                  Home
+                </Link>
+              </li>
+              <li aria-hidden="true">/</li>
+              <li>{page.heading}</li>
+            </ol>
+          </nav>
+          <h1 className="mt-5 font-display text-3xl font-semibold tracking-tight text-ink-950 dark:text-white sm:text-4xl">
+            {page.heading}
+          </h1>
+          {page.description ? (
+            <p className="mt-3 max-w-3xl text-base leading-relaxed text-ink-600 dark:text-ink-300 sm:text-lg">
+              {page.description}
+            </p>
+          ) : null}
+          {page.updated ? (
+            <p className="mt-4 inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-medium text-ink-600 dark:text-ink-300" style={{ borderColor: 'var(--border)', background: 'var(--surface-soft)' }}>
+              Last updated: {page.updated}
+            </p>
+          ) : null}
+        </div>
+      </header>
+
+      <div className="site-container pb-16 pt-10">
+        <div className={showToc ? 'grid gap-8 lg:grid-cols-[16rem_minmax(0,1fr)] lg:gap-10' : ''}>
+          {showToc ? (
+            <aside className="hidden lg:block">
+              <nav aria-label="On this page" className="panel sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto p-4">
+                <TocScrollSpy />
+                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-500 dark:text-ink-400">On this page</p>
+                <ol className="mt-3 space-y-0.5">
+                  {toc.map((t) => (
+                    <li key={t.id}>
+                      <a
+                        href={`#${t.id}`}
+                        className="toc-link block rounded-md px-2 py-1.5 text-sm text-ink-600 transition hover:bg-brand-50 hover:text-brand-800 dark:text-ink-300 dark:hover:bg-brand-950/50 dark:hover:text-brand-200"
+                      >
+                        {t.label}
+                      </a>
+                    </li>
+                  ))}
+                </ol>
+              </nav>
+            </aside>
+          ) : null}
+
+          <div className="min-w-0 space-y-6">
+            {isContact ? <ContactForm /> : null}
+            <article className="panel p-6 sm:p-10">
+              <div className="legal-prose" dangerouslySetInnerHTML={{ __html: page.content }} />
+            </article>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }

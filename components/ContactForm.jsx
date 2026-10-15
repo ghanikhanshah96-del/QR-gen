@@ -65,7 +65,7 @@ export default function ContactForm() {
   const fieldClass = (field) => `field-input${field === 'message' ? ' min-h-[140px] resize-y' : ''}`;
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="panel mt-8 space-y-5 p-6 sm:p-8" aria-label="Contact form">
+    <form onSubmit={handleSubmit} noValidate className="panel space-y-5 p-6 sm:p-8" aria-label="Contact form">
       <div>
         <h2 className="text-xl font-semibold tracking-tight text-ink-950 dark:text-white">Send us a message</h2>
         <p className="mt-1 text-sm text-ink-600 dark:text-ink-300">

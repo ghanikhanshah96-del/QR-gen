@@ -23,11 +23,12 @@ const LEARN_LINKS = [
 ];
 
 const COMPANY_LINKS = [
-  { href: '/about.html', label: 'About' },
-  { href: '/privacy-policy.html', label: 'Privacy' },
-  { href: '/terms.html', label: 'Terms' },
-  { href: '/accessibility.html', label: 'Accessibility' },
-  { href: '/contact.html', label: 'Contact' },
+  { href: '/about.html', label: 'About Us' },
+  { href: '/contact.html', label: 'Contact Us' },
+  { href: '/privacy-policy.html', label: 'Privacy Policy' },
+  { href: '/disclaimer.html', label: 'Disclaimer' },
+  { href: '/terms.html', label: 'Terms and Conditions' },
+  { href: '/editorial-policy.html', label: 'Editorial Policy' },
 ];
 
 function FooterLink({ href, children }) {

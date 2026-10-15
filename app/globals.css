@@ -569,6 +569,16 @@
       dark:bg-brand-500 dark:text-ink-950;
   }
 
+  .blog-prose pre {
+    @apply overflow-x-auto rounded-lg border px-4 py-3 text-sm;
+    border-color: var(--border);
+    background: var(--surface-soft);
+  }
+
+  .blog-prose code {
+    @apply font-mono text-[13px] font-semibold text-brand-800 dark:text-brand-200;
+  }
+
   .blog-callout {
     @apply rounded-lg border-l-4 border-brand-500 bg-brand-50 px-4 py-3 text-brand-900 dark:bg-brand-950/60 dark:text-brand-100;
   }

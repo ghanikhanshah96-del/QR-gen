@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t">
+  <title id="t">A phone scanning a WiFi QR code and showing a prompt to join the network</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#062a27"/>
+      <stop offset="0.55" stop-color="#15564f"/>
+      <stop offset="1" stop-color="#0b1020"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="390" cy="320" r="250" fill="#3fbfaa" fill-opacity="0.07"/>
+  <circle cx="820" cy="300" r="230" fill="#3fbfaa" fill-opacity="0.06"/>
+
+  <!-- WiFi signal arcs (left) -->
+  <g transform="translate(250 175)" fill="none" stroke="#3fbfaa" stroke-linecap="round">
+    <path d="M-110 0 A156 156 0 0 1 110 0" stroke-width="22" stroke-opacity="0.35"/>
+    <path d="M-72 38 A102 102 0 0 1 72 38" stroke-width="22" stroke-opacity="0.6"/>
+    <path d="M-34 76 A48 48 0 0 1 34 76" stroke-width="22"/>
+    <circle cx="0" cy="112" r="15" fill="#3fbfaa" stroke="none"/>
+  </g>
+
+  <!-- QR sign card (left-bottom) -->
+  <g filter="url(#shadow)">
+    <rect x="160" y="330" width="250" height="230" rx="22" fill="#ffffff"/>
+  </g>
+  <g fill="#0b1020">
+    <path d="M186 356h52v52h-52z M196 366v32h32v-32z" fill-rule="evenodd"/>
+    <rect x="203" y="373" width="18" height="18"/>
+    <path d="M332 356h52v52h-52z M342 366v32h32v-32z" fill-rule="evenodd"/>
+    <rect x="349" y="373" width="18" height="18"/>
+    <path d="M186 482h52v52h-52z M196 492v32h32v-32z" fill-rule="evenodd"/>
+    <rect x="203" y="499" width="18" height="18"/>
+    <rect x="252" y="356" width="12" height="12"/><rect x="276" y="356" width="12" height="12"/><rect x="300" y="368" width="12" height="12"/>
+    <rect x="264" y="380" width="12" height="12"/><rect x="288" y="392" width="12" height="12"/><rect x="252" y="404" width="12" height="12"/>
+    <rect x="186" y="422" width="12" height="12"/><rect x="210" y="434" width="12" height="12"/><rect x="234" y="422" width="12" height="12"/>
+    <rect x="258" y="434" width="12" height="12"/><rect x="282" y="422" width="12" height="12"/><rect x="306" y="446" width="12" height="12"/>
+    <rect x="332" y="422" width="12" height="12"/><rect x="356" y="434" width="12" height="12"/><rect x="372" y="458" width="12" height="12"/>
+    <rect x="252" y="482" width="12" height="12"/><rect x="276" y="494" width="12" height="12"/><rect x="300" y="482" width="12" height="12"/>
+    <rect x="252" y="518" width="12" height="12"/><rect x="288" y="522" width="12" height="12"/><rect x="332" y="482" width="12" height="12"/>
+    <rect x="356" y="506" width="12" height="12"/><rect x="332" y="522" width="12" height="12"/><rect x="372" y="522" width="12" height="12"/>
+  </g>
+
+  <!-- scan beam -->
+  <path d="M410 360 L640 250 L640 470 L410 540 Z" fill="#3fbfaa" fill-opacity="0.12"/>
+
+  <!-- phone -->
+  <g filter="url(#shadow)">
+    <rect x="640" y="70" width="290" height="500" rx="44" fill="#0b1020"/>
+  </g>
+  <rect x="654" y="84" width="262" height="472" rx="34" fill="#f4f6f8"/>
+  <rect x="740" y="96" width="90" height="20" rx="10" fill="#0b1020"/>
+
+  <!-- camera viewfinder on phone -->
+  <rect x="678" y="140" width="214" height="214" rx="18" fill="#e4e8ee"/>
+  <g stroke="#148577" stroke-width="7" fill="none" stroke-linecap="round">
+    <path d="M700 190 v-26 h26"/><path d="M844 164 h26 v26"/>
+    <path d="M700 304 v26 h26"/><path d="M844 330 h26 v-26"/>
+  </g>
+  <g fill="#3d4a5e">
+    <path d="M725 189h34v34h-34z M732 196v20h20v-20z" fill-rule="evenodd"/>
+    <path d="M811 189h34v34h-34z M818 196v20h20v-20z" fill-rule="evenodd"/>
+    <path d="M725 275h34v34h-34z M732 282v20h20v-20z" fill-rule="evenodd"/>
+    <rect x="768" y="189" width="9" height="9"/><rect x="786" y="203" width="9" height="9"/><rect x="768" y="217" width="9" height="9"/>
+    <rect x="725" y="236" width="9" height="9"/><rect x="745" y="248" width="9" height="9"/><rect x="768" y="236" width="9" height="9"/>
+    <rect x="790" y="250" width="9" height="9"/><rect x="811" y="236" width="9" height="9"/><rect x="831" y="252" width="9" height="9"/>
+    <rect x="770" y="275" width="9" height="9"/><rect x="790" y="292" width="9" height="9"/><rect x="811" y="280" width="9" height="9"/>
+    <rect x="831" y="298" width="9" height="9"/><rect x="772" y="300" width="9" height="9"/>
+  </g>
+
+  <!-- join network prompt -->
+  <rect x="678" y="374" width="214" height="150" rx="18" fill="#ffffff" stroke="#ccd4df"/>
+  <circle cx="712" cy="410" r="20" fill="#d5f5ee"/>
+  <g transform="translate(712 414)" fill="none" stroke="#148577" stroke-width="4" stroke-linecap="round">
+    <path d="M-11 -4 A15 15 0 0 1 11 -4"/><path d="M-6 1 A8 8 0 0 1 6 1"/>
+    <circle cx="0" cy="6" r="2" fill="#148577" stroke="none"/>
+  </g>
+  <rect x="742" y="398" width="120" height="10" rx="5" fill="#0b1020" fill-opacity="0.75"/>
+  <rect x="742" y="416" width="84" height="9" rx="4.5" fill="#5f718c" fill-opacity="0.5"/>
+  <rect x="696" y="452" width="178" height="50" rx="14" fill="#148577"/>
+  <text x="785" y="484" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Join network</text>
+
+  <!-- connected badge -->
+  <g transform="translate(918 70)">
+    <circle cx="36" cy="36" r="36" fill="#ffffff"/>
+    <path d="M20 37l11 11 22-23" fill="none" stroke="#148577" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- password chip -->
+  <g opacity="0.95">
+    <rect x="960" y="430" width="190" height="64" rx="16" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.18"/>
+    <g fill="#aeebdd">
+      <circle cx="996" cy="462" r="7"/><circle cx="1020" cy="462" r="7"/><circle cx="1044" cy="462" r="7"/>
+      <circle cx="1068" cy="462" r="7"/><circle cx="1092" cy="462" r="7"/><circle cx="1116" cy="462" r="7"/>
+    </g>
+  </g>
+</svg>

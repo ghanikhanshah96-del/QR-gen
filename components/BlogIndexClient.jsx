@@ -88,8 +88,14 @@ export default function BlogIndexClient() {
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState('All');
 
-  // Newest first.
-  const posts = useMemo(() => [...BLOGS].sort((a, b) => b.date.localeCompare(a.date)), []);
+  // Newest first; posts with the same date: the one added later to content/blogs.js comes first.
+  const posts = useMemo(
+    () =>
+      BLOGS.map((post, i) => ({ post, i }))
+        .sort((a, b) => b.post.date.localeCompare(a.post.date) || b.i - a.i)
+        .map(({ post }) => post),
+    []
+  );
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();

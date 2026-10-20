@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t">
+  <title id="t">A phone camera scanning a WiFi QR code on a table card, with a notification to join the WiFi network</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#062a27"/>
+      <stop offset="0.55" stop-color="#15564f"/>
+      <stop offset="1" stop-color="#0b1020"/>
+    </linearGradient>
+    <linearGradient id="cam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2f3745"/>
+      <stop offset="1" stop-color="#0b1020"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+    <clipPath id="screen"><rect x="434" y="44" width="332" height="542" rx="40"/></clipPath>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="600" cy="320" r="290" fill="#3fbfaa" fill-opacity="0.06"/>
+
+  <!-- side icons: Android-style robot head + Apple-style rounded phone glyph -->
+  <g transform="translate(170 300)" opacity="0.9">
+    <rect x="-70" y="-70" width="140" height="140" rx="32" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.18"/>
+    <path d="M-36 14 a36 36 0 0 1 72 0 z" fill="#3fbfaa"/>
+    <circle cx="-14" cy="0" r="5" fill="#062a27"/><circle cx="14" cy="0" r="5" fill="#062a27"/>
+    <path d="M-24 -26 l8 12 M24 -26 l-8 12" stroke="#3fbfaa" stroke-width="5" stroke-linecap="round"/>
+    <rect x="-36" y="20" width="72" height="30" rx="8" fill="#3fbfaa"/>
+  </g>
+  <g transform="translate(1030 300)" opacity="0.9">
+    <rect x="-70" y="-70" width="140" height="140" rx="32" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.18"/>
+    <rect x="-24" y="-44" width="48" height="88" rx="12" fill="none" stroke="#aeebdd" stroke-width="6"/>
+    <rect x="-10" y="-36" width="20" height="5" rx="2.5" fill="#aeebdd"/>
+    <circle cx="0" cy="32" r="4" fill="#aeebdd"/>
+  </g>
+
+  <!-- phone -->
+  <g filter="url(#shadow)">
+    <rect x="420" y="30" width="360" height="570" rx="52" fill="#0b1020"/>
+  </g>
+  <g clip-path="url(#screen)">
+    <rect x="434" y="44" width="332" height="542" fill="url(#cam)"/>
+    <!-- table card seen through the camera -->
+    <path d="M470 560 L520 250 L700 250 L740 560 Z" fill="#e4e8ee" fill-opacity="0.18"/>
+    <rect x="492" y="250" width="216" height="216" rx="14" fill="#ffffff"/>
+    <g fill="#0b1020">
+      <path d="M510 268h50v50h-50z M519 277v32h32v-32z" fill-rule="evenodd"/><rect x="526" y="284" width="18" height="18"/>
+      <path d="M640 268h50v50h-50z M649 277v32h32v-32z" fill-rule="evenodd"/><rect x="656" y="284" width="18" height="18"/>
+      <path d="M510 398h50v50h-50z M519 407v32h32v-32z" fill-rule="evenodd"/><rect x="526" y="414" width="18" height="18"/>
+      <rect x="574" y="268" width="11" height="11"/><rect x="598" y="280" width="11" height="11"/><rect x="618" y="268" width="11" height="11"/>
+      <rect x="584" y="300" width="11" height="11"/><rect x="608" y="306" width="11" height="11"/>
+      <rect x="510" y="332" width="11" height="11"/><rect x="534" y="346" width="11" height="11"/><rect x="556" y="332" width="11" height="11"/>
+      <rect x="578" y="356" width="11" height="11"/><rect x="600" y="334" width="11" height="11"/><rect x="624" y="348" width="11" height="11"/>
+      <rect x="646" y="332" width="11" height="11"/><rect x="668" y="352" width="11" height="11"/><rect x="679" y="334" width="11" height="11"/>
+      <rect x="526" y="370" width="11" height="11"/><rect x="600" y="372" width="11" height="11"/><rect x="654" y="376" width="11" height="11"/>
+      <rect x="576" y="398" width="11" height="11"/><rect x="598" y="416" width="11" height="11"/><rect x="622" y="400" width="11" height="11"/>
+      <rect x="646" y="418" width="11" height="11"/><rect x="670" y="402" width="11" height="11"/><rect x="576" y="436" width="11" height="11"/>
+      <rect x="624" y="438" width="11" height="11"/><rect x="679" y="438" width="11" height="11"/>
+    </g>
+    <!-- focus brackets -->
+    <g stroke="#3fbfaa" stroke-width="7" fill="none" stroke-linecap="round">
+      <path d="M476 268 v-34 h34"/><path d="M690 234 h34 v34"/>
+      <path d="M476 448 v34 h34"/><path d="M690 482 h34 v-34"/>
+    </g>
+    <rect x="482" y="356" width="236" height="4" rx="2" fill="#3fbfaa" fill-opacity="0.9"/>
+    <!-- notification banner -->
+    <g filter="url(#shadow)">
+      <rect x="452" y="92" width="296" height="104" rx="22" fill="#ffffff"/>
+    </g>
+    <circle cx="496" cy="144" r="24" fill="#d5f5ee"/>
+    <g transform="translate(496 148)" fill="none" stroke="#148577" stroke-width="4.5" stroke-linecap="round">
+      <path d="M-13 -5 A18 18 0 0 1 13 -5"/><path d="M-7 1 A10 10 0 0 1 7 1"/>
+      <circle cx="0" cy="7" r="2.5" fill="#148577" stroke="none"/>
+    </g>
+    <text x="534" y="136" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#0b1020">Join WiFi?</text>
+    <text x="534" y="162" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="16" fill="#4a5a73">"GuestNetwork"</text>
+    <rect x="676" y="128" width="56" height="32" rx="10" fill="#148577"/>
+    <text x="704" y="150" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="700" fill="#ffffff">Join</text>
+    <!-- shutter -->
+    <circle cx="600" cy="540" r="30" fill="none" stroke="#ffffff" stroke-width="5"/>
+    <circle cx="600" cy="540" r="22" fill="#ffffff"/>
+  </g>
+  <rect x="555" y="52" width="90" height="22" rx="11" fill="#0b1020"/>
+
+  <!-- tap indicator -->
+  <circle cx="704" cy="144" r="30" fill="none" stroke="#3fbfaa" stroke-width="3" stroke-opacity="0.7"/>
+  <circle cx="704" cy="144" r="42" fill="none" stroke="#3fbfaa" stroke-width="2.5" stroke-opacity="0.35"/>
+</svg>

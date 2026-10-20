@@ -69,7 +69,7 @@ function parseFaq(html) {
 }
 
 const isFaq = (heading) => /frequently asked/i.test(heading);
-const isFinal = (heading) => /final thoughts/i.test(heading);
+const isFinal = (heading) => /^(final thoughts|conclusion)$/i.test(heading.trim());
 const pad = (n) => String(n).padStart(2, '0');
 
 function TocList({ sections }) {

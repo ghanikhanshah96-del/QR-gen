@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t">
+  <title id="t">Three ways to share a WhatsApp number: the phone number, a wa.me chat link, and a QR code</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#062a27"/>
+      <stop offset="0.55" stop-color="#15564f"/>
+      <stop offset="1" stop-color="#0b1020"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="600" cy="330" r="290" fill="#3fbfaa" fill-opacity="0.06"/>
+
+  <!-- share hub -->
+  <g transform="translate(600 112)">
+    <circle r="46" fill="#3fbfaa"/>
+    <g fill="#062a27">
+      <circle cx="-14" cy="0" r="9"/><circle cx="14" cy="-14" r="9"/><circle cx="14" cy="14" r="9"/>
+    </g>
+    <path d="M-14 0 L14 -14 M-14 0 L14 14" stroke="#062a27" stroke-width="5"/>
+  </g>
+  <g fill="none" stroke="#3fbfaa" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 12" stroke-opacity="0.8">
+    <path d="M560 140 C 420 170, 300 190, 240 236"/>
+    <path d="M600 160 V 230"/>
+    <path d="M640 140 C 780 170, 900 190, 960 236"/>
+  </g>
+
+  <!-- card helper: number badge -->
+  <!-- 1. phone number -->
+  <g filter="url(#shadow)"><rect x="90" y="250" width="300" height="290" rx="24" fill="#ffffff"/></g>
+  <circle cx="126" cy="286" r="18" fill="#148577"/>
+  <text x="126" y="293" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="18" font-weight="800" fill="#ffffff">1</text>
+  <g transform="translate(240 360)">
+    <circle r="42" fill="#d5f5ee"/>
+    <path d="M-17 -20 c-6 0 -10 6 -8 11 c4 17 17 30 34 34 c5 2 11 -2 11 -8 v-7 l-11 -6 l-6 6 c-8 -4 -13 -9 -17 -17 l6 -6 l-6 -11 z" fill="#148577"/>
+  </g>
+  <rect x="122" y="430" width="236" height="48" rx="12" fill="#f4f6f8" stroke="#ccd4df"/>
+  <text x="240" y="461" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" font-weight="700" fill="#0b1020">+1 555 123 4567</text>
+  <rect x="170" y="496" width="140" height="9" rx="4.5" fill="#5f718c" fill-opacity="0.35"/>
+
+  <!-- 2. chat link -->
+  <g filter="url(#shadow)"><rect x="450" y="250" width="300" height="290" rx="24" fill="#ffffff"/></g>
+  <circle cx="486" cy="286" r="18" fill="#148577"/>
+  <text x="486" y="293" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="18" font-weight="800" fill="#ffffff">2</text>
+  <g transform="translate(600 360)">
+    <circle r="42" fill="#d5f5ee"/>
+    <g fill="none" stroke="#148577" stroke-width="7" stroke-linecap="round">
+      <path d="M-4 -10 l6 -6 a11 11 0 0 1 16 16 l-8 8 a11 11 0 0 1 -16 0"/>
+      <path d="M4 10 l-6 6 a11 11 0 0 1 -16 -16 l8 -8 a11 11 0 0 1 16 0"/>
+    </g>
+  </g>
+  <rect x="482" y="430" width="236" height="48" rx="12" fill="#eefbf8" stroke="#3fbfaa" stroke-width="2"/>
+  <text x="600" y="460" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" font-weight="700" fill="#15564f">wa.me/15551234567</text>
+  <rect x="530" y="496" width="140" height="9" rx="4.5" fill="#5f718c" fill-opacity="0.35"/>
+
+  <!-- 3. QR code -->
+  <g filter="url(#shadow)"><rect x="810" y="250" width="300" height="290" rx="24" fill="#ffffff"/></g>
+  <circle cx="846" cy="286" r="18" fill="#148577"/>
+  <text x="846" y="293" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="18" font-weight="800" fill="#ffffff">3</text>
+  <g fill="#0b1020">
+    <path d="M880 312h40v40h-40z M887 319v26h26v-26z" fill-rule="evenodd"/><rect x="893" y="325" width="14" height="14"/>
+    <path d="M1000 312h40v40h-40z M1007 319v26h26v-26z" fill-rule="evenodd"/><rect x="1013" y="325" width="14" height="14"/>
+    <path d="M880 432h40v40h-40z M887 439v26h26v-26z" fill-rule="evenodd"/><rect x="893" y="445" width="14" height="14"/>
+    <rect x="930" y="312" width="10" height="10"/><rect x="950" y="324" width="10" height="10"/><rect x="972" y="312" width="10" height="10"/>
+    <rect x="940" y="340" width="10" height="10"/><rect x="964" y="346" width="10" height="10"/>
+    <rect x="880" y="364" width="10" height="10"/><rect x="900" y="376" width="10" height="10"/><rect x="922" y="364" width="10" height="10"/>
+    <rect x="942" y="386" width="10" height="10"/><rect x="964" y="366" width="10" height="10"/><rect x="986" y="380" width="10" height="10"/>
+    <rect x="1008" y="364" width="10" height="10"/><rect x="1030" y="384" width="10" height="10"/><rect x="1030" y="364" width="10" height="10"/>
+    <rect x="892" y="404" width="10" height="10"/><rect x="962" y="406" width="10" height="10"/><rect x="1014" y="410" width="10" height="10"/>
+    <rect x="930" y="432" width="10" height="10"/><rect x="950" y="448" width="10" height="10"/><rect x="972" y="434" width="10" height="10"/>
+    <rect x="994" y="452" width="10" height="10"/><rect x="1016" y="436" width="10" height="10"/><rect x="930" y="462" width="10" height="10"/>
+    <rect x="974" y="462" width="10" height="10"/><rect x="1030" y="462" width="10" height="10"/>
+  </g>
+  <g transform="translate(1078 284)">
+    <circle r="20" fill="#148577" stroke="#ffffff" stroke-width="4"/>
+    <path d="M-9 -7 h18 a5 5 0 0 1 5 5 v8 a5 5 0 0 1 -5 5 h-8 l-7 6 v-6 h-3 a5 5 0 0 1 -5 -5 v-8 a5 5 0 0 1 5 -5 z" fill="#ffffff"/>
+  </g>
+  <rect x="890" y="496" width="140" height="9" rx="4.5" fill="#5f718c" fill-opacity="0.35"/>
+</svg>

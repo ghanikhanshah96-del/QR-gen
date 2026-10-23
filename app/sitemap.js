@@ -13,6 +13,7 @@ export default function sitemap() {
   const entries = [
     { url: `${base}/`, lastModified },
     ...TOOLS.map((t) => ({ url: `${base}/${t.dir}/`, lastModified })),
+    { url: `${base}/qr-code-repair/`, lastModified },
     { url: `${base}/guides/`, lastModified },
     ...GUIDES.map((g) => ({ url: `${base}/guides/${g.dir}/`, lastModified })),
     { url: `${base}/blogs/`, lastModified },

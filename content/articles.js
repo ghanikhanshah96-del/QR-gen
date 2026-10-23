@@ -1937,6 +1937,7 @@ export const ARTICLES = {
           "Presentations (PPT, PPTX)",
           "Text files (TXT, RTF, ODT)",
           "Data files (JSON, XML)",
+          "ZIP archives (several files in one)",
         ],
         "If you paste a link instead, it can point to almost any file that opens in a phone browser.",
       ],

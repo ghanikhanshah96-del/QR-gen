@@ -524,7 +524,7 @@ export const TOOLS = [
       },
       {
         q: 'Which file types can I use?',
-        a: 'You can upload PDF, DOC, DOCX, TXT, CSV, RTF, XLS, XLSX, PPT, PPTX, ODT, JSON, and XML files up to 25 MB. If you paste a link instead, it can point to almost any file that opens in a browser.',
+        a: 'You can upload PDF, DOC, DOCX, TXT, CSV, RTF, XLS, XLSX, PPT, PPTX, ODT, JSON, XML, and ZIP files up to 25 MB. If you paste a link instead, it can point to almost any file that opens in a browser.',
       },
       {
         q: 'Is the file stored inside the QR code?',

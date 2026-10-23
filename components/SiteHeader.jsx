@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
-import { QR_TYPES } from '@/lib/constants';
+import { QR_TYPES, EXTRA_TOOLS } from '@/lib/constants';
 import ThemeToggle from '@/components/ThemeToggle';
 import { PATHS } from '@/lib/config';
 
@@ -77,7 +77,7 @@ export default function SiteHeader() {
               </svg>
             </button>
             {typesOpen ? (
-              <div className="absolute left-1/2 top-full z-50 w-[min(22rem,calc(100vw-2rem))] -translate-x-1/2 pt-2 animate-fade-in">
+              <div className="absolute left-1/2 top-full z-50 w-[min(24rem,calc(100vw-2rem))] -translate-x-1/2 pt-2 animate-fade-in">
                 <div className="nav-dropdown-panel" role="menu">
                   {types.map((t) => (
                     <Link
@@ -90,6 +90,23 @@ export default function SiteHeader() {
                       {t.label}
                     </Link>
                   ))}
+                  {EXTRA_TOOLS.length ? (
+                    <div className="col-span-2 mt-1 border-t pt-2" style={{ borderColor: 'var(--border)' }}>
+                      <p className="px-3 pb-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-ink-400">More tools</p>
+                      {EXTRA_TOOLS.map((t) => (
+                        <Link
+                          key={t.id}
+                          className="nav-dropdown-item block"
+                          role="menuitem"
+                          href={t.path}
+                          onClick={() => setTypesOpen(false)}
+                        >
+                          <span className="block font-semibold">{t.label}</span>
+                          <span className="mt-0.5 block text-xs font-normal opacity-75">{t.description}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  ) : null}
                 </div>
               </div>
             ) : null}
@@ -132,6 +149,14 @@ export default function SiteHeader() {
             <p className="px-3 pt-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-ink-400">QR types</p>
             <div className="grid grid-cols-2 gap-1 pb-2">
               {types.map((t) => (
+                <Link key={t.id} className="nav-dropdown-item" href={t.path} onClick={() => setOpen(false)}>
+                  {t.label}
+                </Link>
+              ))}
+            </div>
+            <p className="px-3 pt-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-ink-400">More tools</p>
+            <div className="grid grid-cols-1 gap-1 pb-2">
+              {EXTRA_TOOLS.map((t) => (
                 <Link key={t.id} className="nav-dropdown-item" href={t.path} onClick={() => setOpen(false)}>
                   {t.label}
                 </Link>

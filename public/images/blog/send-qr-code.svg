@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t">
+  <title id="t">A QR code image being sent in a chat on a phone, with email and text message icons as other ways to share it</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#062a27"/>
+      <stop offset="0.55" stop-color="#15564f"/>
+      <stop offset="1" stop-color="#0b1020"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+    <clipPath id="screen"><rect x="459" y="59" width="282" height="512" rx="36"/></clipPath>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="600" cy="320" r="290" fill="#3fbfaa" fill-opacity="0.06"/>
+
+  <!-- left: email card -->
+  <g transform="translate(150 200)" filter="url(#shadow)">
+    <rect x="-90" y="-62" width="180" height="124" rx="22" fill="#ffffff"/>
+  </g>
+  <g transform="translate(150 200)">
+    <rect x="-46" y="-30" width="92" height="62" rx="8" fill="#d5f5ee" stroke="#148577" stroke-width="4"/>
+    <path d="M-44 -26 L0 8 L44 -26" fill="none" stroke="#148577" stroke-width="4" stroke-linejoin="round"/>
+  </g>
+  <text x="150" y="300" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Email</text>
+
+  <!-- left lower: text message card -->
+  <g transform="translate(250 420)" filter="url(#shadow)">
+    <rect x="-90" y="-62" width="180" height="124" rx="22" fill="#ffffff"/>
+  </g>
+  <g transform="translate(250 418)">
+    <path d="M-42 -28 h84 a10 10 0 0 1 10 10 v34 a10 10 0 0 1 -10 10 h-50 l-20 16 v-16 h-14 a10 10 0 0 1 -10 -10 v-34 a10 10 0 0 1 10 -10 z" fill="#d5f5ee" stroke="#148577" stroke-width="4" stroke-linejoin="round"/>
+    <text x="0" y="6" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="18" font-weight="800" fill="#148577">SMS</text>
+  </g>
+  <text x="250" y="520" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Text message</text>
+
+  <!-- dashed links to phone -->
+  <g fill="none" stroke="#3fbfaa" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 12" stroke-opacity="0.8">
+    <path d="M250 200 C 330 200, 380 230, 440 260"/>
+    <path d="M350 420 C 390 410, 410 400, 440 380"/>
+  </g>
+
+  <!-- phone with chat -->
+  <g filter="url(#shadow)"><rect x="445" y="45" width="310" height="540" rx="46" fill="#0b1020"/></g>
+  <g clip-path="url(#screen)">
+    <rect x="459" y="59" width="282" height="512" fill="#eefbf8"/>
+    <rect x="459" y="59" width="282" height="88" fill="#148577"/>
+    <circle cx="500" cy="115" r="20" fill="#d5f5ee"/>
+    <path d="M500 107 a7 7 0 1 1 0.01 0 M486 129 a14 10 0 0 1 28 0" fill="#148577"/>
+    <rect x="530" y="104" width="110" height="11" rx="5.5" fill="#ffffff"/>
+    <rect x="530" y="122" width="70" height="8" rx="4" fill="#ffffff" fill-opacity="0.6"/>
+    <!-- incoming -->
+    <rect x="475" y="168" width="160" height="48" rx="14" fill="#ffffff"/>
+    <rect x="489" y="182" width="120" height="8" rx="4" fill="#4a5a73" fill-opacity="0.45"/>
+    <rect x="489" y="197" width="80" height="8" rx="4" fill="#4a5a73" fill-opacity="0.3"/>
+    <!-- outgoing image bubble with QR -->
+    <rect x="537" y="236" width="190" height="230" rx="18" fill="#aeebdd"/>
+    <rect x="549" y="248" width="166" height="166" rx="10" fill="#ffffff"/>
+    <g fill="#0b1020">
+      <path d="M561 260h36v36h-36z M567 266v24h24v-24z" fill-rule="evenodd"/><rect x="573" y="272" width="12" height="12"/>
+      <path d="M667 260h36v36h-36z M673 266v24h24v-24z" fill-rule="evenodd"/><rect x="679" y="272" width="12" height="12"/>
+      <path d="M561 366h36v36h-36z M567 372v24h24v-24z" fill-rule="evenodd"/><rect x="573" y="378" width="12" height="12"/>
+      <rect x="607" y="260" width="9" height="9"/><rect x="625" y="270" width="9" height="9"/><rect x="643" y="260" width="9" height="9"/>
+      <rect x="615" y="286" width="9" height="9"/><rect x="637" y="290" width="9" height="9"/>
+      <rect x="561" y="308" width="9" height="9"/><rect x="579" y="318" width="9" height="9"/><rect x="597" y="308" width="9" height="9"/>
+      <rect x="615" y="326" width="9" height="9"/><rect x="633" y="310" width="9" height="9"/><rect x="651" y="322" width="9" height="9"/>
+      <rect x="669" y="308" width="9" height="9"/><rect x="687" y="326" width="9" height="9"/><rect x="694" y="310" width="9" height="9"/>
+      <rect x="571" y="340" width="9" height="9"/><rect x="633" y="342" width="9" height="9"/><rect x="677" y="346" width="9" height="9"/>
+      <rect x="607" y="366" width="9" height="9"/><rect x="625" y="380" width="9" height="9"/><rect x="645" y="368" width="9" height="9"/>
+      <rect x="663" y="384" width="9" height="9"/><rect x="683" y="370" width="9" height="9"/><rect x="607" y="393" width="9" height="9"/>
+      <rect x="647" y="393" width="9" height="9"/><rect x="694" y="393" width="9" height="9"/>
+    </g>
+    <rect x="551" y="428" width="70" height="20" rx="6" fill="#ffffff" fill-opacity="0.7"/>
+    <text x="586" y="443" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#15564f">PNG</text>
+    <!-- sent ticks -->
+    <g fill="none" stroke="#148577" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M676 440 l5 5 l9 -10"/><path d="M688 440 l5 5 l9 -10"/>
+    </g>
+    <!-- input bar -->
+    <rect x="475" y="500" width="198" height="46" rx="23" fill="#ffffff" stroke="#ccd4df"/>
+    <g transform="translate(497 523)" fill="none" stroke="#5f718c" stroke-width="2.6" stroke-linecap="round">
+      <path d="M4 -8 l-10 10 a5 5 0 0 0 7 7 l12 -12 a8 8 0 0 0 -11 -11 l-12 12"/>
+    </g>
+    <rect x="516" y="519" width="110" height="8" rx="4" fill="#ccd4df"/>
+    <circle cx="704" cy="523" r="23" fill="#148577"/>
+    <path d="M694 523 l20 -9 l-6 20 l-4 -8 z" fill="#ffffff"/>
+  </g>
+  <rect x="555" y="62" width="90" height="20" rx="10" fill="#0b1020"/>
+
+  <!-- right: recipient scanning -->
+  <path d="M770 330 H 870" stroke="#3fbfaa" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 13"/>
+  <path d="M864 317 l14 13 l-14 13" fill="none" stroke="#3fbfaa" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(1000 330)">
+    <circle r="105" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.18"/>
+    <rect x="-46" y="-80" width="92" height="160" rx="18" fill="#0b1020" stroke="#aeebdd" stroke-width="4"/>
+    <g stroke="#3fbfaa" stroke-width="4" fill="none" stroke-linecap="round">
+      <path d="M-28 -34 v-14 h14"/><path d="M14 -48 h14 v14"/>
+      <path d="M-28 30 v14 h14"/><path d="M14 44 h14 v-14"/>
+    </g>
+    <rect x="-24" y="-2" width="48" height="3" fill="#3fbfaa"/>
+    <circle cx="62" cy="-62" r="22" fill="#3fbfaa"/>
+    <path d="M52 -62 l7 7 l13 -14" fill="none" stroke="#062a27" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="1000" y="470" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="20" font-weight="700" fill="#ffffff">Scan to open</text>
+</svg>

@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t">
+  <title id="t">A website link copied from a browser address bar, turned into a QR code, and opened as a web page on a phone</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#062a27"/>
+      <stop offset="0.55" stop-color="#15564f"/>
+      <stop offset="1" stop-color="#0b1020"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+    <clipPath id="screen"><rect x="904" y="114" width="232" height="432" rx="30"/></clipPath>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="600" cy="330" r="290" fill="#3fbfaa" fill-opacity="0.06"/>
+
+  <!-- address bar card -->
+  <g filter="url(#shadow)"><rect x="70" y="90" width="560" height="120" rx="22" fill="#ffffff"/></g>
+  <circle cx="104" cy="122" r="7" fill="#f87171"/><circle cx="126" cy="122" r="7" fill="#fbbf24"/><circle cx="148" cy="122" r="7" fill="#34d399"/>
+  <rect x="94" y="146" width="512" height="44" rx="22" fill="#f4f6f8" stroke="#3fbfaa" stroke-width="2"/>
+  <rect x="114" y="164" width="12" height="10" rx="2" fill="#148577"/>
+  <path d="M116 164 v-4 a4 4 0 0 1 8 0 v4" fill="none" stroke="#148577" stroke-width="2.4"/>
+  <text x="140" y="175" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" fill="#0b1020">https://example.com/products</text>
+  <rect x="140" y="179" width="296" height="3" fill="#3fbfaa" fill-opacity="0.45"/>
+  <!-- copy icon -->
+  <g transform="translate(566 168)">
+    <circle r="17" fill="#148577"/>
+    <rect x="-5" y="-8" width="11" height="13" rx="2" fill="none" stroke="#ffffff" stroke-width="2.4"/>
+    <rect x="-9" y="-4" width="11" height="13" rx="2" fill="#148577" stroke="#ffffff" stroke-width="2.4"/>
+  </g>
+
+  <!-- arrow down to QR -->
+  <path d="M350 228 C 350 270, 380 300, 430 320" fill="none" stroke="#3fbfaa" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 13"/>
+  <path d="M418 306 l16 16 l-21 6" fill="none" stroke="#3fbfaa" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- QR -->
+  <g filter="url(#shadow)"><rect x="450" y="250" width="260" height="260" rx="24" fill="#ffffff"/></g>
+  <g fill="#0b1020">
+    <path d="M474 274h56v56h-56z M484 284v36h36v-36z" fill-rule="evenodd"/><rect x="492" y="292" width="20" height="20"/>
+    <path d="M630 274h56v56h-56z M640 284v36h36v-36z" fill-rule="evenodd"/><rect x="648" y="292" width="20" height="20"/>
+    <path d="M474 430h56v56h-56z M484 440v36h36v-36z" fill-rule="evenodd"/><rect x="492" y="448" width="20" height="20"/>
+    <rect x="544" y="274" width="13" height="13"/><rect x="570" y="287" width="13" height="13"/><rect x="596" y="274" width="13" height="13"/>
+    <rect x="556" y="309" width="13" height="13"/><rect x="584" y="317" width="13" height="13"/>
+    <rect x="474" y="345" width="13" height="13"/><rect x="500" y="359" width="13" height="13"/><rect x="526" y="345" width="13" height="13"/>
+    <rect x="552" y="371" width="13" height="13"/><rect x="578" y="345" width="13" height="13"/><rect x="604" y="363" width="13" height="13"/>
+    <rect x="630" y="345" width="13" height="13"/><rect x="656" y="371" width="13" height="13"/><rect x="673" y="347" width="13" height="13"/>
+    <rect x="488" y="385" width="13" height="13"/><rect x="578" y="389" width="13" height="13"/><rect x="642" y="395" width="13" height="13"/>
+    <rect x="544" y="430" width="13" height="13"/><rect x="570" y="449" width="13" height="13"/><rect x="598" y="433" width="13" height="13"/>
+    <rect x="624" y="453" width="13" height="13"/><rect x="652" y="435" width="13" height="13"/><rect x="544" y="473" width="13" height="13"/>
+    <rect x="600" y="473" width="13" height="13"/><rect x="673" y="473" width="13" height="13"/>
+  </g>
+  <!-- link badge on QR -->
+  <g transform="translate(710 250)">
+    <circle r="26" fill="#148577" stroke="#ffffff" stroke-width="5"/>
+    <g fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round">
+      <path d="M-2 -6 l4 -4 a7 7 0 0 1 10 10 l-5 5 a7 7 0 0 1 -10 0"/>
+      <path d="M2 6 l-4 4 a7 7 0 0 1 -10 -10 l5 -5 a7 7 0 0 1 10 0"/>
+    </g>
+  </g>
+
+  <!-- arrow to phone -->
+  <path d="M736 380 H 870" stroke="#3fbfaa" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 13"/>
+  <path d="M864 367 l14 13 l-14 13" fill="none" stroke="#3fbfaa" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- phone opening the page -->
+  <g filter="url(#shadow)"><rect x="890" y="100" width="260" height="460" rx="40" fill="#0b1020"/></g>
+  <g clip-path="url(#screen)">
+    <rect x="904" y="114" width="232" height="432" fill="#ffffff"/>
+    <rect x="904" y="114" width="232" height="70" fill="#f4f6f8"/>
+    <rect x="918" y="146" width="204" height="26" rx="13" fill="#ffffff" stroke="#ccd4df"/>
+    <text x="1020" y="164" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11" font-weight="700" fill="#15564f">example.com/products</text>
+    <!-- page content -->
+    <rect x="918" y="198" width="204" height="100" rx="12" fill="#d5f5ee"/>
+    <circle cx="960" cy="246" r="22" fill="#3fbfaa"/>
+    <path d="M1000 276 l30 -40 l26 30 l14 -14 l22 24 z" fill="#148577" fill-opacity="0.7"/>
+    <rect x="918" y="314" width="150" height="12" rx="6" fill="#0b1020" fill-opacity="0.8"/>
+    <rect x="918" y="336" width="200" height="8" rx="4" fill="#5f718c" fill-opacity="0.4"/>
+    <rect x="918" y="352" width="180" height="8" rx="4" fill="#5f718c" fill-opacity="0.4"/>
+    <rect x="918" y="380" width="96" height="66" rx="10" fill="#eefbf8" stroke="#aeebdd"/>
+    <rect x="1026" y="380" width="96" height="66" rx="10" fill="#eefbf8" stroke="#aeebdd"/>
+    <rect x="918" y="466" width="204" height="40" rx="12" fill="#148577"/>
+    <rect x="980" y="482" width="80" height="8" rx="4" fill="#ffffff"/>
+  </g>
+  <rect x="975" y="118" width="90" height="18" rx="9" fill="#0b1020"/>
+  <!-- opened check -->
+  <g transform="translate(1150 120)">
+    <circle r="24" fill="#ffffff"/>
+    <path d="M-10 0 l7 7 l13 -14" fill="none" stroke="#148577" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

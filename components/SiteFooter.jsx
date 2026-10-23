@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { PATHS } from '@/lib/config';
+import { EXTRA_TOOLS } from '@/lib/constants';
 
 const TOOL_LINKS = [
   { href: '/url-qr-code/', label: 'URL' },
@@ -11,6 +12,7 @@ const TOOL_LINKS = [
   { href: '/image-to-qr-code/', label: 'Image' },
   { href: '/video-to-qr-code/', label: 'Video' },
   { href: '/file-qr-code/', label: 'File' },
+  ...EXTRA_TOOLS.map((t) => ({ href: t.path, label: t.label })),
 ];
 
 const LEARN_LINKS = [

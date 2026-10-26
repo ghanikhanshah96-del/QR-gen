@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t">
+  <title id="t">An Android phone scanning a QR code with its built-in camera, Quick Settings scanner, and Lens, with no app download needed</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#062a27"/>
+      <stop offset="0.55" stop-color="#15564f"/>
+      <stop offset="1" stop-color="#0b1020"/>
+    </linearGradient>
+    <linearGradient id="cam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2f3745"/>
+      <stop offset="1" stop-color="#0b1020"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+    <clipPath id="screen"><rect x="484" y="74" width="232" height="482" rx="26"/></clipPath>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <circle cx="600" cy="320" r="290" fill="#3fbfaa" fill-opacity="0.06"/>
+
+  <!-- left: three built-in methods -->
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-weight="700" font-size="20" fill="#0b1020">
+    <!-- Camera -->
+    <g filter="url(#shadow)"><rect x="90" y="120" width="300" height="96" rx="20" fill="#ffffff"/></g>
+    <g transform="translate(140 168)">
+      <circle r="28" fill="#d5f5ee"/>
+      <rect x="-16" y="-10" width="32" height="22" rx="5" fill="none" stroke="#148577" stroke-width="3.5"/>
+      <path d="M-6 -10 l3 -5 h6 l3 5" fill="none" stroke="#148577" stroke-width="3.5" stroke-linejoin="round"/>
+      <circle cx="0" cy="1" r="6" fill="none" stroke="#148577" stroke-width="3.5"/>
+    </g>
+    <text x="186" y="164">Camera app</text>
+    <rect x="186" y="176" width="150" height="8" rx="4" fill="#5f718c" fill-opacity="0.35"/>
+
+    <!-- Quick Settings -->
+    <g filter="url(#shadow)"><rect x="90" y="267" width="300" height="96" rx="20" fill="#ffffff"/></g>
+    <g transform="translate(140 315)">
+      <circle r="28" fill="#d5f5ee"/>
+      <g fill="#148577">
+        <path d="M-14 -14h10v10h-10z M-11 -11v4h4v-4z" fill-rule="evenodd"/>
+        <path d="M4 -14h10v10h-10z M7 -11v4h4v-4z" fill-rule="evenodd"/>
+        <path d="M-14 4h10v10h-10z M-11 7v4h4v-4z" fill-rule="evenodd"/>
+        <rect x="4" y="4" width="4" height="4"/><rect x="10" y="10" width="4" height="4"/><rect x="10" y="4" width="4" height="4"/>
+      </g>
+    </g>
+    <text x="186" y="311">Quick Settings</text>
+    <rect x="186" y="323" width="120" height="8" rx="4" fill="#5f718c" fill-opacity="0.35"/>
+
+    <!-- Lens -->
+    <g filter="url(#shadow)"><rect x="90" y="414" width="300" height="96" rx="20" fill="#ffffff"/></g>
+    <g transform="translate(140 462)">
+      <circle r="28" fill="#d5f5ee"/>
+      <path d="M-14 -4 v-6 a4 4 0 0 1 4 -4 h6 M4 -14 h6 a4 4 0 0 1 4 4 v6 M14 4 v6 a4 4 0 0 1 -4 4 h-6 M-4 14 h-6 a4 4 0 0 1 -4 -4 v-6" fill="none" stroke="#148577" stroke-width="3.5" stroke-linecap="round"/>
+      <circle cx="0" cy="0" r="5" fill="#148577"/>
+    </g>
+    <text x="186" y="458">Lens</text>
+    <rect x="186" y="470" width="140" height="8" rx="4" fill="#5f718c" fill-opacity="0.35"/>
+  </g>
+
+  <!-- connectors -->
+  <g fill="none" stroke="#3fbfaa" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 12" stroke-opacity="0.8">
+    <path d="M400 168 C 430 168, 440 220, 470 250"/>
+    <path d="M400 315 H 470"/>
+    <path d="M400 462 C 430 462, 440 410, 470 380"/>
+  </g>
+
+  <!-- phone (Android-style: punch-hole camera, square-ish corners) -->
+  <g filter="url(#shadow)"><rect x="470" y="60" width="260" height="510" rx="36" fill="#0b1020"/></g>
+  <g clip-path="url(#screen)">
+    <rect x="484" y="74" width="232" height="482" fill="url(#cam)"/>
+    <!-- quick settings tile bar at top -->
+    <rect x="496" y="96" width="208" height="56" rx="16" fill="#ffffff" fill-opacity="0.12"/>
+    <rect x="506" y="106" width="92" height="36" rx="12" fill="#3fbfaa"/>
+    <g transform="translate(524 124)" fill="#062a27">
+      <path d="M-8 -8h6v6h-6z M-6 -6v2h2v-2z" fill-rule="evenodd"/>
+      <path d="M2 -8h6v6h-6z M4 -6v2h2v-2z" fill-rule="evenodd"/>
+      <path d="M-8 2h6v6h-6z M-6 4v2h2v-2z" fill-rule="evenodd"/>
+      <rect x="2" y="2" width="2.5" height="2.5"/><rect x="5.5" y="5.5" width="2.5" height="2.5"/>
+    </g>
+    <rect x="538" y="119" width="50" height="9" rx="4.5" fill="#062a27" fill-opacity="0.7"/>
+    <rect x="606" y="106" width="88" height="36" rx="12" fill="#ffffff" fill-opacity="0.15"/>
+    <!-- viewfinder -->
+    <g stroke="#3fbfaa" stroke-width="6" fill="none" stroke-linecap="round">
+      <path d="M514 236 v-28 h28"/><path d="M658 208 h28 v28"/>
+      <path d="M514 372 v28 h28"/><path d="M658 400 h28 v-28"/>
+    </g>
+    <rect x="532" y="226" width="136" height="156" rx="8" fill="#ffffff"/>
+    <g fill="#0b1020">
+      <path d="M542 236h30v30h-30z M547 241v20h20v-20z" fill-rule="evenodd"/><rect x="552" y="246" width="10" height="10"/>
+      <path d="M628 236h30v30h-30z M633 241v20h20v-20z" fill-rule="evenodd"/><rect x="638" y="246" width="10" height="10"/>
+      <path d="M542 342h30v30h-30z M547 347v20h20v-20z" fill-rule="evenodd"/><rect x="552" y="352" width="10" height="10"/>
+      <rect x="582" y="236" width="8" height="8"/><rect x="598" y="248" width="8" height="8"/><rect x="614" y="236" width="8" height="8"/>
+      <rect x="542" y="280" width="8" height="8"/><rect x="558" y="292" width="8" height="8"/><rect x="576" y="280" width="8" height="8"/>
+      <rect x="592" y="300" width="8" height="8"/><rect x="608" y="282" width="8" height="8"/><rect x="624" y="296" width="8" height="8"/>
+      <rect x="640" y="282" width="8" height="8"/><rect x="650" y="304" width="8" height="8"/><rect x="560" y="316" width="8" height="8"/>
+      <rect x="604" y="320" width="8" height="8"/><rect x="638" y="326" width="8" height="8"/>
+      <rect x="584" y="344" width="8" height="8"/><rect x="600" y="360" width="8" height="8"/><rect x="618" y="346" width="8" height="8"/>
+      <rect x="636" y="362" width="8" height="8"/><rect x="650" y="346" width="8" height="8"/><rect x="584" y="364" width="8" height="8"/>
+    </g>
+    <rect x="520" y="300" width="160" height="3" fill="#3fbfaa"/>
+    <!-- detected link chip -->
+    <rect x="500" y="430" width="200" height="56" rx="16" fill="#ffffff"/>
+    <circle cx="526" cy="458" r="12" fill="#148577"/>
+    <path d="M520 458 l4 4 l8 -9" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="546" y="448" width="120" height="8" rx="4" fill="#0b1020" fill-opacity="0.75"/>
+    <rect x="546" y="462" width="80" height="7" rx="3.5" fill="#5f718c" fill-opacity="0.5"/>
+    <rect x="560" y="520" width="80" height="6" rx="3" fill="#ffffff" fill-opacity="0.5"/>
+  </g>
+  <circle cx="600" cy="86" r="7" fill="#0b1020"/>
+
+  <!-- right: no app needed -->
+  <g transform="translate(940 300)">
+    <circle r="120" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.18"/>
+    <!-- app download icon -->
+    <rect x="-48" y="-62" width="96" height="96" rx="24" fill="#ffffff" fill-opacity="0.9"/>
+    <path d="M0 -40 v38 M-16 -18 l16 16 l16 -16" fill="none" stroke="#5f718c" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M-20 16 h40" stroke="#5f718c" stroke-width="7" stroke-linecap="round"/>
+    <!-- strike -->
+    <path d="M-60 -74 L 60 46" stroke="#f59e0b" stroke-width="10" stroke-linecap="round"/>
+    <!-- check badge -->
+    <circle cx="62" cy="-74" r="26" fill="#3fbfaa"/>
+    <path d="M50 -74 l8 8 l16 -17" fill="none" stroke="#062a27" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="940" y="480" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif" font-size="24" font-weight="800" fill="#ffffff">No app needed</text>
+</svg>

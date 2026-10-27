@@ -1,4 +1,5 @@
 import { Fraunces, Plus_Jakarta_Sans } from 'next/font/google';
+import Script from 'next/script';
 import SiteHeader from '@/components/SiteHeader';
 import SiteFooter from '@/components/SiteFooter';
 import { SITE } from '@/lib/config';
@@ -73,21 +74,30 @@ export default function RootLayout({ children }) {
         {/* Google Search Console ownership check. Written directly in <head> (not via metadata)
             so it is always in the initial <head>, never streamed into <body>. */}
         <meta name="google-site-verification" content="QqkaJSl8U0i4F8isgE53joiwTOQn1ndq5dVIAiIcbUE" />
-        {/* Google tag (gtag.js) — Google Analytics 4 */}
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
-        <script dangerouslySetInnerHTML={{ __html: gaInitScript }} />
-        {/* Google AdSense */}
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9309280380486229"
-          crossOrigin="anonymous"
-        />
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        {/* Google AdSense site verification (the ad script itself loads after hydration, below). */}
+        <meta name="google-adsense-account" content="ca-pub-9309280380486229" />
+        {/* Inline scripts go through next/script: a raw inline <script> makes React warn
+            ("Encountered a script tag…") whenever it re-renders the layout in the browser. */}
+        <Script id="theme-init" strategy="beforeInteractive">
+          {themeInitScript}
+        </Script>
       </head>
       <body className="flex min-h-screen flex-col">
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />
+        {/* Google AdSense. Loaded after hydration on purpose: as a raw <script> in <head> it injects
+            extra scripts into <head> before React hydrates, causing a hydration mismatch. */}
+        <Script
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9309280380486229"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+        {/* Google tag (gtag.js) — Google Analytics 4 */}
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
+        <Script id="ga-init" strategy="afterInteractive">
+          {gaInitScript}
+        </Script>
       </body>
     </html>
   );

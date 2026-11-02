@@ -110,7 +110,8 @@ export async function GET() {
   return new Response(html, {
     headers: {
       'Content-Type': 'text/html; charset=utf-8',
-      'Cache-Control': 'no-store',
+      // no-transform stops Cloudflare injecting its Web Analytics script into this page.
+      'Cache-Control': 'no-store, no-transform',
       'Referrer-Policy': 'no-referrer',
       'X-Robots-Tag': 'noindex',
       'X-Content-Type-Options': 'nosniff',

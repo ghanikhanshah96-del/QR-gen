@@ -58,6 +58,7 @@ function FeaturedCard({ post }) {
           Read article →
         </Link>
       </div>
+      
     </article>
   );
 }

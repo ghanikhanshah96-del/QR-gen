@@ -1910,8 +1910,8 @@ export const ARTICLES = {
             {
               title: "Upload your file",
               body: [
-                "The fastest option. Your file is uploaded to a free temporary host to create a public link, and that link goes into the QR code.",
-                "Uploaded files are kept for 48 hours. After that, the QR code stops working.",
+                "The fastest option. Your file is encrypted in your browser and uploaded, and a private link to it goes into the QR code.",
+                "The link does not expire. Anyone with the QR code can open the file.",
               ],
             },
             {
@@ -1999,7 +1999,7 @@ export const ARTICLES = {
       heading: "Does a File QR Code Expire?",
       blocks: [
         "The QR code itself does not expire, but it depends on the file link stored inside it.",
-        "If you upload your file here, the file is deleted after 48 hours and the QR code stops working.",
+        "If you upload your file here, the link does not expire.",
         "If you paste your own link, the QR code keeps working as long as the file stays online at that address. If you delete the file, move it, or change its sharing settings, the code may still scan but will no longer open the document.",
         "For long-term printed materials, use a stable link that you expect to keep active.",
       ],

@@ -425,7 +425,7 @@ export const TOOLS = [
     description:
       'Turn an image or photo into a QR code. Add your image, generate the code, test it, and download it for sharing.',
     intro:
-      'Convert an image to a QR code for free. Upload a photo for a temporary link that expires after 48 hours, or paste your own image URL for a permanent QR code. GenerateQRFast encodes that https link in the QR, not the image bytes.',
+      'Convert an image to a QR code for free. Upload a photo for an encrypted link that does not expire, or paste your own image URL. GenerateQRFast encodes that https link in the QR, not the image bytes.',
     instructions: [
       'Upload an image (PNG, JPG, WebP, GIF, SVG) or paste a public https URL.',
       'Confirm the public image link appears in the form.',
@@ -443,11 +443,11 @@ export const TOOLS = [
       },
       {
         q: 'How does image upload work?',
-        a: 'Your file is sent to a free temporary host (tmpfiles.org) to get a public link, and that link goes into the QR code. GenerateQRFast does not store your image. The uploaded file is deleted after 48 hours.',
+        a: 'Your image is encrypted in your browser, then stored in encrypted form so the QR code has a link to it. The key stays inside the QR link, so GenerateQRFast cannot read your image. Anyone with the QR code can open it.',
       },
       {
         q: 'Does an uploaded image QR expire?',
-        a: 'Yes, if you upload. Uploaded images expire after 48 hours, and the QR code stops working after that. For a permanent QR code, paste your own image link (Google Drive, Dropbox, or your website). Then it works as long as that link stays online.',
+        a: 'No. Uploaded images have a link that does not expire. If you paste your own image link instead, the QR code works for as long as that link stays online.',
       },
       {
         q: 'What kind of links work best?',
@@ -463,9 +463,9 @@ export const TOOLS = [
     description:
       'Turn a video or video link into a QR code. Generate, test, download, and share your video QR code free.',
     intro:
-      'Convert a video to a QR code for free. Upload a short video for a temporary link that expires after 48 hours, or paste YouTube, Vimeo, or Drive for a permanent QR code — the QR opens that link because video files are too large to embed inside a QR.',
+      'Convert a video to a QR code for free. Upload a short video for an encrypted link that does not expire, or paste a YouTube, Vimeo, or Drive link — the QR opens that link because video files are too large to embed inside a QR.',
     instructions: [
-      'Paste a YouTube, Vimeo, or Drive link (permanent), or upload MP4/WebM/MOV (expires after 48 hours).',
+      'Paste a YouTube, Vimeo, or Drive link (permanent), or upload MP4/WebM/MOV up to 50 MB (encrypted, does not expire).',
       'Confirm the public URL appears in the form.',
       'Customize the design.',
       'Download and share — no watermark.',
@@ -485,7 +485,7 @@ export const TOOLS = [
       },
       {
         q: 'Can I turn an MP4 file into a QR code?',
-        a: 'You can upload an MP4 for a temporary link that expires after 48 hours, or host it on YouTube, Vimeo, or Drive and paste that link for a permanent QR code. The QR stores the link, not the whole video.',
+        a: 'You can upload an MP4 up to 50 MB for an encrypted link that does not expire, or host it on YouTube, Vimeo, or Drive and paste that link. The QR stores the link, not the whole video.',
       },
       {
         q: 'Is the whole video stored inside the QR code?',
@@ -493,7 +493,7 @@ export const TOOLS = [
       },
       {
         q: 'Do you host my video?',
-        a: 'No. Uploads go to a free temporary host (tmpfiles.org) and are deleted after 48 hours, so the QR code stops working after that. For a permanent QR code, use a YouTube, Vimeo, or Drive link.',
+        a: 'Your video is encrypted in your browser before upload, and the key stays inside the QR link, so GenerateQRFast cannot watch it. Anyone with the QR code can open it, so share it with care.',
       },
       {
         q: 'Does a video QR code expire?',
@@ -532,7 +532,7 @@ export const TOOLS = [
       },
       {
         q: 'Do uploaded files expire?',
-        a: 'Yes. Uploaded files are kept for 48 hours, and the QR code stops working after that. For a permanent QR code, paste a link to a file stored on Google Drive, Dropbox, or your own website.',
+        a: 'No. Uploaded files have a link that does not expire. If you paste your own link instead, the QR code works for as long as that link stays online.',
       },
       {
         q: 'Can I use a Google Drive or Dropbox link?',

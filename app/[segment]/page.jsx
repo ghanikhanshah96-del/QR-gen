@@ -10,7 +10,7 @@ import { LEGAL_PAGES } from '@/content/legal';
 import { getBlogByToolId } from '@/content/blogs';
 import { getArticle } from '@/content/articles';
 
-// Tools whose optional upload uses a temporary host (files expire after 48 hours).
+// Tools with an optional encrypted upload.
 const UPLOAD_TOOLS = new Set(['image', 'video', 'file']);
 
 const LEGAL_BY_FILE = Object.fromEntries(LEGAL_PAGES.map((p) => [p.file, p]));
@@ -110,12 +110,12 @@ function ToolPageView({ tool }) {
           {UPLOAD_TOOLS.has(tool.id) ? (
             <>
               <p className="mt-4 rounded-lg border border-amber-300 bg-amber-50 px-4 py-3 text-sm font-medium leading-relaxed text-amber-900 dark:border-amber-700/60 dark:bg-amber-950/40 dark:text-amber-200">
-                Uploaded files expire after 48 hours. After that, the QR code stops working.
+                Anyone with this QR code can open the uploaded file, so share it with care.
               </p>
               <p className="mt-4 leading-relaxed text-ink-600 dark:text-ink-300">
-                Uploads go to a free temporary host (tmpfiles.org) so the QR code has a public link. GenerateQRFast does
-                not store your files. For a permanent QR code, paste your own link instead (YouTube, Google Drive,
-                Dropbox, or your website). It keeps working as long as that link stays online.
+                Your file is encrypted in your browser before upload, and the key stays inside the QR link, so
+                GenerateQRFast cannot read it. The link does not expire. You can also paste your own link instead
+                (YouTube, Google Drive, Dropbox, or your website).
               </p>
             </>
           ) : (

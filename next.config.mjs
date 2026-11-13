@@ -16,6 +16,12 @@ const nextConfig = {
       { source: '/email-qr-code', destination: '/email-qr-code-generator/', permanent: true },
       { source: '/sms-qr-code', destination: '/sms-qr-code-generator/', permanent: true },
       { source: '/phone-number-qr-code', destination: '/qr-code-generator-phone-number/', permanent: true },
+      // Retired thin pages.
+      { source: '/changelog.html', destination: '/contact.html', permanent: true },
+      { source: '/security.html', destination: '/contact.html', permanent: true },
+      { source: '/offline.html', destination: '/', permanent: true },
+      { source: '/templates', destination: '/', permanent: true },
+      { source: '/guides/qr-code-with-logo', destination: '/', permanent: true },
     ];
   },
   // Keep legacy .html URLs working alongside clean paths where both existed.

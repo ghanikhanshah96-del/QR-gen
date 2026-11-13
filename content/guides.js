@@ -122,12 +122,4 @@ export const GUIDES = [
     content: `<p>Place a Google review QR at checkout, on receipts, or near exits. Make sure your Google Business link is correct, then generate a static QR so customers can leave feedback in seconds.</p>
 <p>Create yours with the <a href="/google-review-qr-code-generator/">Google Review QR Code Generator</a>, scan-test it, and print it where happy customers are most likely to see it.</p>`,
   },
-  {
-    dir: 'qr-code-with-logo',
-    title: 'QR Codes with Logos | GenerateQRFast Guides',
-    heading: 'QR codes with logos',
-    description: 'Add a logo without breaking scan reliability — ECC and size tips.',
-    content: `<p>Logos should stay relatively small, keep high error correction (H), and preserve enough contrast. Always scan-test after adding branding.</p>
-<p>Leave a quiet zone around the full code, avoid covering finder patterns, and download SVG when you need crisp print at any size.</p>`,
-  },
 ];

@@ -66,29 +66,5 @@ export const LEGAL_PAGES = [
     description: "GenerateQRFast accessibility commitments.",
     heading: "Accessibility",
     content: "<p>We aim for semantic HTML, keyboard access, visible focus, labeled forms, and sufficient contrast. If you hit a barrier, email hello@generateqrfast.com.</p>",
-  },
-  {
-    slug: "security",
-    file: "security.html",
-    title: "Security | GenerateQRFast",
-    description: "Security practices for the GenerateQRFast client-side generator.",
-    heading: "Security",
-    content: "<p>We sanitize user-controlled text before HTML insertion, validate URLs and uploads, keep dependencies minimal, and avoid executing imported project JSON as code.</p>",
-  },
-  {
-    slug: "changelog",
-    file: "changelog.html",
-    title: "Changelog | GenerateQRFast",
-    description: "Product changelog for GenerateQRFast.",
-    heading: "Changelog",
-    content: "<p><strong>v1.0.0</strong> — Initial release with URL, Text, Wi‑Fi, WhatsApp, Google Review, vCard, Email, SMS, and Phone generators; live preview; PNG/SVG/JPG export; local saved designs.</p>",
-  },
-  {
-    slug: "offline",
-    file: "offline.html",
-    title: "Offline | GenerateQRFast",
-    description: "You appear to be offline.",
-    heading: "You are offline",
-    content: "<p>Reconnect to load the latest assets, then return to create a QR code.</p>",
   }
 ];

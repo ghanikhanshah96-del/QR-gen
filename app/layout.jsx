@@ -74,6 +74,8 @@ export default function RootLayout({ children }) {
         {/* Google Search Console ownership check. Written directly in <head> (not via metadata)
             so it is always in the initial <head>, never streamed into <body>. */}
         <meta name="google-site-verification" content="QqkaJSl8U0i4F8isgE53joiwTOQn1ndq5dVIAiIcbUE" />
+        {/* Second Google verification code, added Nov 2026. Keep both: each proves ownership for a different Google account or property. */}
+        <meta name="google-site-verification" content="_URCBapTEtkuv4odz-i_SCbkU2PxSlfwZjAjPJpZkXI" />
         {/* Google AdSense site verification (the ad script itself loads after hydration, below). */}
         <meta name="google-adsense-account" content="ca-pub-9309280380486229" />
         {/* Inline scripts go through next/script: a raw inline <script> makes React warn

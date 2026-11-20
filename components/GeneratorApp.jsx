@@ -181,7 +181,7 @@ function EditorControls() {
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-500 dark:text-ink-400">Error correction</h4>
             <div className="mt-3 grid grid-cols-2 gap-2" data-ecc-options />
-            <p className="field-hint">Use H when adding a logo or printing small.</p>
+            <p className="field-hint">Use H when adding a logo or extra damage tolerance is needed.</p>
           </div>
           <div className="space-y-3 rounded-xl border p-4" style={{ borderColor: 'var(--border)', background: 'var(--surface-soft)' }}>
             <h4 className="text-sm font-semibold text-ink-900 dark:text-ink-100">Logo</h4>

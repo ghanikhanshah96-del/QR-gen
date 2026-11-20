@@ -718,3 +718,14 @@
     animation-delay: 180ms;
   }
 }
+
+/* Stop sideways scrolling on phones. AdSense Auto ads (full-width and anchor ads) can be wider
+   than the screen, which lets the whole page slide left and right. `clip` (not `hidden`) keeps
+   the sticky header and sidebars working. */
+@layer base {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+}

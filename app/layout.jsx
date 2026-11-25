@@ -77,7 +77,7 @@ export default function RootLayout({ children }) {
         {/* Second Google verification code, added Nov 2026. Keep both: each proves ownership for a different Google account or property. */}
         <meta name="google-site-verification" content="_URCBapTEtkuv4odz-i_SCbkU2PxSlfwZjAjPJpZkXI" />
         {/* Google AdSense site verification (the ad script itself loads after hydration, below). */}
-        <meta name="google-adsense-account" content="ca-pub-9309280380486229" />
+        <meta name="google-adsense-account" content="ca-pub-8270477962353734" />
         {/* Inline scripts go through next/script: a raw inline <script> makes React warn
             ("Encountered a script tag…") whenever it re-renders the layout in the browser. */}
         <Script id="theme-init" strategy="beforeInteractive">
@@ -91,7 +91,7 @@ export default function RootLayout({ children }) {
         {/* Google AdSense. Loaded after hydration on purpose: as a raw <script> in <head> it injects
             extra scripts into <head> before React hydrates, causing a hydration mismatch. */}
         <Script
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9309280380486229"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8270477962353734"
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />

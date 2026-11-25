@@ -76,25 +76,28 @@ export default function RootLayout({ children }) {
         <meta name="google-site-verification" content="QqkaJSl8U0i4F8isgE53joiwTOQn1ndq5dVIAiIcbUE" />
         {/* Second Google verification code, added Nov 2026. Keep both: each proves ownership for a different Google account or property. */}
         <meta name="google-site-verification" content="_URCBapTEtkuv4odz-i_SCbkU2PxSlfwZjAjPJpZkXI" />
-        {/* Google AdSense site verification (the ad script itself loads after hydration, below). */}
+        {/* Google AdSense site verification. */}
         <meta name="google-adsense-account" content="ca-pub-8270477962353734" />
-        {/* Inline scripts go through next/script: a raw inline <script> makes React warn
-            ("Encountered a script tag…") whenever it re-renders the layout in the browser. */}
+        {/* Google AdSense code, as a real <script> tag in the server HTML so the AdSense site
+            verification can find it. AdSense inserts a second <script> into <head> before React
+            hydrates, so no other React-rendered <script> may live in <head> (React would try to
+            match it against AdSense's tag and report a hydration mismatch). */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8270477962353734"
+          crossOrigin="anonymous"
+        />
+      </head>
+      <body className="flex min-h-screen flex-col">
+        {/* Theme setup. Kept in <body>, not <head>: see the AdSense note above. Inline scripts go
+            through next/script: a raw inline <script> makes React warn ("Encountered a script
+            tag…") whenever it re-renders the layout in the browser. */}
         <Script id="theme-init" strategy="beforeInteractive">
           {themeInitScript}
         </Script>
-      </head>
-      <body className="flex min-h-screen flex-col">
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />
-        {/* Google AdSense. Loaded after hydration on purpose: as a raw <script> in <head> it injects
-            extra scripts into <head> before React hydrates, causing a hydration mismatch. */}
-        <Script
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8270477962353734"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
         {/* Google tag (gtag.js) — Google Analytics 4 */}
         <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
         <Script id="ga-init" strategy="afterInteractive">
